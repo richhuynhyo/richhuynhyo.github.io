@@ -26,6 +26,14 @@
   font-weight: 300;
   font-size: 32px;
 }
+#work a {
+  color: #10678e;
+  text-decoration: none;
+  font-weight: 700;
+}
+#work a:hover {
+  color: #808080;
+}
 #work .work-container .thumb-row:after {
   content: " ";
   display: block;
