@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<works>
+	<work>
+		<name>+1 Fitness Intro</name>
+		<tagline>Motion Graphics</tagline>
+		<overlay>#92c83f</overlay>
+		<description>
+			+1 STR Fitness is a parody video work-out series for the popular video game-focused website 			
+			<![CDATA[<a target="_blank" href="http://www.destructoid.com">Destructoid</a>]]>. 				
+			While assisting in the production of this video, I created a simple motion graphic 
+			that introduced the website's brand and the title of the show, while maintaining the 
+			already established graphic style of the website.		
+		</description>
+		<skills>
+			Photoshop,
+			After Effects,
+			Premiere,
+			Motion Graphics
+		</skills>
+		<thumb>
+			img/plusOne/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				
+				<img src="img/plusOne/intro.gif" style="width:560px;"/>
+				
+				<iframe width="560" height="315" 
+					src="https://www.youtube.com/embed/cnnj83MUaXY" 
+					frameborder="0" allowfullscreen
+					style="display:block; margin:0 auto;">
+				</iframe>
+
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>Game Level Design</name>
+		<tagline>Mobile Game UI</tagline>
+		<overlay>#e7d070</overlay>
+		<description>
+			This is a mock-up mobile-game level created primarily through Adobe Illustrator. 
+		</description>
+		<skills>
+			Illustrator,
+			Vector Art
+		</skills>
+		<thumb>
+			img/gamelevel/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/gamelevel/ui.jpg" />
+				<img src="img/gamelevel/full.jpg" />
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>Robo</name>
+		<tagline>Digital Illustration</tagline>
+		<overlay>#24e9df</overlay>
+		<description>
+			This illustration was primarily a practice in perspective. 
+			Photoshop's transform tool was used liberally to assist in establishing perspective.
+			Blending and masking was also used to add texture and shading to the subjects.
+		</description>
+		<skills>
+			Photoshop,
+			Transforming,
+			Blending,
+			Masking
+		</skills>
+		<thumb>
+			img/robo/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/robo/robo.jpg" />
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>Squid Pop Pin</name>
+		<tagline>Graphic Design</tagline>
+		<overlay>#e45c66</overlay>
+		<description>
+			<![CDATA[
+			My band <a target="_blank" href="http://www.pachucaband.com">Pachuca</a>		
+			needed pins for promotion. I created this design under the direction of <i>Squid Pop</i> -a term 
+			that encompasses "fun", "the beach", and "a bit of weirdness." 
+			]]>
+		</description>
+		<skills>
+			Photoshop,
+			Vector Art,
+			Graphic Design
+		</skills>
+		<thumb>
+			img/pachucaPin/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/pachucaPin/design.jpg" />
+				<img src="img/pachucaPin/pins.jpg" />
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>The Woodpile</name>
+		<tagline>Graphic Design</tagline>
+		<overlay>#f01f46</overlay>
+		<description>
+			<![CDATA[
+			This was a assignment in a graphic design course that called for a graphical interpretation of song lyrics.
+			I chose the song <i>The Woodpile</i> by Frightened Rabbit, a song that 
+			describes a person's social anxiety and desperation. The narrator is portrayed
+			with an image of shoes as to be grounded in his own reality, while the 
+			rest of the room is portrayed as glowing silhouettes that appear to have
+			ascended into a perceived magical existence. The yellow 
+			text creates a barrier between the red passion of the room and of the 
+			narrator.
+			]]>
+		</description>
+		<skills>
+			Photoshop,
+			Vector Art,
+			Graphic Design
+		</skills>
+		<thumb>
+			img/artc100_woodpile/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/artc100_woodpile/full.jpg" />
+				<img src="img/artc100_woodpile/process.jpg" />
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>Separate Suns</name>
+		<tagline>Pattern</tagline>
+		<overlay>#ffd22e</overlay>
+		<description>
+			This was a pattern created for a 2d design course. This pattern was a
+			practice in contrast between geometric and organic shapes and
+			complementary colors. It portrays a seperation between humans from nature
+			as well as humans from eachother. The warmer use of colors is used to convey
+			a discomforting, claustrophobic sensation.
+		</description>
+		<skills>
+			Photoshop,
+			Vector Art,
+			Graphic Design
+		</skills>
+		<thumb>
+			img/motif/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/motif/full.jpg" />
+			]]>
+		</slides>
+	</work>
+
+
+</works>
+

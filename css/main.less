@@ -1,24 +1,162 @@
-﻿/*svg {
-  max-width: 95%;
-  max-height: 95%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  path {
-    fill-opacity: 0;
-    stroke: #000;
-    stroke-width: 0;
-    stroke-dasharray: 870;
-    stroke-dashoffset: 870;
-    animation: draw 10s  linear;
-  }
-}*/
+﻿@black:#1e1f1f;
+@white:#fff;
 
-/*@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}*/
+body
+{
+    font-family: 'Josefin sans', sans-serif;
+    background:@white;
+	overflow-y:scroll;
+}
+#header
+{
+	.logo
+	{
+		display:block;
+		width:200px;
+		margin:120px auto;
+	}
+	.intro
+	{
+		margin:0 auto;
+		text-align:center;
+	}
+}
+#main
+{
+}
+
+
+.container
+{
+    width:960px;
+    margin:0 auto;
+    padding:20px;
+}
+
+
+
+
+@thumb-size: 220px;
+#work
+{ 
+	padding:80px 0;
+	h1
+	{
+		text-align:center;
+		margin-bottom:40px;
+		font-weight:300;
+		font-size:32px;
+	}
+	.work-container
+	{
+		.thumb-row
+		{
+			.clearfix;
+			.thumb
+			{
+				position:relative;
+				background:#fff;
+				width: @thumb-size;
+				height: @thumb-size;
+				float:left;
+				margin:10px;
+				cursor:pointer;
+
+				img{
+	width:100%;
+}
+
+				.overlay
+				{
+					position:absolute;
+					top:0;
+					width: @thumb-size;
+					line-height: @thumb-size;
+					opacity:0;
+					&:hover
+					{
+						opacity:1;
+					}
+					.overlay-text
+					{
+						width:~"calc(100% - 20px)";
+						padding:0 10px;
+						display:inline-block;
+						vertical-align:middle;
+						text-align:center;
+						line-height:1em;
+						font-size:30px;
+					}
+				}
+			}
+		}
+		.detail-container
+		{
+			.thumb-pointer
+			{
+				width: 0; 
+				height: 0; 
+				border-left: 10px solid transparent; 
+				border-right: 10px solid transparent; 
+				border-bottom: 20px solid @black;
+				margin-top:40px;
+					&[data-column="0"]
+					{
+						margin-left:110px;
+					}
+					&[data-column="1"]
+					{
+						margin-left:350px;
+					}
+					&[data-column="2"]
+					{
+						margin-left:590px;
+					}
+					&[data-column="3"]
+					{
+						margin-left:830px;
+					}
+			}
+			.detail
+			{
+				width:700px;
+				margin:0 auto;
+				padding:40px 20px;
+				margin-bottom:80px;
+				border-top:1px solid @black;
+				border-bottom:1px solid @black;	
+				.text
+				{
+					color:@black;
+					margin-bottom:80px;
+				}
+				.slides
+				{
+					img
+					{
+						display:block;
+						max-width:100%;
+						margin:0 auto 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+.clearfix
+{
+    &:after {
+    content:" ";
+    display:block;
+    clear:both;
+    }
+}
+.hidden
+{
+	display:none;
+}
