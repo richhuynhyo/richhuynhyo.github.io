@@ -48,12 +48,12 @@
 			Vector Art
 		</skills>
 		<thumb>
-			img/gamelevel/thumb.jpg
+			img/gameLevel/thumb.jpg
 		</thumb>
 		<slides>
 			<![CDATA[
-				<img src="img/gamelevel/ui.jpg" />
-				<img src="img/gamelevel/full.jpg" />
+				<img src="img/gameLevel/ui.jpg" />
+				<img src="img/gameLevel/full.jpg" />
 			]]>
 		</slides>
 	</work>
