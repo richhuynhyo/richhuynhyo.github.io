@@ -1,5 +1,4 @@
 ﻿body {
-  font-family: 'Josefin sans', sans-serif;
   background: #fff;
   overflow-y: scroll;
 }
@@ -9,6 +8,7 @@
   margin: 120px auto;
 }
 #header .intro {
+  font-family: 'Quicksand', sans-serif;
   margin: 0 auto;
   text-align: center;
 }
@@ -21,6 +21,7 @@
   padding: 80px 0;
 }
 #work h1 {
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   margin-bottom: 40px;
   font-weight: 300;
@@ -48,9 +49,6 @@
   margin: 10px;
   cursor: pointer;
 }
-#work .work-container .thumb-row .thumb img {
-  width: 100%;
-}
 #work .work-container .thumb-row .thumb .overlay {
   position: absolute;
   top: 0;
@@ -68,6 +66,7 @@
   vertical-align: middle;
   text-align: center;
   line-height: 1em;
+  font-family: 'Quicksand', sans-serif;
   font-size: 30px;
 }
 #work .work-container .detail-container .thumb-pointer {
@@ -99,6 +98,8 @@
   border-bottom: 1px solid #1e1f1f;
 }
 #work .work-container .detail-container .detail .text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
   color: #1e1f1f;
   margin-bottom: 80px;
 }

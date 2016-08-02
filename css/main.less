@@ -1,9 +1,10 @@
 ﻿@black:#1e1f1f;
 @white:#fff;
+@font-1: 'Quicksand', sans-serif;
+@font-2: 'Open Sans', sans-serif;
 
 body
 {
-    font-family: 'Josefin sans', sans-serif;
     background:@white;
 	overflow-y:scroll;
 }
@@ -17,6 +18,7 @@ body
 	}
 	.intro
 	{
+		font-family: @font-1;
 		margin:0 auto;
 		text-align:center;
 	}
@@ -42,6 +44,7 @@ body
 	padding:80px 0;
 	h1
 	{
+		font-family: @font-1;
 		text-align:center;
 		margin-bottom:40px;
 		font-weight:300;
@@ -71,11 +74,6 @@ body
 				float:left;
 				margin:10px;
 				cursor:pointer;
-
-				img{
-	width:100%;
-}
-
 				.overlay
 				{
 					position:absolute;
@@ -95,6 +93,7 @@ body
 						vertical-align:middle;
 						text-align:center;
 						line-height:1em;
+						font-family: @font-1;
 						font-size:30px;
 					}
 				}
@@ -137,6 +136,8 @@ body
 				border-bottom:1px solid @black;	
 				.text
 				{
+					font-family: @font-2;
+					font-size:15px;
 					color:@black;
 					margin-bottom:80px;
 				}

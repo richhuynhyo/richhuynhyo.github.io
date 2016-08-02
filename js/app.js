@@ -16,7 +16,7 @@ $(document).ready(function () {
 	//Load View from Data
 	initializeView();
 
-    //Less Click
+    //Thumb Click
 	$('.thumb').click(function () {
 		if (activeThumb != $(this).data('id'))
 		{
@@ -56,13 +56,14 @@ function readXml()
 				var name = $(this).find("name").text();
 				var tagline = $(this).find("tagline").text();
 				var overlay = $(this).find("overlay").text();
+				var date = $(this).find("date").text();
 				var description = $(this).find("description").text();
 				var skills = $(this).find("skills").text();
 				var thumb = $(this).find("thumb").text();
 				var slides = $(this).find("slides").text();
 				//Get Slides
 
-				var newWork = new work(id, name, tagline, overlay, description, skills, thumb, slides);
+				var newWork = new work(id, name, tagline, overlay, date, description, skills, thumb, slides);
 
 				//Add each work entry to workList
 				workList.push(newWork);
@@ -118,6 +119,7 @@ function displayDetailsFromThumb(thumb)
 	var detailTemp =
 		templates.detail.replace("[[column]]", thumbColumn)
 						.replace("[[name]]", item.name)
+						.replace("[[date]]", item.date)
 						.replace("[[description]]", item.description)
 						.replace("[[skills]]", item.skills)
 						.replace("[[slides]]", item.slides);
@@ -140,13 +142,14 @@ function hideDetails()
 // CLASSES
 //
 
-function work(id, name, tagline, overlay, description, skills, thumb, slides)
+function work(id, name, tagline, overlay, date, description, skills, thumb, slides)
 {
 	this.id = id;
 	this.name = name;
-	this.description = description;
 	this.tagline = tagline;
 	this.overlay = overlay;
+	this.date = date;
+	this.description = description;
 	this.skills = skills;
 	this.thumb = thumb;
 	this.slides = slides;
