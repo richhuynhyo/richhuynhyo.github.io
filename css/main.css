@@ -4,7 +4,7 @@
 }
 #header .logo {
   display: block;
-  width: 200px;
+  width: 120px;
   margin: 120px auto;
 }
 #header .intro {
@@ -74,7 +74,7 @@
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 20px solid #1e1f1f;
+  border-bottom: 20px solid #333;
   margin-top: 40px;
 }
 #work .work-container .detail-container .thumb-pointer[data-column="0"] {
@@ -94,13 +94,13 @@
   margin: 0 auto;
   padding: 40px 20px;
   margin-bottom: 80px;
-  border-top: 1px solid #1e1f1f;
-  border-bottom: 1px solid #1e1f1f;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 #work .work-container .detail-container .detail .text {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #1e1f1f;
+  color: #333;
   margin-bottom: 80px;
 }
 #work .work-container .detail-container .detail .slides img {

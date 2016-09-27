@@ -38,6 +38,30 @@
 	</work>
 
 	<work>
+		<name>Mechanical Man</name>
+		<tagline>3d Modeling</tagline>
+		<overlay>#74b7d9</overlay>
+		<date>2016</date>
+		<description>
+			This is just something I built with Maya. 
+		</description>
+		<skills>
+			Maya,
+			3d Modeling
+		</skills>
+		<thumb>
+			img/3dmech/thumb.gif
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/3dmech/3dmech_1.gif" />
+				<img src="img/3dmech/3dmech_2.gif" />
+				<img src="img/3dmech/3dmech_3.gif" />
+			]]>
+		</slides>
+	</work>
+	
+	<work>
 		<name>Game Level Design</name>
 		<tagline>Mobile Game UI</tagline>
 		<overlay>#e7d070</overlay>
