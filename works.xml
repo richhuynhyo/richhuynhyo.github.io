@@ -61,57 +61,7 @@
 		</slides>
 	</work>
 
-	<work>
-		<name>Berserk Knife</name>
-		<tagline>Steam Workshop</tagline>
-		<overlay>#42fc90</overlay>
-		<date>2015</date>
-		<description>
-			This is a model reskin I created for the PC Game Killing Floor via Steam Workshop.
-			The item can be found here:
-			<![CDATA[
-			<a target="_blank" href="http://steamcommunity.com/sharedfiles/filedetails/?id=611380693">
-				http://steamcommunity.com/sharedfiles/filedetails/?id=611380693
-			</a>	
-			]]>
-		</description>
-		<skills>
-			Photoshop, Steam Workshop, Unreal Editor
-		</skills>
-		<thumb>
-			img/berserkKnife/thumb.jpg
-		</thumb>
-		<slides>
-			<![CDATA[
-				<img src="img/berserkKnife/1.jpg" />			
-				<img src="img/berserkKnife/2.jpg" />
-			]]>
-		</slides>
-	</work>
 	
-	<work>
-		<name>Game Level Design</name>
-		<tagline>Mobile Game UI</tagline>
-		<overlay>#e7d070</overlay>
-		<date>2016</date>
-		<description>
-			This is a mock-up mobile-game level created primarily through Adobe Illustrator. 
-			The purple circles outline the placement for mobile touch controls.
-		</description>
-		<skills>
-			Illustrator,
-			Vector Art
-		</skills>
-		<thumb>
-			img/gameLevel/thumb.jpg
-		</thumb>
-		<slides>
-			<![CDATA[
-				<img src="img/gameLevel/ui.jpg" />
-				<img src="img/gameLevel/full.jpg" />
-			]]>
-		</slides>
-	</work>
 
 	<work>
 		<name>Robo</name>
@@ -166,6 +116,7 @@
 			]]>
 		</slides>
 	</work>
+	
 
 	<work>
 		<name>The Woodpile</name>
@@ -196,6 +147,110 @@
 			<![CDATA[
 				<img src="img/artc100_woodpile/full.jpg" />
 				<img src="img/artc100_woodpile/process.jpg" />
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>Fingerling</name>
+		<tagline>Steam Workshop</tagline>
+		<overlay>#42fc90</overlay>
+		<date>2016</date>
+		<description>
+			<![CDATA[
+			This is a model texture reskin I created for the PC Game Killing Floor 2 via Steam Workshop.
+			Original assets from Tripwire Interactive.<br /><br />
+			The item can be found here:
+			<a target="_blank" href="http://steamcommunity.com/sharedfiles/filedetails/?id=611380693">
+				Steam Community Workshop
+			</a>	
+			]]>
+		</description>
+		<skills>
+			Photoshop, Steam Workshop, Unreal Editor
+		</skills>
+		<thumb>
+			img/berserkKnife/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/berserkKnife/1.jpg" />			
+				<img src="img/berserkKnife/2.jpg" />
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>Midnight Galaxy</name>
+		<tagline>Steam Workshop</tagline>
+		<overlay>#6046a0</overlay>
+		<date>2016</date>
+		<description>
+			<![CDATA[
+			This is a model texture reskin I created for the PC Game Killing Floor 2 via Steam Workshop.
+			Original assets from Tripwire Interactive.<br /><br />
+			The item can be found here:
+			
+			<a target="_blank" href="http://steamcommunity.com/sharedfiles/filedetails/?id=589391507">
+				Steam Community Workshop
+			</a>	
+			]]>
+		</description>
+		<skills> 
+			Photoshop, Steam Workshop, Unreal Editor
+		</skills>
+		<thumb>
+			img/midnightgalaxy/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/midnightgalaxy/1.jpg" />			
+				<img src="img/midnightgalaxy/2.jpg" />
+			]]>
+		</slides>
+	</work>
+
+	<work>
+		<name>Ugly Thing</name>
+		<tagline>Pencil</tagline>
+		<overlay>#65737e</overlay>
+		<date>2016</date>
+		<description>
+			This is an attempt to draw something ugly.
+		</description>
+		<skills>
+			Pencil, Illustration
+		</skills>
+		<thumb>
+			img/uglything/thumb.gif
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/uglything/1.gif" />
+			]]>
+		</slides>
+	</work>
+	
+	<work>
+		<name>Game Level Design</name>
+		<tagline>Mobile Game UI</tagline>
+		<overlay>#e7d070</overlay>
+		<date>2016</date>
+		<description>
+			This is a mock-up mobile-game level created primarily through Adobe Illustrator.
+			The purple circles outline the placement for mobile touch controls.
+		</description>
+		<skills>
+			Illustrator,
+			Vector Art
+		</skills>
+		<thumb>
+			img/gameLevel/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/gameLevel/ui.jpg" />
+				<img src="img/gameLevel/full.jpg" />
 			]]>
 		</slides>
 	</work>
