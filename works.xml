@@ -60,6 +60,34 @@
 			]]>
 		</slides>
 	</work>
+
+	<work>
+		<name>Berserk Knife</name>
+		<tagline>Steam Workshop</tagline>
+		<overlay>#42fc90</overlay>
+		<date>2015</date>
+		<description>
+			This is a model reskin I created for the PC Game Killing Floor via Steam Workshop.
+			The item can be found here:
+			<![CDATA[
+			<a target="_blank" href="http://steamcommunity.com/sharedfiles/filedetails/?id=611380693">
+				http://steamcommunity.com/sharedfiles/filedetails/?id=611380693
+			</a>	
+			]]>
+		</description>
+		<skills>
+			Photoshop, Steam Workshop, Unreal Editor
+		</skills>
+		<thumb>
+			img/berserkKnife/thumb.jpg
+		</thumb>
+		<slides>
+			<![CDATA[
+				<img src="img/berserkKnife/1.jpg" />			
+				<img src="img/berserkKnife/2.jpg" />
+			]]>
+		</slides>
+	</work>
 	
 	<work>
 		<name>Game Level Design</name>
@@ -141,7 +169,7 @@
 
 	<work>
 		<name>The Woodpile</name>
-		<tagline>Graphic Design</tagline>
+		<tagline>Photo Manipulation</tagline>
 		<overlay>#f01f46</overlay>
 		<date>2016</date>
 		<description>
