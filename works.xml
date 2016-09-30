@@ -222,11 +222,11 @@
 			Pencil, Illustration
 		</skills>
 		<thumb>
-			img/uglything/thumb.gif
+			img/uglyThing/thumb.gif
 		</thumb>
 		<slides>
 			<![CDATA[
-				<img src="img/uglything/1.gif" />
+				<img src="img/uglyThing/1.gif" />
 			]]>
 		</slides>
 	</work>
