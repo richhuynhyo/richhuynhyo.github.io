@@ -256,42 +256,17 @@
 	</work>
 
 	<work>
-		<name>Separate Suns</name>
-		<tagline>Pattern</tagline>
-		<overlay>#ffd22e</overlay>
-		<date>2016</date>
-		<description>
-			This was a pattern created for a 2d design course. This pattern was a
-			practice in contrast between geometric and organic shapes and
-			complementary colors. It portrays a seperation between humans from nature
-			as well as humans from eachother. The warmer use of colors is used to convey
-			a discomforting, claustrophobic sensation.
-		</description>
-		<skills>
-			Photoshop,
-			Vector Art,
-			Graphic Design
-		</skills>
-		<thumb>
-			img/motif/thumb.jpg
-		</thumb>
-		<slides>
-			<![CDATA[
-				<img src="img/motif/full.jpg" />
-			]]>
-		</slides>
-	</work>
-
-	<work>
 		<name>RichHuynh.com</name>
 		<tagline>Psuedo-CMS</tagline>
 		<overlay>#3c944a</overlay>
 		<date>2016</date>
 		<description>
-			This website was built with CMS-like features (where content is stored as 
-			data in which html is generated for).This allows me to add new content 
+			This website was built with CMS-like features (where content is stored as
+			data in which html is generated for).This allows me to add new content
 			quickly and efficiently. Because this website is hosted on github 
-			(no database functionality), content is stored as xml.
+			(no database functionality), content is stored as xml. This content is 
+			loaded based on user interaction in order to reduce server requests and 
+			improve inital load times.
 		</description>
 		<skills>
 			HTML, CSS/LESS, JS, JQuery, XML
