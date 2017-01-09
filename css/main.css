@@ -2,13 +2,15 @@
   overflow-y: scroll;
 }
 header {
-  background: #111;
+  /*background:#14ed76;*/
+  background: #0a0c2a;
   background-size: cover;
   min-width: 600px;
 }
 header .container {
   position: relative;
   height: 100vh;
+  z-index: 500;
 }
 header h1 {
   top: 0;
@@ -51,6 +53,45 @@ h2 {
   z-index: 700;
   height: 100vh;
   width: 100%;
+}
+#rad_gradient {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  height: 200vh;
+  width: 100%;
+  background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0) 80%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0) 80%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ffffff 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#ray_poly_controller {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  z-index: 800;
+}
+#ray_poly_controller polygon {
+  fill: #ffffff;
+  fill-opacity: 0;
+}
+#ray_poly {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+}
+#ray_poly polygon {
+  fill: #ffffff;
+  fill-opacity: 0.4;
 }
 /*#about
 {

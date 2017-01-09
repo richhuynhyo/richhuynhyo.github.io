@@ -8,10 +8,27 @@ var mouseY = 0;
 $(document).ready(function () {
 
 	//#f2f020
+	//extrudedText(element_id, depth, rgb, stretch, shadow)
 	extrudedText("title", 40, [242, 240, 32], .35, 1);
 	extrudedText("name", 45, [242, 240, 32], .35, 1);
 
+	//Load Model
 	updateWrapWidthHeight();
 	initModel();
 	animateModel();
+
+
+	//ADD EVENT LISTENERS
+	initRayPolyHover();
+	window.addEventListener('resize', onWindowResize, false);
+	window.addEventListener('mousemove', onMouseMove, false);
 });
+
+
+
+function onMouseMove(event) {
+	MouseMoveModel(event);
+};
+function onWindowResize() {
+	WindowResizeModel();
+}

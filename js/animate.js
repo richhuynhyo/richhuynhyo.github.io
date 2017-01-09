@@ -119,3 +119,48 @@ function extrudedTextLite(element_id, depth, color) {
 
 	$(element).css("text-shadow", textShadow);
 }
+
+
+function initRayPolyHover()
+{
+	//var defaultPoly = $("#ray_poly_controller").find('[data-poly="8"]');
+	//rayPolyMouseOn(defaultPoly);
+	$("#ray_poly_controller").children().on("mouseover", function () { rayPolyMouseOn(this); });
+}
+
+
+function rayPolyMouseOn(poly)
+{
+	var polyData = parseInt($(poly).data("poly"));
+
+	//reset All
+	$("#ray_poly").children().css("fill-opacity", "0.4");
+
+	$("#ray_poly").find('[data-poly="' + String(polyData) + '"]').css("fill-opacity", "1");
+
+	if(polyData - 1 > 0)
+	{
+		$("#ray_poly").find('[data-poly="' + String(polyData - 1) + '"]').css("fill-opacity", "0.85");
+
+		if (polyData - 2 > 0)
+		{
+			$("#ray_poly").find('[data-poly="' + String(polyData - 2) + '"]').css("fill-opacity", "0.75");
+
+			if (polyData - 3 > 0) {
+				$("#ray_poly").find('[data-poly="' + String(polyData - 2) + '"]').css("fill-opacity", "0.60");
+			}
+		}
+	}
+	if (polyData + 1 < 16) {
+		$("#ray_poly").find('[data-poly="' + String(polyData + 1) + '"]').css("fill-opacity", "0.85");
+
+		if (polyData + 2 < 16) {
+			$("#ray_poly").find('[data-poly="' + String(polyData + 2) + '"]').css("fill-opacity", "0.75");
+
+			if (polyData + 3 < 16) {
+				$("#ray_poly").find('[data-poly="' + String(polyData + 2) + '"]').css("fill-opacity", "0.60");
+			}
+		}
+	}
+
+}

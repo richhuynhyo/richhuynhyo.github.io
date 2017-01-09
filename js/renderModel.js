@@ -1,5 +1,5 @@
 ﻿var container;
-var camera, scene;
+var camera, scene, particle;
 var canvasRenderer, webglRenderer;
 var mesh, zmesh, geometry;
 
@@ -17,6 +17,26 @@ function initModel() {
 	directionalLight.position.set(0, 40, 100).normalize();
 	scene.add(directionalLight);
 
+
+	//PARTICLES
+	var spriteMat = new THREE.SpriteMaterial({
+		map: new THREE.CanvasTexture(generateSprite()),
+		blending: THREE.AdditiveBlending
+	});
+
+	for (var i = 0; i < 1000; i++) {
+
+		particle = new THREE.Sprite(spriteMat);
+
+		initParticle(particle, i * 10);
+
+		scene.add(particle);
+	}
+
+
+
+
+
 	//RENDERER
 	webglRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 	webglRenderer.setSize(WRAP_WIDTH, WRAP_HEIGHT);
@@ -30,9 +50,7 @@ function initModel() {
 	var callbackKey = function (geometry) { createScene(geometry, 0, -5, 0, 3, "model/mechUV.jpg") };
 	loader.load("model/mech.js", callbackKey);
 
-	//ADD EVENT LISTENERS
-	window.addEventListener('resize', onWindowResize, false);
-	window.addEventListener('mousemove', onMouseMove, false);
+
 
 }
 
@@ -44,6 +62,9 @@ function createScene(geometry, x, y, z, scale, tmap) {
 	scene.add(zmesh);
 }
 function render() {
+
+	TWEEN.update();
+
 	camera.position.x = (mouseX) * -.025;
 	camera.position.y = (mouseY) * .025;
 	camera.lookAt(scene.position);
@@ -53,12 +74,70 @@ function animateModel() {
 	requestAnimationFrame(animateModel);
 	render();
 }
-function onMouseMove(event)
+
+
+function generateSprite() {
+
+	var canvas = document.createElement('canvas');
+	canvas.width = 16;
+	canvas.height = 16;
+
+	var context = canvas.getContext('2d');
+	var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+	gradient.addColorStop(0, 'rgba(255,255,255,1)');
+	gradient.addColorStop(1, 'rgba(255,255,255,0)');
+
+	context.fillStyle = gradient;
+	context.fillRect(0, 0, canvas.width, canvas.height);
+
+	return canvas;
+
+}
+
+function initParticle(particle, delay) {
+
+	var particle = this instanceof THREE.Sprite ? this : particle;
+	var delay = delay !== undefined ? delay : 0;
+
+	particle.position.set(0, -600, -1000);
+	particle.scale.x = particle.scale.y = Math.random() * 8 + 16;
+
+	new TWEEN.Tween(particle)
+		.delay(delay)
+		.to({}, 10000)
+		.onComplete(initParticle)
+		.start();
+
+	new TWEEN.Tween(particle.position)
+		.delay(delay)
+		.to({ x: Math.random() * 4000 - 2000, y: Math.random() * 4000 - 500, z: Math.random() * 4000 - 2000 }, 10000)
+		.start();
+
+	new TWEEN.Tween(particle.scale)
+		.delay(delay)
+		.to({ x: 0.01, y: 0.01 }, 10000)
+		.start();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function MouseMoveModel(event)
 {
 	mouseX = (event.clientX - (WRAP_WIDTH / 2)) / 4;
 	mouseY = (event.clientY - (WRAP_HEIGHT / 2)) / 8;
 };
-function onWindowResize() {
+function WindowResizeModel() {
 	updateWrapWidthHeight();
 	camera.aspect = WRAP_WIDTH / WRAP_HEIGHT;
 	camera.updateProjectionMatrix();
@@ -69,3 +148,7 @@ function updateWrapWidthHeight()
 	WRAP_WIDTH = $("#mech_wrap").width();
 	WRAP_HEIGHT = $("#mech_wrap").height();
 }
+
+
+
+
