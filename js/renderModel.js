@@ -3,7 +3,8 @@ var camera, scene, particle;
 var canvasRenderer, webglRenderer;
 var mesh, zmesh, geometry;
 
-function initModel() {
+function initModel()
+{
 
 	//CAMERA AND SCENE
 	camera = new THREE.PerspectiveCamera(75, WRAP_WIDTH / WRAP_HEIGHT, 1, 100000);
@@ -17,25 +18,17 @@ function initModel() {
 	directionalLight.position.set(0, 40, 100).normalize();
 	scene.add(directionalLight);
 
-
 	//PARTICLES
 	var spriteMat = new THREE.SpriteMaterial({
 		map: new THREE.CanvasTexture(generateSprite()),
 		blending: THREE.AdditiveBlending
 	});
-
-	for (var i = 0; i < 1000; i++) {
-
+	for (var i = 0; i < 750; i++)
+	{
 		particle = new THREE.Sprite(spriteMat);
-
-		initParticle(particle, i * 10);
-
+		initParticle(particle, i * 17.5);
 		scene.add(particle);
 	}
-
-
-
-
 
 	//RENDERER
 	webglRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -49,37 +42,38 @@ function initModel() {
 	var loader = new THREE.JSONLoader();
 	var callbackKey = function (geometry) { createScene(geometry, 0, -5, 0, 3, "model/mechUV.jpg") };
 	loader.load("model/mech.js", callbackKey);
-
-
-
 }
 
 
-function createScene(geometry, x, y, z, scale, tmap) {
+function createScene(geometry, x, y, z, scale, tmap)
+{
 	zmesh = new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ map: THREE.ImageUtils.loadTexture(tmap) }));
 	zmesh.position.set(x, y, z);
 	zmesh.scale.set(scale, scale, scale);
 	scene.add(zmesh);
 }
-function render() {
-
+function render()
+{
+	//PARTICLES
 	TWEEN.update();
 
+	//CAMERA
 	camera.position.x = (mouseX) * -.025;
 	camera.position.y = (mouseY) * .025;
 	camera.lookAt(scene.position);
 	webglRenderer.render(scene, camera);
 }
-function animateModel() {
+function animateModel()
+{
 	requestAnimationFrame(animateModel);
 	render();
 }
 
 
-function generateSprite() {
-
+function generateSprite()
+{
 	var canvas = document.createElement('canvas');
-	canvas.width = 16;
+	canvas.width = 8;
 	canvas.height = 16;
 
 	var context = canvas.getContext('2d');
@@ -91,15 +85,15 @@ function generateSprite() {
 	context.fillRect(0, 0, canvas.width, canvas.height);
 
 	return canvas;
-
 }
 
-function initParticle(particle, delay) {
+function initParticle(particle, delay)
+{
 
 	var particle = this instanceof THREE.Sprite ? this : particle;
 	var delay = delay !== undefined ? delay : 0;
 
-	particle.position.set(0, -600, -1000);
+	particle.position.set(0, -1000, -1500);
 	particle.scale.x = particle.scale.y = Math.random() * 8 + 16;
 
 	new TWEEN.Tween(particle)
@@ -110,7 +104,7 @@ function initParticle(particle, delay) {
 
 	new TWEEN.Tween(particle.position)
 		.delay(delay)
-		.to({ x: Math.random() * 4000 - 2000, y: Math.random() * 4000 - 500, z: Math.random() * 4000 - 2000 }, 10000)
+		.to({ x: Math.random() * 4000 - 2000, y: Math.random() * 4300 , z: Math.random() * 4000 }, 10000)
 		.start();
 
 	new TWEEN.Tween(particle.scale)
