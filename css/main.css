@@ -7,6 +7,7 @@ body {
   overflow: hidden;
 }
 header {
+  /*filter:grayscale(50%);*/
   position: fixed;
   background: #e90b02;
   background-size: cover;
@@ -116,7 +117,7 @@ h2 {
   transform: rotate(0deg);
   color: #0bf591;
 }
-.parallax {
+#parallax {
   perspective: 50px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -167,9 +168,9 @@ h2 {
   position: relative;
   left: 15%;
   top: -10vh;
-  -ms-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 #topdosh {
   position: relative;
@@ -191,9 +192,9 @@ h2 {
 #topdosh .container .text {
   position: relative;
   left: 15%;
-  /*-ms-transform: rotate(-6deg); 
-			-webkit-transform: rotate(-6deg); 
-			transform: rotate(-6deg);*/
+  -ms-transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
 }
 .image_wrap {
   position: relative;

@@ -22,11 +22,17 @@ $(document).ready(function () {
 
 	//ADD EVENT LISTENERS
 	initRayPolyHover();
+
+	document.getElementById('parallax').addEventListener('scroll', onScroll, false);
+
 	window.addEventListener('resize', onWindowResize, false);
 	window.addEventListener('mousemove', onMouseMove, false);
 
 });
 
+function onScroll()
+{
+}
 
 
 function onMouseMove(event) {
