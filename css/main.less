@@ -1,21 +1,36 @@
 ﻿@min-width:600px;
+
+
 @black: #121212;
+@dark-gray:#363638;
+@light-gray:#767676;
+@lighter-gray:#e2e2e2;
 @white:#ffffff;
 @red:#e90b02;
 @teal:#14ed76;
-@yellow:#F2F020;
+@yellow:#F2F021;
+@navy:#003470;
 
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 body
 {
-	overflow-y:scroll;
+	overflow:hidden;
 }
 
 
 header
 {
+	position:fixed;
 	background:@red;
 	background-size:cover;
 	min-width:@min-width;
+	width:100%;
+	z-index:0;
 	.container
 	{
 		position:relative;
@@ -46,24 +61,6 @@ header
 	}
 }
 
-/*h2
-{
-	display:inline-block;
-	position:relative;
-	top:-8vh;
-	left:20px;
-	z-index:50;	
-	margin:0;
-	font-family: "museo-sans-display";
-	font-size:9vw;
-	text-align:left;
-	line-height:.8em;
-	transform:rotate(-10deg);
-	color:#0bf591;
-}*/
-
-
-
 #mech_wrap
 {
 	position:absolute;
@@ -71,6 +68,7 @@ header
 	z-index:180;
 	height:100vh;
 	width:100%;
+	min-width:@min-width;
 }
 
 #rad_gradient	
@@ -80,6 +78,7 @@ header
 	z-index:100;
 	height:100vh;
 	width:100%;
+	min-width:@min-width;
 	/*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 80%);*/ /* FF3.6-15 */
 	/*background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);*/ /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(ellipse at bottom, rgba(20,237,118,1) 0%,rgba(255,255,255,0) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -92,6 +91,7 @@ header
 	top:0;
 	display:block;
 	width: 100%;
+	min-width:@min-width;
 	height: 100vh;
 	z-index:199;
 	polygon 
@@ -107,6 +107,7 @@ header
 	top:0;
 	display:block;
 	width: 100%;
+	min-width:@min-width;
 	height: 100vh;
 	z-index:110;
 	polygon 
@@ -117,13 +118,196 @@ header
 }
 
 
-
-
-/*#about
+#about
 {
+	
+	top:100vh;
 	position:relative;
 	z-index:200;
-	height:100vh;
+	height:10vh;
 	width:100%;
+	min-width:@min-width;
 	background:@teal;
-}*/
+	.container
+	{
+		padding:20px;
+
+	}
+}
+
+h2
+{
+	display:inline-block;
+	/*position:absolute;
+	top:-8vh;
+	left:20px;
+	z-index:50;*/	
+	margin:0;
+	font-family: "museo-sans-display";
+	font-size:9vw;
+	text-align:left;
+	line-height:.8em;
+	transform:rotate(0deg);
+	color:#0bf591;
+}
+
+.parallax
+{
+	perspective:50px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	width:100vw;
+	height:100vh;
+}
+
+
+.parallax_front
+{	
+	transform: translateZ(20px) scale(.6);
+	position:absolute;
+	z-index:400;
+}
+.parallax_mid
+{
+	transform: translateZ(10px) scale(.8);
+	position:absolute;
+	z-index:300;
+	height:600vh;
+}
+
+.parallax_back
+{
+	transform: translateZ(0);
+	position:absolute;
+	z-index:200;
+	height:600vh;
+}
+
+
+.clip_wrap
+{
+	position:relative;
+	overflow:hidden;
+	width:100vw;
+	min-width:@min-width;
+}
+#dino
+{
+	position:relative;
+	top:40vh;
+	height:100vh;
+	.container
+	{		
+		 -ms-transform: rotate(3deg); 
+		-webkit-transform: rotate(3deg); 
+		transform: rotate(3deg);
+		position: absolute;	
+		top:10vh;
+		left:-20%;
+		padding:10vh;
+		height:60vh;
+		width:140vw;
+		background:@white;	
+		.text
+		{
+			position:relative;
+			left:15%;
+			top:-10vh;
+			-ms-transform: rotate(-6deg); 
+			-webkit-transform: rotate(-6deg); 
+			transform: rotate(-6deg);
+		}
+	}
+
+}
+
+
+
+#topdosh
+{
+	position:relative;
+	top:160vh;
+	height:100vh;
+	.container
+	{		
+		 -ms-transform: rotate(-3deg); 
+		-webkit-transform: rotate(-3deg); 
+		transform: rotate(-3deg);
+		position: absolute;	
+		top:10vh;
+		left:-20%;
+		padding:10vh;
+		height:60vh;
+		width:140vw;
+		background:@navy;	
+		.text
+		{
+			position:relative;
+			left:15%;
+
+			/*-ms-transform: rotate(-6deg); 
+			-webkit-transform: rotate(-6deg); 
+			transform: rotate(-6deg);*/
+		}
+	}
+
+}
+
+.image_wrap
+{
+	position:relative;
+	z-index:300;
+	&.dino_image
+	{
+		left:30%;
+		top:170vh;
+		-ms-transform: rotate(-6deg); 
+		-webkit-transform: rotate(-6deg); 
+		transform: rotate(-6deg);
+		img
+		{
+			display:block;
+			float:left;
+			width:30%;
+			box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+			&.front
+			{
+				z-index:200;
+				position:relative;
+				left:-5%;
+				top:5vh;
+			}
+			&.back
+			{				
+				z-index:100;
+			}
+		}
+	}
+	&.topdosh_image
+	{
+		left:30%;
+		top:65vh;
+		-ms-transform: rotate(-6deg); 
+		-webkit-transform: rotate(-6deg); 
+		transform: rotate(-6deg);
+		img
+		{
+			display:block;
+			float:left;
+			width:40%;
+			box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+			&.front
+			{
+				z-index:200;
+				position:relative;
+				left:-20%;
+				top:10vh;
+			}
+			&.back
+			{				
+				z-index:100;
+			}
+		}
+	}
+
+}

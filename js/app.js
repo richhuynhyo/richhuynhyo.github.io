@@ -18,10 +18,13 @@ $(document).ready(function () {
 	animateModel();
 
 
+
+
 	//ADD EVENT LISTENERS
 	initRayPolyHover();
 	window.addEventListener('resize', onWindowResize, false);
 	window.addEventListener('mousemove', onMouseMove, false);
+
 });
 
 

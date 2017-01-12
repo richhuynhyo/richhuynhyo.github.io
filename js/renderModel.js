@@ -1,7 +1,9 @@
 ﻿var container;
-var camera, scene, particle;
+var camera, scene;
 var canvasRenderer, webglRenderer;
 var mesh, zmesh, geometry;
+
+//var particle;
 
 function initModel()
 {
@@ -19,16 +21,16 @@ function initModel()
 	scene.add(directionalLight);
 
 	//PARTICLES
-	var spriteMat = new THREE.SpriteMaterial({
-		map: new THREE.CanvasTexture(generateSprite()),
-		blending: THREE.AdditiveBlending
-	});
-	for (var i = 0; i < 750; i++)
-	{
-		particle = new THREE.Sprite(spriteMat);
-		initParticle(particle, i * 17.5);
-		scene.add(particle);
-	}
+	//var spriteMat = new THREE.SpriteMaterial({
+	//	map: new THREE.CanvasTexture(generateSprite()),
+	//	blending: THREE.AdditiveBlending
+	//});
+	//for (var i = 0; i < 750; i++)
+	//{
+	//	particle = new THREE.Sprite(spriteMat);
+	//	initParticle(particle, i * 17.5);
+	//	scene.add(particle);
+	//}
 
 	//RENDERER
 	webglRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -55,7 +57,7 @@ function createScene(geometry, x, y, z, scale, tmap)
 function render()
 {
 	//PARTICLES
-	TWEEN.update();
+	//TWEEN.update();
 
 	//CAMERA
 	camera.position.x = (mouseX) * -.025;
