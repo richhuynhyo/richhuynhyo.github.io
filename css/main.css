@@ -9,9 +9,10 @@ body {
 header {
   /*filter:grayscale(50%);*/
   position: fixed;
+  left: -10px;
   background: #e90b02;
   background-size: cover;
-  min-width: 600px;
+  min-width: 420px;
   width: 100%;
   z-index: 0;
 }
@@ -26,14 +27,25 @@ header h1 {
   position: absolute;
   width: 100%;
   font-family: "ff-good-headline-web-pro-con", sans-serif;
-  font-size: 86px;
+  font-size: 68px;
   text-align: center;
   letter-spacing: -0.02em;
   line-height: .5em;
   vertical-align: middle;
   color: #e90b02;
 }
-@media (min-width: 600px) {
+@media (orientation: portrait) {
+  header h1 {
+    top: 5vh;
+  }
+}
+@media (orientation: portrait) and (min-width: 420px) {
+  header h1 {
+    top: 3vh;
+    font-size: 16vw;
+  }
+}
+@media (min-width: 420px) and (orientation: landscape) {
   header h1 {
     font-size: 14vw;
   }
@@ -47,7 +59,7 @@ header h1 #title {
   z-index: 180;
   height: 100vh;
   width: 100%;
-  min-width: 600px;
+  min-width: 420px;
 }
 #rad_gradient {
   position: absolute;
@@ -55,7 +67,7 @@ header h1 #title {
   z-index: 100;
   height: 100vh;
   width: 100%;
-  min-width: 600px;
+  min-width: 420px;
   /*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 80%);*/
   /* FF3.6-15 */
   /*background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);*/
@@ -70,7 +82,7 @@ header h1 #title {
   top: 0;
   display: block;
   width: 100%;
-  min-width: 600px;
+  min-width: 420px;
   height: 100vh;
   z-index: 199;
 }
@@ -83,7 +95,7 @@ header h1 #title {
   top: 0;
   display: block;
   width: 100%;
-  min-width: 600px;
+  min-width: 420px;
   height: 100vh;
   z-index: 110;
 }
@@ -97,8 +109,8 @@ header h1 #title {
   z-index: 200;
   height: 10vh;
   width: 100%;
-  min-width: 600px;
-  background: #14ed76;
+  min-width: 420px;
+  background: #0bf591;
 }
 #about .container {
   padding: 20px;
@@ -145,7 +157,7 @@ h2 {
   position: relative;
   overflow: hidden;
   width: 100vw;
-  min-width: 600px;
+  min-width: 420px;
 }
 #dino {
   position: relative;
@@ -172,9 +184,17 @@ h2 {
   -webkit-transform: rotate(-5deg);
   transform: rotate(-5deg);
 }
+#dino .container .text h3 {
+  font-family: "museo-sans-display";
+  font-size: 3vw;
+  text-align: left;
+  line-height: 1.2em;
+  transform: rotate(-1deg);
+  color: #767676;
+}
 #topdosh {
   position: relative;
-  top: 160vh;
+  top: 170vh;
   height: 100vh;
 }
 #topdosh .container {
@@ -196,13 +216,59 @@ h2 {
   -webkit-transform: rotate(1deg);
   transform: rotate(1deg);
 }
+#topdosh .container .text h3 {
+  font-family: "museo-sans-display";
+  font-size: 3vw;
+  text-align: left;
+  line-height: 1.2em;
+  transform: rotate(0deg);
+  color: #e2e2e2;
+}
+#twenty {
+  position: relative;
+  top: 110vh;
+  height: 100vh;
+}
+#twenty .container {
+  -ms-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+  position: absolute;
+  top: 10vh;
+  left: -20%;
+  padding: 10vh;
+  height: 60vh;
+  width: 140vw;
+  background: #ffffff;
+}
+#twenty .container .text {
+  position: relative;
+  left: 15%;
+  top: -10vh;
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+#twenty .container .text h2 {
+  font-size: 10vw;
+}
+#twenty .container .text h3 {
+  position: relative;
+  top: -2vh;
+  font-family: "museo-sans-display";
+  font-size: 3vw;
+  text-align: left;
+  line-height: 1.2em;
+  transform: rotate(-1deg);
+  color: #767676;
+}
 .image_wrap {
   position: relative;
   z-index: 300;
 }
 .image_wrap.dino_image {
   left: 30%;
-  top: 170vh;
+  top: 160vh;
   -ms-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
@@ -224,7 +290,7 @@ h2 {
 }
 .image_wrap.topdosh_image {
   left: 30%;
-  top: 65vh;
+  top: 80vh;
   -ms-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
@@ -243,4 +309,34 @@ h2 {
 }
 .image_wrap.topdosh_image img.back {
   z-index: 100;
+}
+.image_wrap.twenty_image {
+  left: -30%;
+  top: 465vh;
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+.image_wrap.twenty_image img {
+  display: block;
+  float: left;
+  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
+}
+.image_wrap.twenty_image img.front {
+  z-index: 200;
+  position: relative;
+  left: 10%;
+  top: -15vh;
+  width: 40%;
+}
+.image_wrap.twenty_image img.back {
+  z-index: 100;
+  width: 30%;
+}
+.image_wrap.twenty_image img.mid {
+  position: relative;
+  z-index: 100;
+  left: 25%;
+  top: -80vh;
+  width: 32.5%;
 }
