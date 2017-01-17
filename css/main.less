@@ -12,17 +12,21 @@
 @navy:#003470;
 
 
-.cf:after {
+body
+{
+	background:@black;
+	overflow:hidden;
+}
+.cf:after 
+{
   content: "";
   display: table;
   clear: both;
 }
-body
-{
-	overflow:hidden;
-}
 
-
+/*--------------------------------------------*/
+/*HEADER*/
+/*--------------------------------------------*/
 header
 {
 	/*filter:grayscale(50%);*/
@@ -31,7 +35,7 @@ header
 	background:@red;
 	background-size:cover;
 	min-width:@min-width;
-	width:100%;
+	width:100vw;
 	z-index:0;
 	.container
 	{
@@ -44,7 +48,7 @@ header
 		top:0;
 		margin:0;
 		position:absolute;
-		width:100%;
+		width:100vw;
 		font-family: "ff-good-headline-web-pro-con", sans-serif;
 		font-size:68px;
 		text-align:center;
@@ -73,31 +77,28 @@ header
 		}
 	}
 }
-
 #mech_wrap
 {
 	position:absolute;
 	top:0;
 	z-index:180;
 	height:100vh;
-	width:100%;
+	width:100vw;
 	min-width:@min-width;
 }
-
 #rad_gradient	
 {
 	position:absolute;
 	top:0;
 	z-index:100;
 	height:100vh;
-	width:100%;
+	width:100vw;
 	min-width:@min-width;
-	/*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 80%);*/ /* FF3.6-15 */
+	/*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0vw, rgba(255,255,255,0) 80%);*/ /* FF3.6-15 */
 	/*background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);*/ /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(ellipse at bottom, rgba(20,237,118,1) 0%,rgba(255,255,255,0) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-
 #ray_poly_controller
 {
 	position:absolute;
@@ -119,7 +120,7 @@ header
 	position:absolute;
 	top:0;
 	display:block;
-	width: 100%;
+	width: 100vw;
 	min-width:@min-width;
 	height: 100vh;
 	z-index:110;
@@ -138,7 +139,7 @@ header
 	position:relative;
 	z-index:200;
 	height:10vh;
-	width:100%;
+	width:100vw;
 	min-width:@min-width;
 	background:@teal;
 	.container
@@ -148,21 +149,11 @@ header
 	}
 }
 
-h2
-{
-	display:inline-block;
-	/*position:absolute;
-	top:-8vh;
-	left:20px;
-	z-index:50;*/	
-	margin:0;
-	font-family: "museo-sans-display";
-	font-size:9vw;
-	text-align:left;
-	line-height:.8em;
-	transform:rotate(0deg);
-	color:@teal;
-}
+
+/*--------------------------------------------*/
+/*PARALLAX LAYERS*/
+/*--------------------------------------------*/
+
 
 
 #parallax
@@ -173,54 +164,109 @@ h2
 	width:100vw;
 	height:100vh;
 }
-
-
+.parallax_wrap
+{
+}
 .parallax_front
 {	
+	overflow:hidden;
 	transform: translateZ(20px) scale(.6);
 	position:absolute;
-	z-index:400;
+	z-index:800;
+	width:100%;
+	min-width:@min-width;
+	height:502vh;	
 }
 .parallax_mid
-{
-	transform: translateZ(10px) scale(.8);
+{	
+	overflow:hidden;
+	transform: translateZ(10px) scale(.805);
 	position:absolute;
-	z-index:300;
-	height:600vh;
+	z-index:700;
+	width:100%;
+	min-width:@min-width;
+	height:456vh;	
 }
-
 .parallax_back
 {
+	
+	overflow:hidden;
 	transform: translateZ(0);
 	position:absolute;
-	z-index:200;
-	height:600vh;
+	z-index:600;
+	height:300vh;	
+	width:100%;
+	min-width:@min-width;
+	height:421vh;	
+}
+
+/*--------------------------------------------*/
+/*HEADERS*/
+/*--------------------------------------------*/
+h2
+{
+	display:inline-block;
+	margin:0;
+	font-family: "museo-sans-display";
+	font-size:9vw;
+	text-align:left;
+	line-height:.8em;
+	transform:rotate(0deg);
+	color:@teal;
+}
+h3
+{
+	font-family: "museo-sans-display";
+	font-size:3vw;
+	text-align:left;
+	line-height:1.2em;
+}
+
+/*--------------------------------------------*/
+/*GENERICS*/
+/*--------------------------------------------*/
+
+
+.image_wrap
+{
+	position:absolute;
+	z-index:500;
+	width:100%;
+	height:100vh;
 }
 
 
-.clip_wrap
+.container_wrap
 {
-	position:relative;
 	overflow:hidden;
 	width:100vw;
 	min-width:@min-width;
+	height:100vh;
+	position:absolute;
+	.container
+	{
+		position: absolute;	
+		top:10vh;
+		left:-20%;
+		padding:12vh 0 0 5vw;
+		height:60vh;
+		width:140%;
+	}
 }
+
+
+
+/*--------------------------------------------*/
+/*DINO*/
+/*--------------------------------------------*/
 #dino
 {
-	position:relative;
-	top:40vh;
-	height:100vh;
+	top:60vh;
 	.container
 	{		
 		 -ms-transform: rotate(3deg); 
 		-webkit-transform: rotate(3deg); 
-		transform: rotate(3deg);
-		position: absolute;	
-		top:10vh;
-		left:-20%;
-		padding:10vh;
-		height:60vh;
-		width:140vw;
+		transform: rotate(3deg);				
 		background:@white;	
 		.text
 		{
@@ -232,10 +278,6 @@ h2
 			transform: rotate(-5deg);
 			h3
 			{
-				font-family: "museo-sans-display";
-				font-size:3vw;
-				text-align:left;
-				line-height:1.2em;
 				transform:rotate(-1deg);
 				color:@light-gray;
 			}
@@ -243,25 +285,47 @@ h2
 	}
 
 }
+.dino_image
+{
+	left:35%;
+	top:0vh;
+	-ms-transform: rotate(-6deg); 
+	-webkit-transform: rotate(-6deg); 
+	transform: rotate(-6deg);
+	@media (orientation:portrait)
+	{	
 
+	}
+	img
+	{
+		display:block;
+		width:35%;
+		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+		position:absolute;
+		&.front
+		{
+			z-index:200;
+			left:25%;
+			top:15vh;
+		}
+		&.back
+		{
+			top:10vh;
+		}
+	}
+}
 
-
+/*--------------------------------------------*/
+/*TOPDOSH*/
+/*--------------------------------------------*/
 #topdosh
 {
-	position:relative;
-	top:170vh;
-	height:100vh;
+	top:165vh;
 	.container
 	{		
 		 -ms-transform: rotate(-3deg); 
 		-webkit-transform: rotate(-3deg); 
 		transform: rotate(-3deg);
-		position: absolute;	
-		top:10vh;
-		left:-20%;
-		padding:10vh;
-		height:60vh;
-		width:140vw;
 		background:@navy;	
 		.text
 		{
@@ -272,10 +336,6 @@ h2
 			transform: rotate(1deg);
 			h3
 			{
-				font-family: "museo-sans-display";
-				font-size:3vw;
-				text-align:left;
-				line-height:1.2em;
 				transform:rotate(0deg);
 				color:@lighter-gray;
 			}
@@ -283,24 +343,40 @@ h2
 	}
 
 }
+.topdosh_image
+{	
+	left:35%;
+	top:142vh;
+	-ms-transform: rotate(-6deg); 
+	-webkit-transform: rotate(-6deg); 
+	transform: rotate(-6deg);
+	img
+	{
+		display:block;
+		width:45%;
+		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+		&.front
+		{
+			z-index:200;
+			position:absolute;
+			left:15%;
+			top:15vh;
+		}
+	}
+}
 
 
+/*--------------------------------------------*/
+/*TWENTY*/
+/*--------------------------------------------*/
 #twenty
 {
-	position:relative;
-	top:110vh;
-	height:100vh;
+	top:250vh;
 	.container
 	{		
 		 -ms-transform: rotate(3deg); 
 		-webkit-transform: rotate(3deg); 
 		transform: rotate(3deg);
-		position: absolute;	
-		top:10vh;
-		left:-20%;
-		padding:10vh;
-		height:60vh;
-		width:140vw;
 		background:@white;	
 		.text
 		{
@@ -316,12 +392,7 @@ h2
 			}
 			h3
 			{
-				position:relative;
 				top:-2vh;
-				font-family: "museo-sans-display";
-				font-size:3vw;
-				text-align:left;
-				line-height:1.2em;
 				transform:rotate(-1deg);
 				color:@light-gray;
 			}
@@ -329,106 +400,90 @@ h2
 	}
 
 }
-
-
-.image_wrap
+.twenty_image
 {
-	position:relative;
-	z-index:300;
-	&.dino_image
-	{
-		left:30%;
-		top:160vh;
-		-ms-transform: rotate(-6deg); 
-		-webkit-transform: rotate(-6deg); 
-		transform: rotate(-6deg);
-		@media (orientation:portrait)
-		{	
+	left:35%;
+	top:265vh;
+	-ms-transform: rotate(-6deg); 
+	-webkit-transform: rotate(-6deg); 
+	transform: rotate(-6deg);
+	@media (orientation:portrait)
+	{	
 
-		}
-		img
+	}
+	img
+	{
+		position:absolute;	
+		display:block;
+		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+		&.front
 		{
-			display:block;
-			float:left;
+			z-index:200;			
+			width:45%;
+			top:18vh;
+			left:5%;	
+		}		
+		&.mid
+		{			
+			top:-5vh;	
+			left:20%;	
+			z-index:100;	
+			width:35%;
+		}
+		&.back
+		{			
+			z-index:100;			
 			width:30%;
-			box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
-			&.front
-			{
-				z-index:200;
-				position:relative;
-				left:-5%;
-				top:5vh;
-			}
-			&.back
-			{				
-				z-index:100;
-			}
 		}
 	}
-	&.topdosh_image
-	{
-		left:30%;
-		top:80vh;
-		-ms-transform: rotate(-6deg); 
-		-webkit-transform: rotate(-6deg); 
-		transform: rotate(-6deg);
-		img
-		{
-			display:block;
-			float:left;
-			width:40%;
-			box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
-			&.front
-			{
-				z-index:200;
-				position:relative;
-				left:-20%;
-				top:10vh;
-			}
-			&.back
-			{				
-				z-index:100;
-			}
-		}
-	}
-	&.twenty_image
-	{
-		left:-30%;
-		top:465vh;
-		-ms-transform: rotate(-6deg); 
-		-webkit-transform: rotate(-6deg); 
-		transform: rotate(-6deg);
-		@media (orientation:portrait)
-		{	
+}
 
-		}
-		img
+/*--------------------------------------------*/
+/*+1Fitness*/
+/*--------------------------------------------*/
+#fitness
+{
+	top:320vh;
+	.container
+	{		
+		 -ms-transform: rotate(-3deg); 
+		-webkit-transform: rotate(-3deg); 
+		transform: rotate(-3deg);
+		background:@navy;	
+		.text
 		{
-			display:block;
-			float:left;
-			box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
-			&.front
+			position:relative;
+			left:15%;
+			-ms-transform: rotate(1deg); 
+			-webkit-transform: rotate(1deg); 
+			transform: rotate(1deg);
+			h3
 			{
-				z-index:200;
-				position:relative;
-				left:10%;
-				top:-15vh;			
-				width:40%;
-			}
-			&.back
-			{				
-				z-index:100;				
-				width:30%;
-			}
-			&.mid
-			{						
-				position:relative;
-				z-index:100;			
-				left:25%;
-				top:-80vh;
-				width:32.5%;
+				transform:rotate(0deg);
+				color:@lighter-gray;
 			}
 		}
 	}
 
+}
+.fitness_image
+{	
+	left:40%;
+	top:405vh;
+	-ms-transform: rotate(-6deg); 
+	-webkit-transform: rotate(-6deg); 
+	transform: rotate(-6deg);
+	img
+	{
+		display:block;
+		width:45%;
+		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+		&.front
+		{
+			z-index:200;
+			position:absolute;
+			left:15%;
+			top:15vh;
+		}
+	}
 }

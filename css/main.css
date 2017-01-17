@@ -1,11 +1,15 @@
-﻿.cf:after {
+﻿body {
+  background: #121212;
+  overflow: hidden;
+}
+.cf:after {
   content: "";
   display: table;
   clear: both;
 }
-body {
-  overflow: hidden;
-}
+/*--------------------------------------------*/
+/*HEADER*/
+/*--------------------------------------------*/
 header {
   /*filter:grayscale(50%);*/
   position: fixed;
@@ -13,7 +17,7 @@ header {
   background: #e90b02;
   background-size: cover;
   min-width: 420px;
-  width: 100%;
+  width: 100vw;
   z-index: 0;
 }
 header .container {
@@ -25,7 +29,7 @@ header h1 {
   top: 0;
   margin: 0;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   font-family: "ff-good-headline-web-pro-con", sans-serif;
   font-size: 68px;
   text-align: center;
@@ -58,7 +62,7 @@ header h1 #title {
   top: 0;
   z-index: 180;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   min-width: 420px;
 }
 #rad_gradient {
@@ -66,9 +70,9 @@ header h1 #title {
   top: 0;
   z-index: 100;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   min-width: 420px;
-  /*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 80%);*/
+  /*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0vw, rgba(255,255,255,0) 80%);*/
   /* FF3.6-15 */
   /*background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);*/
   /* Chrome10-25,Safari5.1-6 */
@@ -94,7 +98,7 @@ header h1 #title {
   position: absolute;
   top: 0;
   display: block;
-  width: 100%;
+  width: 100vw;
   min-width: 420px;
   height: 100vh;
   z-index: 110;
@@ -108,27 +112,16 @@ header h1 #title {
   position: relative;
   z-index: 200;
   height: 10vh;
-  width: 100%;
+  width: 100vw;
   min-width: 420px;
   background: #0bf591;
 }
 #about .container {
   padding: 20px;
 }
-h2 {
-  display: inline-block;
-  /*position:absolute;
-	top:-8vh;
-	left:20px;
-	z-index:50;*/
-  margin: 0;
-  font-family: "museo-sans-display";
-  font-size: 9vw;
-  text-align: left;
-  line-height: .8em;
-  transform: rotate(0deg);
-  color: #0bf591;
-}
+/*--------------------------------------------*/
+/*PARALLAX LAYERS*/
+/*--------------------------------------------*/
 #parallax {
   perspective: 50px;
   overflow-y: scroll;
@@ -137,43 +130,86 @@ h2 {
   height: 100vh;
 }
 .parallax_front {
+  overflow: hidden;
   transform: translateZ(20px) scale(0.6);
   position: absolute;
-  z-index: 400;
+  z-index: 800;
+  width: 100%;
+  min-width: 420px;
+  height: 502vh;
 }
 .parallax_mid {
-  transform: translateZ(10px) scale(0.8);
+  overflow: hidden;
+  transform: translateZ(10px) scale(0.805);
   position: absolute;
-  z-index: 300;
-  height: 600vh;
+  z-index: 700;
+  width: 100%;
+  min-width: 420px;
+  height: 456vh;
 }
 .parallax_back {
+  overflow: hidden;
   transform: translateZ(0);
   position: absolute;
-  z-index: 200;
-  height: 600vh;
+  z-index: 600;
+  height: 300vh;
+  width: 100%;
+  min-width: 420px;
+  height: 421vh;
 }
-.clip_wrap {
-  position: relative;
+/*--------------------------------------------*/
+/*HEADERS*/
+/*--------------------------------------------*/
+h2 {
+  display: inline-block;
+  margin: 0;
+  font-family: "museo-sans-display";
+  font-size: 9vw;
+  text-align: left;
+  line-height: .8em;
+  transform: rotate(0deg);
+  color: #0bf591;
+}
+h3 {
+  font-family: "museo-sans-display";
+  font-size: 3vw;
+  text-align: left;
+  line-height: 1.2em;
+}
+/*--------------------------------------------*/
+/*GENERICS*/
+/*--------------------------------------------*/
+.image_wrap {
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+}
+.container_wrap {
   overflow: hidden;
   width: 100vw;
   min-width: 420px;
-}
-#dino {
-  position: relative;
-  top: 40vh;
   height: 100vh;
+  position: absolute;
+}
+.container_wrap .container {
+  position: absolute;
+  top: 10vh;
+  left: -20%;
+  padding: 12vh 0 0 5vw;
+  height: 60vh;
+  width: 140%;
+}
+/*--------------------------------------------*/
+/*DINO*/
+/*--------------------------------------------*/
+#dino {
+  top: 60vh;
 }
 #dino .container {
   -ms-transform: rotate(3deg);
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
-  position: absolute;
-  top: 10vh;
-  left: -20%;
-  padding: 10vh;
-  height: 60vh;
-  width: 140vw;
   background: #ffffff;
 }
 #dino .container .text {
@@ -185,28 +221,40 @@ h2 {
   transform: rotate(-5deg);
 }
 #dino .container .text h3 {
-  font-family: "museo-sans-display";
-  font-size: 3vw;
-  text-align: left;
-  line-height: 1.2em;
   transform: rotate(-1deg);
   color: #767676;
 }
+.dino_image {
+  left: 35%;
+  top: 0vh;
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+.dino_image img {
+  display: block;
+  width: 35%;
+  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
+  position: absolute;
+}
+.dino_image img.front {
+  z-index: 200;
+  left: 25%;
+  top: 15vh;
+}
+.dino_image img.back {
+  top: 10vh;
+}
+/*--------------------------------------------*/
+/*TOPDOSH*/
+/*--------------------------------------------*/
 #topdosh {
-  position: relative;
-  top: 170vh;
-  height: 100vh;
+  top: 165vh;
 }
 #topdosh .container {
   -ms-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
   transform: rotate(-3deg);
-  position: absolute;
-  top: 10vh;
-  left: -20%;
-  padding: 10vh;
-  height: 60vh;
-  width: 140vw;
   background: #003470;
 }
 #topdosh .container .text {
@@ -217,28 +265,37 @@ h2 {
   transform: rotate(1deg);
 }
 #topdosh .container .text h3 {
-  font-family: "museo-sans-display";
-  font-size: 3vw;
-  text-align: left;
-  line-height: 1.2em;
   transform: rotate(0deg);
   color: #e2e2e2;
 }
+.topdosh_image {
+  left: 35%;
+  top: 142vh;
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+.topdosh_image img {
+  display: block;
+  width: 45%;
+  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
+}
+.topdosh_image img.front {
+  z-index: 200;
+  position: absolute;
+  left: 15%;
+  top: 15vh;
+}
+/*--------------------------------------------*/
+/*TWENTY*/
+/*--------------------------------------------*/
 #twenty {
-  position: relative;
-  top: 110vh;
-  height: 100vh;
+  top: 250vh;
 }
 #twenty .container {
   -ms-transform: rotate(3deg);
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
-  position: absolute;
-  top: 10vh;
-  left: -20%;
-  padding: 10vh;
-  height: 60vh;
-  width: 140vw;
   background: #ffffff;
 }
 #twenty .container .text {
@@ -253,90 +310,76 @@ h2 {
   font-size: 10vw;
 }
 #twenty .container .text h3 {
-  position: relative;
   top: -2vh;
-  font-family: "museo-sans-display";
-  font-size: 3vw;
-  text-align: left;
-  line-height: 1.2em;
   transform: rotate(-1deg);
   color: #767676;
 }
-.image_wrap {
-  position: relative;
-  z-index: 300;
-}
-.image_wrap.dino_image {
-  left: 30%;
-  top: 160vh;
+.twenty_image {
+  left: 35%;
+  top: 265vh;
   -ms-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
 }
-.image_wrap.dino_image img {
+.twenty_image img {
+  position: absolute;
   display: block;
-  float: left;
-  width: 30%;
   box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
 }
-.image_wrap.dino_image img.front {
+.twenty_image img.front {
   z-index: 200;
-  position: relative;
-  left: -5%;
-  top: 5vh;
+  width: 45%;
+  top: 18vh;
+  left: 5%;
 }
-.image_wrap.dino_image img.back {
+.twenty_image img.mid {
+  top: -5vh;
+  left: 20%;
   z-index: 100;
+  width: 35%;
 }
-.image_wrap.topdosh_image {
-  left: 30%;
-  top: 80vh;
-  -ms-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
-}
-.image_wrap.topdosh_image img {
-  display: block;
-  float: left;
-  width: 40%;
-  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
-}
-.image_wrap.topdosh_image img.front {
-  z-index: 200;
-  position: relative;
-  left: -20%;
-  top: 10vh;
-}
-.image_wrap.topdosh_image img.back {
-  z-index: 100;
-}
-.image_wrap.twenty_image {
-  left: -30%;
-  top: 465vh;
-  -ms-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
-}
-.image_wrap.twenty_image img {
-  display: block;
-  float: left;
-  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
-}
-.image_wrap.twenty_image img.front {
-  z-index: 200;
-  position: relative;
-  left: 10%;
-  top: -15vh;
-  width: 40%;
-}
-.image_wrap.twenty_image img.back {
+.twenty_image img.back {
   z-index: 100;
   width: 30%;
 }
-.image_wrap.twenty_image img.mid {
+/*--------------------------------------------*/
+/*+1Fitness*/
+/*--------------------------------------------*/
+#fitness {
+  top: 320vh;
+}
+#fitness .container {
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  background: #003470;
+}
+#fitness .container .text {
   position: relative;
-  z-index: 100;
-  left: 25%;
-  top: -80vh;
-  width: 32.5%;
+  left: 15%;
+  -ms-transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+#fitness .container .text h3 {
+  transform: rotate(0deg);
+  color: #e2e2e2;
+}
+.fitness_image {
+  left: 40%;
+  top: 405vh;
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+.fitness_image img {
+  display: block;
+  width: 45%;
+  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
+}
+.fitness_image img.front {
+  z-index: 200;
+  position: absolute;
+  left: 15%;
+  top: 15vh;
 }

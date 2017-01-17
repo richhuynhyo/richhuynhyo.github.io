@@ -121,14 +121,14 @@ function extrudedTextLite(element_id, depth, color) {
 }
 
 
+
+
 function initRayPolyHover()
 {
 	//var defaultPoly = $("#ray_poly_controller").find('[data-poly="8"]');
 	//rayPolyMouseOn(defaultPoly);
 	$("#ray_poly_controller").children().on("mouseover", function () { rayPolyMouseOn(this); });
 }
-
-
 function rayPolyMouseOn(poly)
 {
 	var polyData = parseInt($(poly).data("poly"));
@@ -164,3 +164,7 @@ function rayPolyMouseOn(poly)
 	}
 
 }
+
+
+
+
