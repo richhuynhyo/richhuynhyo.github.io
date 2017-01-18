@@ -1,5 +1,6 @@
-﻿@min-width:420px;
-@mid-width:720px;
+﻿@min-width:600px;
+@mid-width:800px;
+
 
 @black: #121212;
 @dark-gray:#363638;
@@ -15,7 +16,7 @@
 body
 {
 	background:@black;
-	overflow:hidden;
+	overflow-y:scroll;
 }
 .cf:after 
 {
@@ -31,7 +32,6 @@ header
 {
 	/*filter:grayscale(50%);*/
 	position:fixed;
-	left:-10px;
 	background:@red;
 	background-size:cover;
 	min-width:@min-width;
@@ -132,74 +132,6 @@ header
 }
 
 
-#about
-{
-	
-	top:100vh;
-	position:relative;
-	z-index:200;
-	height:10vh;
-	width:100vw;
-	min-width:@min-width;
-	background:@teal;
-	.container
-	{
-		padding:20px;
-
-	}
-}
-
-
-/*--------------------------------------------*/
-/*PARALLAX LAYERS*/
-/*--------------------------------------------*/
-
-
-
-#parallax
-{
-	perspective:50px;
-	overflow-y:scroll;
-	overflow-x:hidden;
-	width:100vw;
-	height:100vh;
-}
-.parallax_wrap
-{
-}
-.parallax_front
-{	
-	overflow:hidden;
-	transform: translateZ(20px) scale(.6);
-	position:absolute;
-	z-index:800;
-	width:100%;
-	min-width:@min-width;
-	height:502vh;	
-}
-.parallax_mid
-{	
-	overflow:hidden;
-	transform: translateZ(10px) scale(.805);
-	position:absolute;
-	z-index:700;
-	width:100%;
-	min-width:@min-width;
-	height:456vh;	
-}
-.parallax_back
-{
-	
-	overflow:hidden;
-	transform: translateZ(0);
-	position:absolute;
-	z-index:600;
-	height:300vh;	
-	width:100%;
-	min-width:@min-width;
-	height:421vh;	
-}
-
 /*--------------------------------------------*/
 /*HEADERS*/
 /*--------------------------------------------*/
@@ -213,6 +145,12 @@ h2
 	line-height:.8em;
 	transform:rotate(0deg);
 	color:@teal;
+
+		@media (max-width: @mid-width)
+		{
+			font-size:66px;
+		}
+	
 }
 h3
 {
@@ -220,6 +158,10 @@ h3
 	font-size:3vw;
 	text-align:left;
 	line-height:1.2em;
+			@media (max-width: @mid-width)
+		{
+			font-size:24px;
+		}
 }
 
 /*--------------------------------------------*/
@@ -231,8 +173,8 @@ h3
 {
 	position:absolute;
 	z-index:500;
-	width:100%;
-	height:100vh;
+	width:60%;
+	height:50vw;
 }
 
 
@@ -241,19 +183,47 @@ h3
 	overflow:hidden;
 	width:100vw;
 	min-width:@min-width;
-	height:100vh;
-	position:absolute;
+	height:70vw;
+	position:relative;
+		@media (max-width: @min-width)
+		{
+			height:420px;
+		}
 	.container
 	{
-		position: absolute;	
-		top:10vh;
-		left:-20%;
-		padding:12vh 0 0 5vw;
-		height:60vh;
+		position:absolute;	
+		top:5vw;
+		padding:2.5vw 20vw 0;
+		height:50vw;
 		width:140%;
+		margin-left:-15vw;
+		@media (max-width: @min-width)
+		{
+
+			top:30px;
+			margin-left:-90px;
+			padding:15px 120px 0;
+			height:300px;
+		}
 	}
 }
 
+/*--------------------------------------------*/
+/*WORK*/
+/*--------------------------------------------*/
+
+
+
+#work
+{
+	overflow:hidden;
+	position:absolute;
+	z-index:200;
+	width:100%;
+	min-width:@min-width;
+	height:280vw;	
+	top:100vh;
+}
 
 
 /*--------------------------------------------*/
@@ -261,7 +231,6 @@ h3
 /*--------------------------------------------*/
 #dino
 {
-	top:60vh;
 	.container
 	{		
 		 -ms-transform: rotate(3deg); 
@@ -271,8 +240,6 @@ h3
 		.text
 		{
 			position:relative;
-			left:15%;
-			top:-10vh;
 			-ms-transform: rotate(-5deg); 
 			-webkit-transform: rotate(-5deg); 
 			transform: rotate(-5deg);
@@ -287,30 +254,27 @@ h3
 }
 .dino_image
 {
-	left:35%;
-	top:0vh;
 	-ms-transform: rotate(-6deg); 
 	-webkit-transform: rotate(-6deg); 
 	transform: rotate(-6deg);
-	@media (orientation:portrait)
-	{	
-
+	top:18vw;
+	left:35%;
+	@media (max-width: @min-width)
+	{
+		top:108px;
+		left:210px;
 	}
 	img
 	{
 		display:block;
-		width:35%;
+		width:45%;
 		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
 		position:absolute;
 		&.front
 		{
 			z-index:200;
-			left:25%;
-			top:15vh;
-		}
-		&.back
-		{
-			top:10vh;
+			left:40%;
+			top:5vw;
 		}
 	}
 }
@@ -320,7 +284,6 @@ h3
 /*--------------------------------------------*/
 #topdosh
 {
-	top:165vh;
 	.container
 	{		
 		 -ms-transform: rotate(-3deg); 
@@ -329,8 +292,8 @@ h3
 		background:@navy;	
 		.text
 		{
+			top:3vw;
 			position:relative;
-			left:15%;
 			-ms-transform: rotate(1deg); 
 			-webkit-transform: rotate(1deg); 
 			transform: rotate(1deg);
@@ -345,22 +308,32 @@ h3
 }
 .topdosh_image
 {	
-	left:35%;
-	top:142vh;
+	left:32%;
+	top:90vw;
 	-ms-transform: rotate(-6deg); 
 	-webkit-transform: rotate(-6deg); 
 	transform: rotate(-6deg);
+	@media (max-width: @mid-width)
+	{
+		left:240px;
+	}
+	@media (max-width: @min-width)
+	{
+		top:528px;
+		left:240px;
+	}
 	img
 	{
 		display:block;
-		width:45%;
-		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+		width:70%;
+		max-width:850px;
+		box-shadow:rgba(20, 20, 20, 0.7) 0 5px 10px;
 		&.front
 		{
 			z-index:200;
 			position:absolute;
-			left:15%;
-			top:15vh;
+			left:20%;
+			top:10vw;
 		}
 	}
 }
@@ -371,7 +344,6 @@ h3
 /*--------------------------------------------*/
 #twenty
 {
-	top:250vh;
 	.container
 	{		
 		 -ms-transform: rotate(3deg); 
@@ -381,18 +353,12 @@ h3
 		.text
 		{
 			position:relative;
-			left:15%;
-			top:-10vh;
 			-ms-transform: rotate(-5deg); 
 			-webkit-transform: rotate(-5deg); 
 			transform: rotate(-5deg);
-			h2
-			{
-				font-size:10vw;
-			}
 			h3
 			{
-				top:-2vh;
+				position:relative;
 				transform:rotate(-1deg);
 				color:@light-gray;
 			}
@@ -402,38 +368,28 @@ h3
 }
 .twenty_image
 {
-	left:35%;
-	top:265vh;
+	left:38%;
+	top:155vw;
 	-ms-transform: rotate(-6deg); 
 	-webkit-transform: rotate(-6deg); 
 	transform: rotate(-6deg);
-	@media (orientation:portrait)
-	{	
-
+	@media (max-width: @min-width)
+	{
+		top:938px;
+		left:228px;
 	}
 	img
 	{
-		position:absolute;	
 		display:block;
-		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
+		width:70%;
+		max-width:850px;
+		box-shadow:rgba(20, 20, 20, 0.7) 0 5px 10px;
 		&.front
 		{
-			z-index:200;			
-			width:45%;
-			top:18vh;
-			left:5%;	
-		}		
-		&.mid
-		{			
-			top:-5vh;	
-			left:20%;	
-			z-index:100;	
-			width:35%;
-		}
-		&.back
-		{			
-			z-index:100;			
-			width:30%;
+			z-index:200;
+			position:absolute;
+			left:20%;
+			top:15vw;
 		}
 	}
 }
@@ -443,7 +399,6 @@ h3
 /*--------------------------------------------*/
 #fitness
 {
-	top:320vh;
 	.container
 	{		
 		 -ms-transform: rotate(-3deg); 
@@ -452,8 +407,8 @@ h3
 		background:@navy;	
 		.text
 		{
+			top:2.5vw;
 			position:relative;
-			left:15%;
 			-ms-transform: rotate(1deg); 
 			-webkit-transform: rotate(1deg); 
 			transform: rotate(1deg);
@@ -468,22 +423,34 @@ h3
 }
 .fitness_image
 {	
-	left:40%;
-	top:405vh;
+	left:42.5%;
+	top:232vw;
 	-ms-transform: rotate(-6deg); 
 	-webkit-transform: rotate(-6deg); 
 	transform: rotate(-6deg);
+	@media (max-width: @min-width)
+	{
+		top:1404px;
+		left:255px;
+	}
 	img
 	{
 		display:block;
-		width:45%;
-		box-shadow:rgba(40, 40, 40, 0.7) 0 5px 10px;
-		&.front
-		{
-			z-index:200;
-			position:absolute;
-			left:15%;
-			top:15vh;
-		}
+		width:85%;
+		max-width:850px;
+		box-shadow:rgba(20, 20, 20, 0.7) 0 5px 10px;
+	}
+}
+
+
+footer
+{
+	position:absolute;
+	bottom:0;
+	
+	.container
+	{
+		background:@white;
+		width:100vw;
 	}
 }

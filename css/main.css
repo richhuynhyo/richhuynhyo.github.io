@@ -1,6 +1,6 @@
 ﻿body {
   background: #121212;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 .cf:after {
   content: "";
@@ -13,10 +13,9 @@
 header {
   /*filter:grayscale(50%);*/
   position: fixed;
-  left: -10px;
   background: #e90b02;
   background-size: cover;
-  min-width: 420px;
+  min-width: 600px;
   width: 100vw;
   z-index: 0;
 }
@@ -43,13 +42,13 @@ header h1 {
     top: 5vh;
   }
 }
-@media (orientation: portrait) and (min-width: 420px) {
+@media (orientation: portrait) and (min-width: 600px) {
   header h1 {
     top: 3vh;
     font-size: 16vw;
   }
 }
-@media (min-width: 420px) and (orientation: landscape) {
+@media (min-width: 600px) and (orientation: landscape) {
   header h1 {
     font-size: 14vw;
   }
@@ -63,7 +62,7 @@ header h1 #title {
   z-index: 180;
   height: 100vh;
   width: 100vw;
-  min-width: 420px;
+  min-width: 600px;
 }
 #rad_gradient {
   position: absolute;
@@ -71,7 +70,7 @@ header h1 #title {
   z-index: 100;
   height: 100vh;
   width: 100vw;
-  min-width: 420px;
+  min-width: 600px;
   /*background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0vw, rgba(255,255,255,0) 80%);*/
   /* FF3.6-15 */
   /*background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);*/
@@ -86,7 +85,7 @@ header h1 #title {
   top: 0;
   display: block;
   width: 100%;
-  min-width: 420px;
+  min-width: 600px;
   height: 100vh;
   z-index: 199;
 }
@@ -99,63 +98,13 @@ header h1 #title {
   top: 0;
   display: block;
   width: 100vw;
-  min-width: 420px;
+  min-width: 600px;
   height: 100vh;
   z-index: 110;
 }
 #ray_poly polygon {
   fill: #F2F021;
   fill-opacity: 0.4;
-}
-#about {
-  top: 100vh;
-  position: relative;
-  z-index: 200;
-  height: 10vh;
-  width: 100vw;
-  min-width: 420px;
-  background: #0bf591;
-}
-#about .container {
-  padding: 20px;
-}
-/*--------------------------------------------*/
-/*PARALLAX LAYERS*/
-/*--------------------------------------------*/
-#parallax {
-  perspective: 50px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
-}
-.parallax_front {
-  overflow: hidden;
-  transform: translateZ(20px) scale(0.6);
-  position: absolute;
-  z-index: 800;
-  width: 100%;
-  min-width: 420px;
-  height: 502vh;
-}
-.parallax_mid {
-  overflow: hidden;
-  transform: translateZ(10px) scale(0.805);
-  position: absolute;
-  z-index: 700;
-  width: 100%;
-  min-width: 420px;
-  height: 456vh;
-}
-.parallax_back {
-  overflow: hidden;
-  transform: translateZ(0);
-  position: absolute;
-  z-index: 600;
-  height: 300vh;
-  width: 100%;
-  min-width: 420px;
-  height: 421vh;
 }
 /*--------------------------------------------*/
 /*HEADERS*/
@@ -170,11 +119,21 @@ h2 {
   transform: rotate(0deg);
   color: #0bf591;
 }
+@media (max-width: 800px) {
+  h2 {
+    font-size: 66px;
+  }
+}
 h3 {
   font-family: "museo-sans-display";
   font-size: 3vw;
   text-align: left;
   line-height: 1.2em;
+}
+@media (max-width: 800px) {
+  h3 {
+    font-size: 24px;
+  }
 }
 /*--------------------------------------------*/
 /*GENERICS*/
@@ -182,30 +141,52 @@ h3 {
 .image_wrap {
   position: absolute;
   z-index: 500;
-  width: 100%;
-  height: 100vh;
+  width: 60%;
+  height: 50vw;
 }
 .container_wrap {
   overflow: hidden;
   width: 100vw;
-  min-width: 420px;
-  height: 100vh;
-  position: absolute;
+  min-width: 600px;
+  height: 70vw;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .container_wrap {
+    height: 420px;
+  }
 }
 .container_wrap .container {
   position: absolute;
-  top: 10vh;
-  left: -20%;
-  padding: 12vh 0 0 5vw;
-  height: 60vh;
+  top: 5vw;
+  padding: 2.5vw 20vw 0;
+  height: 50vw;
   width: 140%;
+  margin-left: -15vw;
+}
+@media (max-width: 600px) {
+  .container_wrap .container {
+    top: 30px;
+    margin-left: -90px;
+    padding: 15px 120px 0;
+    height: 300px;
+  }
+}
+/*--------------------------------------------*/
+/*WORK*/
+/*--------------------------------------------*/
+#work {
+  overflow: hidden;
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  min-width: 600px;
+  height: 280vw;
+  top: 100vh;
 }
 /*--------------------------------------------*/
 /*DINO*/
 /*--------------------------------------------*/
-#dino {
-  top: 60vh;
-}
 #dino .container {
   -ms-transform: rotate(3deg);
   -webkit-transform: rotate(3deg);
@@ -214,8 +195,6 @@ h3 {
 }
 #dino .container .text {
   position: relative;
-  left: 15%;
-  top: -10vh;
   -ms-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
   transform: rotate(-5deg);
@@ -225,32 +204,32 @@ h3 {
   color: #767676;
 }
 .dino_image {
-  left: 35%;
-  top: 0vh;
   -ms-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
+  top: 18vw;
+  left: 35%;
+}
+@media (max-width: 600px) {
+  .dino_image {
+    top: 108px;
+    left: 210px;
+  }
 }
 .dino_image img {
   display: block;
-  width: 35%;
+  width: 45%;
   box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
   position: absolute;
 }
 .dino_image img.front {
   z-index: 200;
-  left: 25%;
-  top: 15vh;
-}
-.dino_image img.back {
-  top: 10vh;
+  left: 40%;
+  top: 5vw;
 }
 /*--------------------------------------------*/
 /*TOPDOSH*/
 /*--------------------------------------------*/
-#topdosh {
-  top: 165vh;
-}
 #topdosh .container {
   -ms-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
@@ -258,8 +237,8 @@ h3 {
   background: #003470;
 }
 #topdosh .container .text {
+  top: 3vw;
   position: relative;
-  left: 15%;
   -ms-transform: rotate(1deg);
   -webkit-transform: rotate(1deg);
   transform: rotate(1deg);
@@ -269,29 +248,38 @@ h3 {
   color: #e2e2e2;
 }
 .topdosh_image {
-  left: 35%;
-  top: 142vh;
+  left: 32%;
+  top: 90vw;
   -ms-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
 }
+@media (max-width: 800px) {
+  .topdosh_image {
+    left: 240px;
+  }
+}
+@media (max-width: 600px) {
+  .topdosh_image {
+    top: 528px;
+    left: 240px;
+  }
+}
 .topdosh_image img {
   display: block;
-  width: 45%;
-  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
+  width: 70%;
+  max-width: 850px;
+  box-shadow: rgba(20, 20, 20, 0.7) 0 5px 10px;
 }
 .topdosh_image img.front {
   z-index: 200;
   position: absolute;
-  left: 15%;
-  top: 15vh;
+  left: 20%;
+  top: 10vw;
 }
 /*--------------------------------------------*/
 /*TWENTY*/
 /*--------------------------------------------*/
-#twenty {
-  top: 250vh;
-}
 #twenty .container {
   -ms-transform: rotate(3deg);
   -webkit-transform: rotate(3deg);
@@ -300,54 +288,43 @@ h3 {
 }
 #twenty .container .text {
   position: relative;
-  left: 15%;
-  top: -10vh;
   -ms-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
   transform: rotate(-5deg);
 }
-#twenty .container .text h2 {
-  font-size: 10vw;
-}
 #twenty .container .text h3 {
-  top: -2vh;
+  position: relative;
   transform: rotate(-1deg);
   color: #767676;
 }
 .twenty_image {
-  left: 35%;
-  top: 265vh;
+  left: 38%;
+  top: 155vw;
   -ms-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
 }
+@media (max-width: 600px) {
+  .twenty_image {
+    top: 938px;
+    left: 228px;
+  }
+}
 .twenty_image img {
-  position: absolute;
   display: block;
-  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
+  width: 70%;
+  max-width: 850px;
+  box-shadow: rgba(20, 20, 20, 0.7) 0 5px 10px;
 }
 .twenty_image img.front {
   z-index: 200;
-  width: 45%;
-  top: 18vh;
-  left: 5%;
-}
-.twenty_image img.mid {
-  top: -5vh;
+  position: absolute;
   left: 20%;
-  z-index: 100;
-  width: 35%;
-}
-.twenty_image img.back {
-  z-index: 100;
-  width: 30%;
+  top: 15vw;
 }
 /*--------------------------------------------*/
 /*+1Fitness*/
 /*--------------------------------------------*/
-#fitness {
-  top: 320vh;
-}
 #fitness .container {
   -ms-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
@@ -355,8 +332,8 @@ h3 {
   background: #003470;
 }
 #fitness .container .text {
+  top: 2.5vw;
   position: relative;
-  left: 15%;
   -ms-transform: rotate(1deg);
   -webkit-transform: rotate(1deg);
   transform: rotate(1deg);
@@ -366,20 +343,29 @@ h3 {
   color: #e2e2e2;
 }
 .fitness_image {
-  left: 40%;
-  top: 405vh;
+  left: 42.5%;
+  top: 232vw;
   -ms-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
 }
+@media (max-width: 600px) {
+  .fitness_image {
+    top: 1404px;
+    left: 255px;
+  }
+}
 .fitness_image img {
   display: block;
-  width: 45%;
-  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
+  width: 85%;
+  max-width: 850px;
+  box-shadow: rgba(20, 20, 20, 0.7) 0 5px 10px;
 }
-.fitness_image img.front {
-  z-index: 200;
+footer {
   position: absolute;
-  left: 15%;
-  top: 15vh;
+  bottom: 0;
+}
+footer .container {
+  background: #ffffff;
+  width: 100vw;
 }

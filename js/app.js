@@ -11,20 +11,22 @@ $(document).ready(function () {
 	//extrudedText(element_id, depth, rgb, stretch, shadow)
 	extrudedText("title", 40, [242, 240, 32], .35, 1);
 	extrudedText("name", 45, [242, 240, 32], .35, 1);
-	headerFade();
 
 	//Load Model
 	updateWrapWidthHeight();
 	initModel();
 	animateModel();
+	headerFade();
 
 	//ADD EVENT LISTENERS
-	document.getElementById("parallax").addEventListener("scroll", onScroll, false);
+	initRayPolyHover()
+	window.addEventListener("scroll", onScroll, false);
 	window.addEventListener('resize', onWindowResize, false);
 	window.addEventListener('mousemove', onMouseMove, false);
 
 });
 
+//Looking for more efficent handler
 function onScroll()
 {
 	headerFade();
@@ -43,7 +45,7 @@ function onWindowResize()
 
 function headerFade()
 {
-	var pos = $("#parallax").scrollTop();
+	var pos = $(window).scrollTop();
 	if (pos < WRAP_HEIGHT)
 	{
 		var grayPercent = Math.ceil((pos / WRAP_HEIGHT) * 100);
