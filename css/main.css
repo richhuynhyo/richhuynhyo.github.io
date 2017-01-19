@@ -13,7 +13,7 @@
 header {
   /*filter:grayscale(50%);*/
   position: fixed;
-  background: #e90b02;
+  background: #61d7f2;
   background-size: cover;
   min-width: 600px;
   width: 100vw;
@@ -30,27 +30,24 @@ header h1 {
   position: absolute;
   width: 100vw;
   font-family: "ff-good-headline-web-pro-con", sans-serif;
-  font-size: 68px;
+  font-size: 14vw;
   text-align: center;
   letter-spacing: -0.02em;
   line-height: .5em;
   vertical-align: middle;
   color: #e90b02;
+  opacity: 0.95;
+  min-width: 600px;
+  filter: saturate(90%) brightness(120%) contrast(80%);
 }
-@media (orientation: portrait) {
+@media (max-width: 800px) {
   header h1 {
-    top: 5vh;
+    font-size: 112px;
   }
 }
-@media (orientation: portrait) and (min-width: 600px) {
+@media (max-width: 800px) and (orientation: portrait) {
   header h1 {
-    top: 3vh;
-    font-size: 16vw;
-  }
-}
-@media (min-width: 600px) and (orientation: landscape) {
-  header h1 {
-    font-size: 14vw;
+    top: 2.5vh;
   }
 }
 header h1 #title {
@@ -63,6 +60,7 @@ header h1 #title {
   height: 100vh;
   width: 100vw;
   min-width: 600px;
+  filter: saturate(90%) brightness(125%) contrast(85%);
 }
 #rad_gradient {
   position: absolute;
@@ -75,8 +73,7 @@ header h1 #title {
   /* FF3.6-15 */
   /*background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);*/
   /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at bottom, #14ed76 0%, rgba(255, 255, 255, 0) 80%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: radial-gradient(ellipse at bottom, #ffffff 20%, rgba(255, 255, 255, 0) 80%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
@@ -103,7 +100,7 @@ header h1 #title {
   z-index: 110;
 }
 #ray_poly polygon {
-  fill: #F2F021;
+  fill: #ffffff;
   fill-opacity: 0.4;
 }
 /*--------------------------------------------*/
@@ -124,6 +121,11 @@ h2 {
     font-size: 66px;
   }
 }
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 126px;
+  }
+}
 h3 {
   font-family: "museo-sans-display";
   font-size: 3vw;
@@ -135,15 +137,14 @@ h3 {
     font-size: 24px;
   }
 }
+@media (min-width: 1400px) {
+  h3 {
+    font-size: 42px;
+  }
+}
 /*--------------------------------------------*/
 /*GENERICS*/
 /*--------------------------------------------*/
-.image_wrap {
-  position: absolute;
-  z-index: 500;
-  width: 60%;
-  height: 50vw;
-}
 .container_wrap {
   overflow: hidden;
   width: 100vw;
@@ -154,6 +155,11 @@ h3 {
 @media (max-width: 600px) {
   .container_wrap {
     height: 420px;
+  }
+}
+@media (min-width: 1400px) {
+  .container_wrap {
+    height: 980px;
   }
 }
 .container_wrap .container {
@@ -172,17 +178,55 @@ h3 {
     height: 300px;
   }
 }
+@media (min-width: 1400px) {
+  .container_wrap .container {
+    top: 70px;
+    height: 700px;
+    width: 1960px;
+    padding: 35px 20vw 0;
+    margin-left: -210px;
+  }
+}
+.image_wrap {
+  position: absolute;
+  z-index: 500;
+  width: 60%;
+  height: 50vw;
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+@media (min-width: 1400px) {
+  .image_wrap {
+    width: 908px;
+  }
+}
+.image_wrap img {
+  display: block;
+  position: absolute;
+  box-shadow: rgba(35, 35, 35, 0.7) 0 4px 8px;
+}
 /*--------------------------------------------*/
 /*WORK*/
 /*--------------------------------------------*/
 #work {
   overflow: hidden;
-  position: absolute;
+  position: relative;
   z-index: 200;
   width: 100%;
   min-width: 600px;
   height: 280vw;
   top: 100vh;
+}
+@media (max-width: 600px) {
+  #work {
+    height: 1680px;
+  }
+}
+@media (min-width: 1400px) {
+  #work {
+    height: 3920px;
+  }
 }
 /*--------------------------------------------*/
 /*DINO*/
@@ -204,11 +248,8 @@ h3 {
   color: #767676;
 }
 .dino_image {
-  -ms-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
+  left: 32%;
   top: 18vw;
-  left: 35%;
 }
 @media (max-width: 600px) {
   .dino_image {
@@ -216,11 +257,13 @@ h3 {
     left: 210px;
   }
 }
+@media (min-width: 1400px) {
+  .dino_image {
+    top: 252px;
+  }
+}
 .dino_image img {
-  display: block;
   width: 45%;
-  box-shadow: rgba(40, 40, 40, 0.7) 0 5px 10px;
-  position: absolute;
 }
 .dino_image img.front {
   z-index: 200;
@@ -248,32 +291,25 @@ h3 {
   color: #e2e2e2;
 }
 .topdosh_image {
-  left: 32%;
-  top: 90vw;
-  -ms-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
+  left: 35%;
+  top: 89vw;
 }
 @media (max-width: 800px) {
   .topdosh_image {
     left: 240px;
   }
 }
-@media (max-width: 600px) {
+@media (min-width: 1400px) {
   .topdosh_image {
-    top: 528px;
-    left: 240px;
+    top: 1240px;
   }
 }
 .topdosh_image img {
-  display: block;
   width: 70%;
   max-width: 850px;
-  box-shadow: rgba(20, 20, 20, 0.7) 0 5px 10px;
 }
 .topdosh_image img.front {
   z-index: 200;
-  position: absolute;
   left: 20%;
   top: 10vw;
 }
@@ -298,11 +334,8 @@ h3 {
   color: #767676;
 }
 .twenty_image {
-  left: 38%;
-  top: 155vw;
-  -ms-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
+  left: 33%;
+  top: 154vw;
 }
 @media (max-width: 600px) {
   .twenty_image {
@@ -310,17 +343,19 @@ h3 {
     left: 228px;
   }
 }
+@media (min-width: 1400px) {
+  .twenty_image {
+    top: 2156px;
+  }
+}
 .twenty_image img {
-  display: block;
   width: 70%;
   max-width: 850px;
-  box-shadow: rgba(20, 20, 20, 0.7) 0 5px 10px;
 }
 .twenty_image img.front {
+  top: 20%;
   z-index: 200;
-  position: absolute;
-  left: 20%;
-  top: 15vw;
+  right: 0%;
 }
 /*--------------------------------------------*/
 /*+1Fitness*/
@@ -343,11 +378,8 @@ h3 {
   color: #e2e2e2;
 }
 .fitness_image {
-  left: 42.5%;
-  top: 232vw;
-  -ms-transform: rotate(-6deg);
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
+  left: 38%;
+  top: 230vw;
 }
 @media (max-width: 600px) {
   .fitness_image {
@@ -355,17 +387,36 @@ h3 {
     left: 255px;
   }
 }
+@media (min-width: 1400px) {
+  .fitness_image {
+    top: 3220px;
+  }
+}
 .fitness_image img {
-  display: block;
   width: 85%;
   max-width: 850px;
-  box-shadow: rgba(20, 20, 20, 0.7) 0 5px 10px;
 }
 footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  z-index: 500;
+  top: 100vh;
 }
 footer .container {
   background: #ffffff;
   width: 100vw;
+}
+footer .container nav {
+  padding: 20px;
+  text-align: center;
+}
+footer .container nav a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
+}
+footer .container nav a svg {
+  width: 120px;
+}
+footer .container nav a svg:hover {
+  opacity: 0.7;
 }
