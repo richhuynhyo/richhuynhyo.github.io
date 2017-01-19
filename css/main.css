@@ -403,7 +403,8 @@ footer {
 }
 footer .container {
   background: #ffffff;
-  width: 100vw;
+  width: 100%;
+  min-width: 600px;
 }
 footer .container nav {
   padding: 20px 0;
