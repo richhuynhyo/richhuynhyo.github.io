@@ -406,7 +406,7 @@ footer .container {
   width: 100vw;
 }
 footer .container nav {
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
 }
 footer .container nav a {
