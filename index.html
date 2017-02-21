@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta name="description" content="Portfolio of Richard Huynh: Designer/Developer/Multimedia Artist.">
+	<meta name="description" content="Richard Huynh: Designer/Developer">
 	<meta content='user-scalable=0' name='viewport' />
 	<title>Richard Huynh</title>
 
 	<!--Vendor-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	<link href="css/vendor/normalize.css" rel="stylesheet" />
+	<link href="css/vendor/font-awesome.css" rel="stylesheet" />
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/vendor/hammer-time.min.js"></script>
 
 	<!--Main-->
 	<link rel="stylesheet" href="css/main.min.css">
@@ -16,25 +17,88 @@
 	<!--Basic-->
 	<script src="https://use.typekit.net/zbq4daq.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	<script src="js/vendor/jquery.min.js"></script>
-	<!--Three JS-->
-	<script src="js/vendor/three/three.min.js"></script>
-	<script src="js/vendor/three/tween.min.js"></script>
-
-	<!--Page JS-->
-	<script src="js/renderModel.js"></script>
-	<script src="js/animate.js"></script>
 	<script src="js/app.js"></script>
 
 </head>
-<body id="body">
-	<header>
-		<div id="mech_wrap">
+<body>
+	<header class="outer">
+		<div class="inner">
+			<h1>
+				Richard Huynh
+			</h1>
+			<nav class="nav-social">
+				<a href="https://www.linkedin.com/in/richhuynh">
+					<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+				</a>
+				<a href="https://github.com/richhyaa">
+					<i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+				</a>
+			</nav>
 		</div>
-		<div class="container">
-		</div>
-		<div id="rad_gradient"></div>
-	
+
 	</header>
+
+
+	<section id="code" class="outer">
+		<div class="inner">
+			<article class="project">
+				<h1>Spelltracker</h1>
+				<p class="keywords">
+					Javascript, jQuery, js-Cookie
+				</p>
+				<p>
+					Spelltracker is used to help Dungeons and Dragons 5E players keep track of their in-game spell resources.
+				</p>
+				<nav>
+					<a target="_blank" href="https://github.com/richhyaa/spelltracker">Git</a>
+					<a target="_blank" href="http://richhuynh.com/spelltracker/">Demo</a>
+				</nav>
+			</article>
+			<article class="project">
+				<h1>Wiggle and Shake</h1>
+				<p class="keywords">
+					SVG, Javascript, jQuery
+				</p>
+				<p>
+					This is an text and vector animation experiment.
+				</p>
+				<nav>
+					<a target="_blank" href="https://github.com/richhyaa/wiggle-shake">Git</a>
+					<a target="_blank" href="http://richhuynh.com/wiggle-shake/">Demo</a>
+				</nav>
+			</article>
+			<article class="project">
+				<h1>Big Robot</h1>
+				<p class="keywords">
+					SVG, Javascript, jQuery, Three.js, Maya
+				</p>
+				<p>
+					This project was an adventure in 3d Modeling and Web GL.
+				</p>
+				<nav>
+					<a target="_blank" href="https://github.com/richhyaa/big-robot">Git</a>
+					<a target="_blank" href="http://richhuynh.com/big-robot/">Demo</a>
+				</nav>
+			</article>
+			<article class="project">
+				<h1>Psuedo-CMS</h1>
+				<p class="keywords">
+					XML, AJAX, Javascript, jQuery
+				</p>
+				<p>
+					This was an experiment in making a template system that would enable me quickly update and display a portfolio of creative projects. 
+				</p>
+				<nav>
+					<a target="_blank" href="https://github.com/richhyaa/psuedo-cms">Git</a>
+					<a target="_blank" href="http://richhuynh.com/psuedo-cms/">Demo</a>
+				</nav>
+			</article>
+		</div>
+	</section>
+
+	<section id="design" class="outer">
+		<div class="inner">
+		</div>
+	</section>
 </body>
 </html>
