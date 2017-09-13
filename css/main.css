@@ -4,11 +4,6 @@
   background: #e0e0e0;
   overflow-y: scroll;
 }
-@media (max-device-width: 480px) {
-  body {
-    zoom: 0.6;
-  }
-}
 .cf:after {
   content: "";
   display: table;
