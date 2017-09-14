@@ -9,6 +9,9 @@
     zoom: .6;
   }
 }
+.asd {
+  color: red;
+}
 .cf:after {
   content: "";
   display: table;
