@@ -21,4 +21,5 @@ function initializeGallery()
 {
 	$('#work_gallery').lightGallery();
 
+	$('#featured_photo_gallery').lightGallery();
 }
