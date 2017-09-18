@@ -11,7 +11,7 @@
 
 @light-gray:#e0e0e0;
 
-@off-white:#f0f0f0;
+@off-white:#f4f4f4;
 @white:#f9f9f9;
 
 
@@ -21,7 +21,7 @@ body
 {
 	font-family: "mr-eaves-xl-modern";
 	color:@black;
-	background:@light-gray;
+	background:@off-white;
 	overflow-y:scroll;
 
 	@media (max-width:480px)
@@ -29,11 +29,6 @@ body
 		font-size:1.5em;
 		zoom:.65;
 	}
-}
-
-p, li
-{
-	font-size:1.5em;
 }
 
 
@@ -130,10 +125,7 @@ h2
 		width:50%;
 		cursor:zoom-in;	
 		margin:0;
-		@media (min-width:@mid-width)
-		{
-			width:25%;
-		}
+
 
 	}
 	img
@@ -146,6 +138,17 @@ h2
 			-webkit-transition: opacity 0.5s ease 0s;
 			-o-transition: opacity 0.15s ease 0s;
 			transition: opacity 0.15s ease 0s;
+		}
+	}
+}
+
+.gallery-4
+{
+	li
+	{
+		@media (min-width:@mid-width)
+		{
+			width:25%;
 		}
 	}
 }
@@ -238,7 +241,6 @@ footer
 {
 	.inner
 	{
-		border-top:1px solid @gray;
 		padding:0 40px;
 	}
 	.section_header_container
@@ -295,13 +297,39 @@ footer
 /*--------------------------------------------*/
 #page_process
 {
+	
+	p, li
+	{
+		font-size:1.12em;
+	}
+	p
+	{
+		margin:60px 0;
+	}
 
+}
 
+#process_hero
+{
+	background-color:@black;
+	background-image: url('../img/reach_brochure/brochure_top.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+	min-width:@min-width;
+	img
+	{
+		display:block;
+		width:100%;
+		max-height:500px;
+		visibility:hidden;
+	}
 }
 
 #process_main
 {
-		background:@black;
+	background:@black;
+	padding-top:80px;
 }
 #background_display{
 	height:80vh;
@@ -311,37 +339,62 @@ footer
 	display:block;
 	max-width:100%;
 }
-
-.process_outer
+.process_section
 {
-	margin-bottom:120px;
-	max-width:800px;
-	@media (min-width:@mid-width)
+	background-image: url('../img/bg_line.jpg');
+	background-repeat:repeat-y;
+	background-position:center;
+	margin-bottom:160px;
+	.process_section_title
 	{
+		text-align:center;
+		h2
+		{
+			display:inline-block;
+			background:@white;
+			font-weight:300;
+			letter-spacing:1px;
+			font-size:1em;
+			margin:0;
+		}
 	}
 }
 
-.process_inner
+
+.process_outer
 {
-	background:@white;
+	width:100%;
+	max-width:800px;
+	margin-top:80px;
+	.process_inner
+	{
+		background:@off-white;
+		box-shadow:rgba(0, 0, 0, 0.5) 0px 5px 30px;
+	}
 }
+
 .process_header
 {
-	h2
+	letter-spacing:1px;
+	font-size:1em;
+	font-weight:800;
+	.process_step
 	{
 		float:left;
 		padding:20px;
 		background:@dark-gray;
 		color:@white;
 	}
-	h3
+	.process_title
 	{
 		width:50%;
 		float:right;
 		text-align:right;
-		padding-right:20px;
+		margin:20px;
 	}
 }
+
+
 .process_content
 {
 	padding: 0 40px 80px;

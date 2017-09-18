@@ -1,7 +1,7 @@
 ﻿body {
   font-family: "mr-eaves-xl-modern";
   color: #181818;
-  background: #e0e0e0;
+  background: #f4f4f4;
   overflow-y: scroll;
 }
 @media (max-width: 480px) {
@@ -9,10 +9,6 @@
     font-size: 1.5em;
     zoom: .65;
   }
-}
-p,
-li {
-  font-size: 1.5em;
 }
 .cf:after {
   content: "";
@@ -27,7 +23,7 @@ li {
   height: 100vh;
   position: fixed;
   top: 0;
-  background: #f0f0f0;
+  background: #f4f4f4;
 }
 /*--------------------------------------------*/
 /*HEADER*/
@@ -78,11 +74,6 @@ h1 {
   cursor: zoom-in;
   margin: 0;
 }
-@media (min-width: 960px) {
-  .gallery li {
-    width: 25%;
-  }
-}
 .gallery img {
   display: block;
   width: 100%;
@@ -92,6 +83,11 @@ h1 {
   -webkit-transition: opacity 0.5s ease 0s;
   -o-transition: opacity 0.15s ease 0s;
   transition: opacity 0.15s ease 0s;
+}
+@media (min-width: 960px) {
+  .gallery-4 li {
+    width: 25%;
+  }
 }
 /*--------------------------------------------*/
 /*featured*/
@@ -164,7 +160,6 @@ h1 {
 /*footer*/
 /*--------------------------------------------*/
 footer .inner {
-  border-top: 1px solid #bababa;
   padding: 0 40px;
 }
 footer .section_header_left {
@@ -201,8 +196,30 @@ footer .nav-social a i {
 /*--------------------------------------------*/
 /*page_process*/
 /*--------------------------------------------*/
+#page_process p,
+#page_process li {
+  font-size: 1.12em;
+}
+#page_process p {
+  margin: 60px 0;
+}
+#process_hero {
+  background-color: #181818;
+  background-image: url('../img/reach_brochure/brochure_top.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 480px;
+}
+#process_hero img {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  visibility: hidden;
+}
 #process_main {
   background: #181818;
+  padding-top: 80px;
 }
 #background_display {
   height: 80vh;
@@ -211,24 +228,48 @@ footer .nav-social a i {
   display: block;
   max-width: 100%;
 }
-.process_outer {
-  margin-bottom: 120px;
-  max-width: 800px;
+.process_section {
+  background-image: url('../img/bg_line.jpg');
+  background-repeat: repeat-y;
+  background-position: center;
+  margin-bottom: 160px;
 }
-.process_inner {
+.process_section .process_section_title {
+  text-align: center;
+}
+.process_section .process_section_title h2 {
+  display: inline-block;
   background: #f9f9f9;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1em;
+  margin: 0;
 }
-.process_header h2 {
+.process_outer {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 80px;
+}
+.process_outer .process_inner {
+  background: #f4f4f4;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 30px;
+}
+.process_header {
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: 800;
+}
+.process_header .process_step {
   float: left;
   padding: 20px;
   background: #242424;
   color: #f9f9f9;
 }
-.process_header h3 {
+.process_header .process_title {
   width: 50%;
   float: right;
   text-align: right;
-  padding-right: 20px;
+  margin: 20px;
 }
 .process_content {
   padding: 0 40px 80px;
