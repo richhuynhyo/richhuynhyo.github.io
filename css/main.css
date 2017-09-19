@@ -1,7 +1,7 @@
 ﻿body {
   font-family: "mr-eaves-xl-modern";
   color: #181818;
-  background: #f4f4f4;
+  background: #f9f9f9;
   overflow-y: scroll;
 }
 @media (max-width: 480px) {
@@ -64,15 +64,17 @@ h1 {
 /*gallery*/
 /*--------------------------------------------*/
 .gallery {
-  padding: 0;
   list-style: none;
+  padding: 0 30px;
 }
 .gallery li {
   display: block;
   float: left;
-  width: 50%;
+  width: calc(50% - 40px);
   cursor: zoom-in;
-  margin: 0;
+  margin: 16px;
+  padding: 2px;
+  background: #e0e0e0;
 }
 .gallery img {
   display: block;
@@ -86,7 +88,7 @@ h1 {
 }
 @media (min-width: 960px) {
   .gallery-4 li {
-    width: 25%;
+    width: calc(25% - 40px);
   }
 }
 /*--------------------------------------------*/
@@ -156,6 +158,9 @@ h1 {
 #work_gallery {
   margin-top: 40px;
 }
+#work_gallery li {
+  background: #bababa;
+}
 /*--------------------------------------------*/
 /*footer*/
 /*--------------------------------------------*/
@@ -196,6 +201,12 @@ footer .nav-social a i {
 /*--------------------------------------------*/
 /*page_process*/
 /*--------------------------------------------*/
+#page_process {
+  background-image: url('../img/reach_brochure/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
 #page_process p,
 #page_process li {
   font-size: 1.12em;
@@ -204,7 +215,7 @@ footer .nav-social a i {
   margin: 60px 0;
 }
 #process_hero {
-  background-color: #181818;
+  background-color: #7eafc8;
   background-image: url('../img/reach_brochure/brochure_top.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -218,8 +229,8 @@ footer .nav-social a i {
   visibility: hidden;
 }
 #process_main {
-  background: #181818;
   padding-top: 80px;
+  background: rgba(126, 175, 200, 0.95);
 }
 #background_display {
   height: 80vh;
@@ -239,20 +250,33 @@ footer .nav-social a i {
 }
 .process_section .process_section_title h2 {
   display: inline-block;
-  background: #f9f9f9;
+  padding: 25px;
   font-weight: 300;
-  letter-spacing: 1px;
-  font-size: 1em;
+  background: #f9f9f9;
+  letter-spacing: 5px;
+  font-size: 1.125em;
   margin: 0;
 }
 .process_outer {
   width: 100%;
-  max-width: 800px;
-  margin-top: 80px;
 }
 .process_outer .process_inner {
   background: #f4f4f4;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 30px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 30px;
+}
+.process_outer.left {
+  margin-top: 80px;
+  max-width: 800px;
+  float: left;
+}
+.process_outer.right {
+  margin-top: 80px;
+  max-width: 800px;
+  float: right;
+}
+.process_outer.final {
+  margin-top: 160px;
+  float: left;
 }
 .process_header {
   letter-spacing: 1px;
@@ -274,9 +298,33 @@ footer .nav-social a i {
 .process_content {
   padding: 0 40px 80px;
 }
-.left {
-  float: left;
+.process_return_link_container {
+  text-align: center;
+  margin: 0 auto 120px;
 }
-.right {
-  float: right;
+.process_return_link_large {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid #f9f9f9;
+  color: #f9f9f9;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.process_return_link_large:hover {
+  background: #f9f9f9;
+  color: #7eafc8;
+}
+.process_return_link_small {
+  font-size: .85em;
+  display: inline-block;
+  padding: 8px 8px 6px 10px;
+  margin-bottom: 2em;
+  text-decoration: none;
+  border: 1px solid #bababa;
+  color: #bababa;
+  letter-spacing: 1px;
+}
+.process_return_link_small:hover {
+  background: #bababa;
+  color: #f9f9f9;
 }
