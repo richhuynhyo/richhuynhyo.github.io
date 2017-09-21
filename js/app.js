@@ -13,7 +13,12 @@ $(window).load(function () {
 
 
 function preload() {
-	$("#preload_container").fadeOut(400);
+	$("#preload_message").fadeOut(400,
+		function()
+		{
+			$("#preload_container").fadeOut(400);
+		}
+	);
 }
 
 

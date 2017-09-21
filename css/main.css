@@ -24,6 +24,36 @@
   position: fixed;
   top: 0;
   background: #f4f4f4;
+  line-height: 100vh;
+  text-align: center;
+}
+#preload_message {
+  vertical-align: middle;
+  font-weight: 800;
+  padding: 20px;
+  border: 1px solid #bababa;
+  color: #bababa;
+  display: inline-block;
+  line-height: 1em;
+  letter-spacing: 2px;
+  animation: pulse 1s infinite alternate;
+  position: relative;
+  top: -3vh;
+}
+@-moz-keyframes pulse {
+  from {
+    padding: 40px;
+  }
+}
+@-webkit-keyframes pulse {
+  from {
+    padding: 40px;
+  }
+}
+@keyframes pulse {
+  from {
+    padding: 40px;
+  }
 }
 /*--------------------------------------------*/
 /*HEADER*/
@@ -90,6 +120,9 @@ h1 {
   .gallery-4 li {
     width: calc(25% - 40px);
   }
+}
+.gallery-1 li {
+  width: calc(100% - 40px);
 }
 /*--------------------------------------------*/
 /*featured*/
