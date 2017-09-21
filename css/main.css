@@ -65,7 +65,7 @@ h1 {
 /*--------------------------------------------*/
 .gallery {
   list-style: none;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 .gallery li {
   display: block;
@@ -296,9 +296,9 @@ footer .nav-social a i {
   margin: 20px;
 }
 .process_content {
-  padding: 0 40px 80px;
+  padding: 0 40px 56px;
 }
-.process_return_link_container {
+.process_return_link_large_container {
   text-align: center;
   margin: 0 auto 120px;
 }
@@ -315,16 +315,17 @@ footer .nav-social a i {
   color: #7eafc8;
 }
 .process_return_link_small {
-  font-size: .85em;
+  font-size: 1em;
   display: inline-block;
   padding: 8px 8px 6px 10px;
-  margin-bottom: 2em;
+  margin: 10px;
   text-decoration: none;
-  border: 1px solid #bababa;
-  color: #bababa;
+  border: 1px solid #f9f9f9;
+  color: #f9f9f9;
   letter-spacing: 1px;
+  position: absolute;
 }
 .process_return_link_small:hover {
-  background: #bababa;
-  color: #f9f9f9;
+  background: #f9f9f9;
+  color: #7eafc8;
 }

@@ -19,7 +19,26 @@ function preload() {
 
 function initializeGallery()
 {
-	$('#work_gallery').lightGallery();
+	//Home Page
+	if ($('#work_gallery').length)
+	{
+		$('#work_gallery').lightGallery();
+	}
 
-	$('#featured_photo_gallery').lightGallery();
+
+	//Check for process page
+	if( $('#page_process').length ) 
+	{
+		$('#process_sketch_gallery').lightGallery();
+
+		$('#process_type_gallery').lightGallery();
+
+		$('#process_photo_gallery').lightGallery();
+
+		$('#process_prototype_gallery').lightGallery();
+
+		$('#process_refine_gallery').lightGallery();
+
+		$('#process_final_gallery').lightGallery();
+	}
 }
