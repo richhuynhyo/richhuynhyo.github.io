@@ -34,6 +34,8 @@ function initializeGallery()
 	//Check for process page
 	if( $('#page_process').length ) 
 	{
+		$('#process_inspiration_gallery').lightGallery();
+
 		$('#process_sketch_gallery').lightGallery();
 
 		$('#process_type_gallery').lightGallery();
