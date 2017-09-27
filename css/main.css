@@ -58,6 +58,22 @@
 /*--------------------------------------------*/
 /*HEADER*/
 /*--------------------------------------------*/
+#page_home header {
+  position: relative;
+  padding: 50px;
+}
+#page_home header h1 {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#rh_logo {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+  fill: #181818;
+}
 header {
   background: #f9f9f9;
 }
@@ -137,7 +153,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url('../img/reach_brochure/preview.jpg');
-  min-height: 540px;
+  min-height: 440px;
 }
 @media (orientation: portrait) {
   #featured .featured_image {
@@ -147,7 +163,7 @@ h1 {
 }
 @media (orientation: landscape) {
   #featured .featured_image {
-    height: 80vh;
+    height: 60vh;
     background-size: contain;
   }
 }
@@ -162,7 +178,7 @@ h1 {
 }
 @media (orientation: landscape) {
   #featured .featured_image img {
-    height: 80vh;
+    height: 60vh;
   }
 }
 #featured .featured_link {
