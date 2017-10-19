@@ -30,6 +30,15 @@ body
 		zoom:.65;
 	}
 }
+h1
+{
+	margin:0;
+	padding:0;
+}
+a
+{
+	text-decoration:none;
+}
 
 
 .cf:after 
@@ -57,6 +66,7 @@ body
 }
 #preload_message
 {
+	font-family:Arial, Helvetica, sans-serif;
 	vertical-align:middle;
 	font-weight:800;
 	padding:20px;
@@ -91,50 +101,81 @@ body
 /*HEADER*/
 /*--------------------------------------------*/
 
-
-#page_home
+#top_nav_container
 {
-	header
+	.inner
 	{
-		position:relative;
-		padding:50px;
-		h1 
+		
+		padding:20px 40px;
+	}
+	.title_container
+	{
+		#rh_logo
 		{
-				font-size:1em;
-				font-weight:300;
-				text-align:center;
-				letter-spacing:1px;
+			display:inline-block;
+			width:50px;
+			fill:@black;
+			vertical-align:middle;
+		}
+		h1
+		{  
+			font-family: "refrigerator-deluxe";
+			font-weight:700;
+			letter-spacing:2px;
+			display:inline-block;
+			vertical-align:middle;
+			padding:0 0 0 15px;
+			line-height:1em;
+			color:@black;
+			.title-2
+			{
+				text-align:right;
+				font-weight:400;
+				color: @black;
+				padding:0 0 0 15px;
+			}
+		}
+
+	}
+
+	a
+	{
+		&:hover
+		{
+			#rh_logo
+			{
+				fill:@gray;
+			}
+			h1
+			{
+				color:@gray;
+				.title-2
+				{
+					color:@gray;
+				}
+			}
 		}
 	}
+
+
 }
-#rh_logo
-{
-	display:block;
-	width:50px;
-	margin:0 auto;
-	fill:@black;
-}
+
+
 
 header
 {
 		background:@white;
 }
-h1 
-{	
-	margin:0;
-	font-family: "mr-eaves-xl-modern";
-	font-size:2.25rem;
-	line-height:1em;
-}
-h2
-{
-}
+
 
 
 /*--------------------------------------------*/
 /*Structure*/
 /*--------------------------------------------*/
-
+#page_home
+{
+		background:@white;
+}
 .outer
 {
 	min-width:@min-width;
@@ -319,6 +360,8 @@ footer
 		letter-spacing:1px;
 		.title
 		{
+			font-family: "refrigerator-deluxe";
+			letter-spacing:2px;
 			display:inline-block;
 			margin:0;
 			vertical-align:middle;
