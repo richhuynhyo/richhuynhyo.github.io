@@ -63,6 +63,12 @@ header a h1 {
   vertical-align: middle;
   font-size: 2em;
 }
+@media (max-width: 480px) {
+  header a h1 {
+    font-size: 1.5em;
+    zoom: .8;
+  }
+}
 header a h1 .title-2 {
   padding-left: 10px;
   color: #bababa;
