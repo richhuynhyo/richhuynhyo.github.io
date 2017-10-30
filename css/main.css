@@ -65,8 +65,7 @@ header a h1 {
 }
 @media (max-width: 480px) {
   header a h1 {
-    font-size: 1.5em;
-    zoom: .8;
+    font-size: 1.25em;
   }
 }
 header a h1 .title-2 {
