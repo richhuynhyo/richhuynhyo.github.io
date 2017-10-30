@@ -70,7 +70,7 @@ header a h1 .title-2 {
 }
 header #rh_logo {
   display: block;
-  margin: .5em auto;
+  margin: 1em auto .5em;
   height: 4em;
   fill: #242424;
 }
