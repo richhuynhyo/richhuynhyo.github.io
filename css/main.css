@@ -47,15 +47,14 @@ header {
   padding: 10px 0;
   font-family: "refrigerator-deluxe";
   letter-spacing: 2px;
-  background: #f9f9f9;
 }
 header a {
   display: block;
   line-height: 3em;
-  color: #242424;
+  color: #f9f9f9;
 }
 header a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 header a h1 {
   display: block;
@@ -70,9 +69,9 @@ header a h1 .title-2 {
 }
 header #rh_logo {
   display: block;
-  margin: 1em auto .25em;
+  margin: 1em auto 0.25em;
   height: 4em;
-  fill: #242424;
+  fill: #f9f9f9;
 }
 /*--------------------------------------------*/
 /*footer*/
@@ -114,7 +113,7 @@ body {
 @media (max-width: 480px) {
   body {
     font-size: 1.5em;
-    zoom: .65;
+    zoom: 0.65;
   }
 }
 body h1 {
