@@ -1,2 +1,2 @@
-# richhyaa.github.io
+# richhuynhyo.github.io
 RichH Website
