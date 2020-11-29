@@ -1,175 +1,106 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta name="description" content="Richard Huynh: Designer/Developer">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Richard Huynh</title>
+	<head>
+		<meta charset="UTF-8">
 
-	<!--Vendor-->
-	<link href="css/vendor/normalize.css" rel="stylesheet" />
-	<link href="css/vendor/font-awesome.css" rel="stylesheet" />
+		<!--LightGallery-->
+		<link href="css/vendor/font-awesome.css" rel="stylesheet" />
+		<link href="css/vendor/lightgallery.css" rel="stylesheet" />
+		<link href="css/vendor/lg-fb-comment-box.css" rel="stylesheet" />
+		<link href="css/vendor/lg-transitions.css" rel="stylesheet" />
 
-	<!--LightGallery-->
-	<link href="css/vendor/lightgallery.css" rel="stylesheet" />
-	<link href="css/vendor/lg-fb-comment-box.css" rel="stylesheet" />
-	<link href="css/vendor/lg-transitions.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/work.css" />
+	</head>
+	<body>
 
-	<!--Main-->
-	<link rel="stylesheet" href="css/main.min.css">
-
-	<!--Typekit-->
-	<script src="https://use.typekit.net/zbq4daq.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-</head>
-<body>
-
-	<header class="outer">
-		<div class="inner">
-			<div class="title_container">
-				<a href="index.html">
-					<svg id="rh_logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 576">
-						<title>rh logo</title>
-						<path class="cls-1" d="M0,0V576H360V0ZM108,540H36V36h72V72l36-36h72V225l-72,72V108l-36,36Zm216,0H252V504l-36,36H144V351l72-72V468l36-36V36h72Z" />
-					</svg>
-					<h1>
-						RICH HUYNH<span class="title-2">DESIGN PORTFOLIO</span>
-					</h1>
-				</a>
-			</div>
-
-		</div>
-	</header>
-
-	<div id="page_home">
-		<section id="featured" class="outer">
-			<div class="inner">
-				<hr />
-				<div class="section_header_container cf">
-					<h2>FEATURED</h2>
-				</div>
-				<a class="featured_container" href="reach-brochure.html">
-					<img src="img/reach_brochure/brochure_preview.jpg" />
-					<div class="featured-info">
-						SEE PROCESS
+			<div id="rich-overlay">
+				<div class="rich-overlay-outer">
+					<button class="rich-overlay-exit" onclick="richOverlay.exit();">&#10006;</button>
+					<article class="rich-overlay-inner"></article>
+					<div class="rich-overlay-footer">
+						<button class="back-to-top" onclick="$('#rich-overlay').animate({ scrollTop: 0 }, 'fast');">BACK TO TOP</button>
 					</div>
-				</a>
-			</div>
-		</section>
-
-		<section id="work" class="outer">
-			<div class="inner">
-				<hr />
-				<div class="section_header_container cf">
-					<h2>WORK</h2>
-				</div>
-				<ul id="work_gallery" class="gallery gallery-4 cf">
-					<li data-src="img/gallery/omn_full.jpg"
-						data-sub-html="REACH - Open Mic Night Flyer">
-						<img src="img/gallery/640/omn_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Open Mic Night Flyer</div>
-						</div>
-					</li>
-
-					<li data-src="img/gallery/topdosh_full.jpg"
-						data-sub-html="Conceptual Streetwear Style Guide Brochure">
-						<img src="img/gallery/640/topdosh_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Conceptual Streetwear Style Guide Brochure</div>
-						</div>
-					</li>
-
-					<li data-src="img/gallery/fyaw_full.jpg"
-						data-sub-html="REACH Foster Youth Awareness Week Flyer">
-						<img src="img/gallery/640/fyaw_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Foster Youth Awareness Week Flyer</div>
-						</div>
-					</li>
-					<li data-src="img/gallery/dino_full.jpg"
-						data-sub-html="Illustrated Dinosaur Poster">
-						<img src="img/gallery/640/dino_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Illustrated Dinosaur Poster</div>
-						</div>
-					</li>
-
-					<li data-src="img/gallery/twin_full.jpg"
-						data-sub-html="REACH - Illustrated 2-piece Flyer Set">
-						<img src="img/gallery/640/twin_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Illustrated 2-piece Flyer Set</div>
-						</div>
-					</li>
-
-					<li data-src="img/gallery/water_full.jpg"
-						data-sub-html="Environmental T-shirt Design">
-						<img src="img/gallery/640/water_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Environmental T-shirt Design</div>
-						</div>
-					</li>
-
-					<li data-src="img/gallery/tacoready_full.jpg"
-						data-sub-html="Family Restuarant Menu">
-						<img src="img/gallery/640/tacoready_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Family Restuarant Menu</div>
-						</div>
-					</li>
-
-					<li data-src="img/gallery/finlit_full.jpg"
-						data-sub-html="Financial Literacy Event Flyer">
-						<img src="img/gallery/640/finlit_640.jpg" />
-						<div class="gallery-title-container">
-							<div class="gallery-title">Financial Literacy Event Flyer</div>
-						</div>
-					</li>
-
-
-				</ul>
-
-
-			</div>
-		</section>
-	</div>
-
-
-	<footer class="outer">
-		<div class="inner">
-			<div class="footer_container cf">
-				<div class="footer_left">
-					<a class="title" href="index.html"><b>RICH HUYNH</b></a>
-				</div>
-				<div class="footer_right">
-					<nav class="nav-social cf">
-						<a href="https://www.linkedin.com/in/richhuynh">
-							<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-						</a>
-						<a href="https://github.com/richhyaa">
-							<i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
-						</a>
-					</nav>
 				</div>
 			</div>
 
-		</div>
 
-	</footer>
+			<header>
+				<img src="img/richhuynh.png" alt="Rich Huynh : Designer + Developer"/>
+			</header>
+			<main class="clearfix">
+
+				<div class="gallery-container">
+
+					<button class="gallery-button" onclick="richOverlay.open(0);">
+						<div class="label-overlay">
+							<div class="label">
+								<h1>Smash the Competition</h1>
+								<h2>Poster</h2>
+							</div>
+						</div>
+						<img src="img/gallery/msi-bh-comic.jpg" />
+					</button>
 
 
-	<!--JS-->
-	<script src="js/vendor/jquery.min.js"></script>
-	<script src="js/vendor/hammer-time.min.js"></script>
+					<button class="gallery-button" onclick="richOverlay.open(1);">
+						<div class="label-overlay">
+							<div class="label">
+								<h1>REACH</h1>
+								<h2>Brand Materials</h2>
+							</div>
+						</div>
+						<img src="img/gallery/reach-brochure.jpg" />
+					</button>
 
-	<!--LightGallery-->
-	<script src="js/vendor/jquery.mousewheel.min.js"></script>
-	<script src="js/vendor/picturefill.min.js"></script>
-	<script src="js/vendor/lightgallery-all.js"></script>
 
-	<!--Site-->
-	<script src="js/app.js"></script>
+					<button class="gallery-button" onclick="richOverlay.open(2);">
+						<div class="label-overlay">
+							<div class="label">
+								<h1>Eon</h1>
+								<h2>Digital Illustration</h2>
+							</div>
+						</div>
+						<img src="img/gallery/dino-poster.jpg" />
+					</button>
+					<button class="gallery-button" onclick="richOverlay.open(3);">
+						<div class="label-overlay">
+							<div class="label">
+								<h1>REACH</h1>
+								<h2>Event Flyers</h2>
+							</div>
+						</div>
+						<img src="img/gallery/reach-flyers.jpg" />
+					</button>
+					<button class="gallery-button" onclick="richOverlay.open(4);">
+						<div class="label-overlay">
+							<div class="label">
+								<h1>Water</h1>
+								<h2>T-Shirt Design</h2>
+							</div>
+						</div>
+						<img src="img/gallery/water-shirt.jpg" />
+					</button>
+				</div>
 
-</body>
+			</main>
+
+
+
+
+
+		<!--JS-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="js/vendor/hammer-time.min.js"></script>
+
+		<!--LightGallery-->
+		<script src="js/vendor/jquery.mousewheel.min.js"></script>
+		<script src="js/vendor/picturefill.min.js"></script>
+		<script src="js/vendor/lightgallery-all.js"></script>
+
+		<!--Site JS-->
+		<script type="text/javascript" src="js/site.js"></script>
+	</body>
 </html>

@@ -1,0 +1,159 @@
+.rich-overlay-inner
+{
+	font-family: 'Poppins', sans-serif;
+	font-size:16px;
+}
+@media (min-width:961px)
+{
+	.rich-overlay-inner
+	{
+		font-size:20px;
+	}
+}
+.rich-overlay-inner h1
+{
+	font-weight: 600;
+	font-size: 1.75em;
+	margin:0 0 .25em;
+	padding:1em 0 0;
+	line-height: 1.15;
+}
+.rich-overlay-inner h2
+{
+	font-weight: 300;
+	font-size: .75em;
+	margin:0 0 1.5em;
+	padding:0;
+	line-height: 1.25;
+	font-style: italic;
+}
+.rich-overlay-inner p
+{
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 1.65;
+	padding:0;
+}
+.rich-overlay-inner img
+{
+	display:block;
+}
+p.note{
+	font-size:.625em;
+	color:#808080;
+	font-style: italic;
+	padding:0;
+	margin:0;
+}
+sup
+{
+	font-size:.5em;
+}
+
+.content-info-outer
+{
+	width:100%;
+	margin:0 auto;
+	padding:3em;
+	background:#fbfbfb;
+	color:#101010;
+	box-sizing: border-box;
+}
+.content-info
+{
+	width:100%;
+	max-width:960px;
+	margin:0 auto;
+	box-sizing: border-box;
+}
+.content-inner
+{
+	width:100%;
+	margin:0 auto;
+	background:#fbfbfb;
+}
+.content-inner .content-info
+{
+	text-align: left;
+}
+.content-footer-outer
+{
+	width:100%;
+	margin:0 auto;
+	padding:2% 5% 2%;
+	background:#202020;
+	box-sizing: border-box;
+}
+.content-footer
+{
+	width:100%;
+	margin:0 auto;
+	max-width:960px;
+	text-align: center;
+}
+.inner-image
+{
+	padding:0 3em 3em;
+}
+.white-border
+{
+	border:1px solid #eee;
+}
+
+/* layout */
+.split-container
+{
+	margin:0 auto;
+	text-align:center;
+}
+.rtl
+{
+	direction: rtl;
+}
+.split
+{
+	position:relative;
+	margin:0 auto;
+	direction: ltr;
+	vertical-align: middle;
+	white-space: normal;
+	text-align:left;
+}
+@media (min-width:1281px)
+{
+	.split
+	{
+		display:inline-block;
+	}
+	.split-container
+	{
+		white-space: nowrap;
+	}
+	.split-50
+	{
+		width:50%;
+	}
+}
+
+
+.light-gallery
+{
+	list-style: none;
+	display: block;
+	padding:0;
+	margin:0;
+	text-align: center;
+}
+.light-gallery a
+{
+	display:block;
+	margin:0 auto;
+}
+.light-gallery img
+{
+	display:block;
+	margin:0 auto;
+	max-width:100%;
+	cursor: zoom-in;
+
+}
