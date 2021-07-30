@@ -9,9 +9,7 @@
 
 		<!--LightGallery-->
 		<link href="css/vendor/font-awesome.css" rel="stylesheet" />
-		<link href="css/vendor/lightgallery.css" rel="stylesheet" />
-		<link href="css/vendor/lg-fb-comment-box.css" rel="stylesheet" />
-		<link href="css/vendor/lg-transitions.css" rel="stylesheet" />
+		<link href="css/vendor/colorbox.css" rel="stylesheet" />
 
 
 
@@ -24,8 +22,11 @@
 
 			<div id="rich-overlay">
 				<div class="rich-overlay-outer">
+
 					<button class="rich-overlay-exit" onclick="richOverlay.exit();">&#10006;</button>
-					<article class="rich-overlay-inner"></article>
+					<div class="rich-overlay-inner">
+						<div class="rich-overlay-content_wrap"></div>
+					</div>
 					<div class="rich-overlay-footer">
 						<button class="back-to-top" onclick="$('#rich-overlay').animate({ scrollTop: 0 }, 'fast');">BACK TO TOP</button>
 					</div>
@@ -40,6 +41,20 @@
 
 				<div class="gallery-container">
 
+					<!--
+
+					<button class="gallery-button" onclick="richOverlay.open(1);">
+						<div class="label-overlay">
+							<div class="label">
+								<h1>Blizzcon 2019</h1>
+								<h2>Web + Event Display</h2>
+							</div>
+						</div>
+						<img src="img/gallery/msi-bh-comic.jpg" />
+					</button>
+
+				-->
+				
 					<button class="gallery-button" onclick="richOverlay.open(0);">
 						<div class="label-overlay">
 							<div class="label">
@@ -112,10 +127,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 		<script src="js/vendor/hammer-time.min.js"></script>
 
-		<!--LightGallery-->
+		<!--ColorBox-->
+		<script src="js/vendor/jquery.colorbox-min.js"></script>
+
+		<!--LightGallery
 		<script src="js/vendor/jquery.mousewheel.min.js"></script>
 		<script src="js/vendor/picturefill.min.js"></script>
-		<script src="js/vendor/lightgallery-all.js"></script>
+		<script src="js/vendor/lightgallery-all.js"></script>-->
 
 		<!--Site JS-->
 		<script type="text/javascript" src="js/site.js"></script>

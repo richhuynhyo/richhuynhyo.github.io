@@ -1,8 +1,14 @@
+html
+{
+height:100%:
+}
+
 body
 {
 	background:#000;
 	margin:0;
 	overflow-y:scroll;
+	height:100%:
 }
 body.no-scroll
 {
@@ -142,28 +148,41 @@ header img
 	width:100%;
 	min-height:100vh;
 	top: 0; left: 0; right: 0; bottom: 0;
-	padding-top:2em;
+	padding-top:4em;
 }
 #rich-overlay .rich-overlay-inner
 {
-	width:80%;
+	width:calc(100% - 40px);
 	max-width:1280px;
 	margin:auto;
 	z-index:500;
 }
-
 #rich-overlay .rich-overlay-exit
 {
 	display:block;
-	position:fixed;
-	top:25px;
-	right:45px;
 	border:none;
 	background:none;
 	color:#fefefe;
 	cursor:pointer;
 	font-size:24px;
+	position:absolute;
+	top:15px;
+	right:15px;
 }
+@media (min-width:721px)
+{
+	#rich-overlay .rich-overlay-inner
+	{
+		width:80%;
+	}
+	#rich-overlay .rich-overlay-exit
+	{
+
+		top:25px;
+		right:25px;
+	}
+}
+
 #rich-overlay .rich-overlay-exit:hover, #rich-overlay .rich-overlay-exit:focus
 {
 	color:red;

@@ -76,19 +76,19 @@ var richOverlay =
 	{
 		$(this.container).show();
 		$(this.container).scrollTop(0);
-		$(this.container).find('.rich-overlay-inner').html(this.content[index]);
+		$(this.container).find('.rich-overlay-content_wrap').html(this.content[index]);
 		$(this.container).find('.rich-overlay-outer').fadeIn();
 		$('body').addClass('no-scroll');
 		$('body').css('padding-right', this.scrollbarWidth);
 
-		$(this.container).find('.light-gallery').lightGallery({selector: '.lg-item'});
+		$(".cbox").colorbox({rel: ".cbox", maxHeight: "90%", maxWidth: "90%"});
 
 	},
 	exit : function()
 	{
 		$(this.container).hide();
 		$(this.container).find('.rich-overlay-outer').hide();
-		$(this.container).find('.rich-overlay-inner').empty();
+		$(this.container).find('.rich-overlay-content_wrap').empty();
 		$('body').removeClass('no-scroll');
 		$('body').css('padding-right', 0);
 	}
