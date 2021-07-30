@@ -81,7 +81,7 @@ var richOverlay =
 		$('body').addClass('no-scroll');
 		$('body').css('padding-right', this.scrollbarWidth);
 
-		$(".cbox").colorbox({rel: ".cbox", maxHeight: "90%", maxWidth: "90%"});
+		$(".cbox").colorbox({rel: ".cbox", maxHeight: "90%", maxWidth: "90%", returnFocus: false});
 
 	},
 	exit : function()
