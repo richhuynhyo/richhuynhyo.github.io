@@ -13,37 +13,6 @@ $(function() {
 
 //Window Load
 
-/*
-function initializeGallery()
-{
-	//Home Page
-	if ($('#work_gallery').length)
-	{
-		$('#work_gallery').lightGallery();
-	}
-
-
-	//Check for process page
-	if( $('#page_process').length )
-	{
-		$('#process_inspiration_gallery').lightGallery();
-
-		$('#process_sketch_gallery').lightGallery();
-
-		$('#process_type_gallery').lightGallery();
-
-		$('#process_photo_gallery').lightGallery();
-
-		$('#process_prototype_gallery').lightGallery();
-
-		$('#process_refine_gallery').lightGallery();
-
-		$('#process_final_gallery').lightGallery();
-	}
-}
-*/
-
-
 $('#rich-overlay').find('.rich-overlay-outer').on('click', function(e)
 {
 	if (e.target !== this) return;
@@ -81,7 +50,13 @@ var richOverlay =
 		$('body').addClass('no-scroll');
 		$('body').css('padding-right', this.scrollbarWidth);
 
-		$(".cbox").colorbox({rel: ".cbox", maxHeight: "90%", maxWidth: "90%", returnFocus: false});
+		$(this.container).find('.light-gallery').lightGallery({
+			selector: '.lg-item',
+			zoom: false,
+			download: false
+		});
+
+		//$(".cbox").colorbox({rel: ".cbox", maxHeight: "90%", maxWidth: "90%", returnFocus: false});
 
 	},
 	exit : function()
