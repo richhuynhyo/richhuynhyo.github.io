@@ -52,8 +52,15 @@ var richOverlay =
 
 		$(this.container).find('.light-gallery').lightGallery({
 			selector: '.lg-item',
-			zoom: false,
-			download: false
+			download: false,
+			mobileSettings : {
+				zoom: false,
+				counter : false,
+				controls : false,
+				enableSwipe : false
+			}
+
+
 		});
 
 		//$(".cbox").colorbox({rel: ".cbox", maxHeight: "90%", maxWidth: "90%", returnFocus: false});
