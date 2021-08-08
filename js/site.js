@@ -53,11 +53,13 @@ var richOverlay =
 		$(this.container).find('.light-gallery').lightGallery({
 			selector: '.lg-item',
 			download: false,
+			zoom: false,
+			counter : false,
+			controls : false,
+			enableSwipe : false,
+			mousewheel: false,
 			mobileSettings : {
-				zoom: false,
-				counter : false,
-				controls : false,
-				enableSwipe : false
+
 			}
 
 
