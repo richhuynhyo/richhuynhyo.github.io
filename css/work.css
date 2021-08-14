@@ -92,6 +92,23 @@ sup
 	max-width:960px;
 	text-align: center;
 }
+.content-link
+{
+	display: inline-block;
+	background:#333;
+	color:#fff;
+	text-decoration: none;
+	padding:20px;
+	border:2px solid #333;
+	border-radius: .25em;
+	transition: all .25s ease-in-out;
+}
+.content-link:hover
+{
+	background:#222;
+	border:2px solid #aaa
+}
+
 .inner-image
 {
 	padding:0 20px 20px;
@@ -145,7 +162,7 @@ sup
 	margin:0;
 	text-align: center;
 }
-.light-gallery a
+.light-gallery .lg-item
 {
 	display:block;
 	margin:0 auto;
