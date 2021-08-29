@@ -5,9 +5,12 @@
 	position: relative;
 
 	width:100%;
-	max-width: 1900px;
+	max-width: 1920px;
 	padding-bottom:125%;
 	margin: 0 auto;
+
+	background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(0,110,255,1) 100%);
+	overflow:hidden;
 
 }
 	@media(min-width:801px)
@@ -24,13 +27,77 @@
 			padding-bottom:1080px;
 		}
 	}
-canvas
+#canvas_3d
 {
-	display: block;
+	display: none;
 	position:absolute;
-
-	background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(0,110,255,1) 100%);
+	z-index:10;
 }
+#bg_wrap
+{
+	position: absolute;
+	top:0;
+	z-index:1;
+
+	width:100%;
+	margin:0;
+
+	overflow:hidden;
+
+}
+	#bg_wrap .kv_bg
+	{
+		width:100%;
+		max-width: 1900px;
+		padding-bottom:80px;
+
+
+		background-position: center center;
+		background-repeat: repeat-x;
+		background-size: auto;
+
+
+		opacity:.5;
+	}
+		#bg_wrap .kv_bg.bg-des
+		{
+			background-image:url('../img/bg-des.png');
+			animation: 8s scroll-des infinite linear;
+		}
+			@keyframes scroll-des {
+			  0% {background-position: 0 0;}
+			  100% {background-position: 400px 0;}
+			}
+		#bg_wrap .kv_bg.bg-dev
+		{
+			background-image:url('../img/bg-dev.png');
+			animation: 9s scroll-dev infinite linear;
+		}
+			@keyframes scroll-dev {
+			  0% {background-position: 0 0;}
+			  100% {background-position: -460px 0;}
+			}
+		#bg_wrap .kv_bg.bg-gfx
+		{
+			background-image:url('../img/bg-gfx.png');
+			animation: 7s scroll-gfx infinite linear;
+		}
+			@keyframes scroll-gfx {
+			  0% {background-position: 0 0;}
+			  100% {background-position: 400px 0;}
+			}
+		#bg_wrap .kv_bg.bg-tech
+		{
+			background-image:url('../img/bg-tech.png');
+			animation: 8s scroll-tech infinite linear;
+		}
+			@keyframes scroll-tech {
+			  0% {background-position: 0 0;}
+			  100% {background-position: -520px 0;}
+			}
+
+
+
 
 #title
 {
@@ -92,6 +159,7 @@ canvas
 		{
 			display: inline-block;
 
+			font-family: 'Montserrat', sans-serif;
 			line-height: .85em;
 
 			cursor: default;

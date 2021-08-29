@@ -81,9 +81,9 @@ function animate() {
 
 	//controls.update();
 
-	camera.lookAt( (mouseX * .0005), (mouseY * -.0005), 0 );
-	camera.position.x = 0 + (mouseX * -.0015);
-	camera.position.y = -.5 + (mouseY * .0015);
+	camera.lookAt( (mouseX * .001), (mouseY * -.001), 0 );
+	camera.position.x = 0 + (mouseX * -.002);
+	camera.position.y = -.5 + (mouseY * .002);
 
 
 	renderer.render( scene, camera );
@@ -104,6 +104,8 @@ $(document).ready(function () {
 	window.addEventListener('resize', onWindowResize, false);
 
 	document.getElementById('kv_wrap').style.visibility = "visible";
+	document.getElementById('canvas_3d').style.display = "block";
+
 
 });
 
