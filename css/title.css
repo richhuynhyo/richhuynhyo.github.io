@@ -80,6 +80,13 @@ canvas
 				font-size:30px;
 			}
 		}
+		@media(min-width:1121px)
+		{
+			#title h1
+			{
+				font-size:35px;
+			}
+		}
 
 		#title h1 .letter
 		{
@@ -120,6 +127,14 @@ canvas
 			}
 			@media(min-width:801px)
 			{
+				#title h1 .firstname
+				{
+					letter-spacing: -4px;
+				}
+				#title h1 .lastname
+				{
+					letter-spacing: 20px;
+				}
 			}
 
 .noise
@@ -131,8 +146,8 @@ canvas
 	width:100%;
 	padding-bottom:125%;
 
-	background-image:url('../img/noise.jpg'),  linear-gradient(0, rgba(32,105,255,1) 0%, rgba(20,171,173,1) 100%);
-	opacity:.5;
+	background-image:url('../img/noise.jpg'), linear-gradient(115deg, rgba(194,107,7,1) 0%, rgba(255,0,181,1) 100%);
+	opacity:.75;
 	background-repeat: repeat;
 	background-blend-mode:overlay;
 
