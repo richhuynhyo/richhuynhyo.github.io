@@ -18,10 +18,20 @@
 		<link href="css/vendor/font-awesome.css" rel="stylesheet" />
 		<link href="css/vendor/colorbox.css" rel="stylesheet" />
 		-->
-
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600;1,900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
 		<link type="text/css" rel="stylesheet" href="css/work.css" />
+
+		<!--Three-->
+		<script src="js/renderModel.js" type="module"></script>
+		<link rel="stylesheet" href="css/title.css">
+
+		<!-- Animate -->
+		<link rel="stylesheet" href="css/vendor/animate.min.css" />
+
+
+
 	</head>
 	<body>
 
@@ -39,14 +49,36 @@
 			</div>
 
 
-			<header>
-				<img src="img/richhuynh.png" alt="Rich Huynh : Designer + Developer"/>
-			</header>
+			<div id="kv_wrap">
+				<header id="title">
+					<h1>
+						<span class="firstname letter">R</span>
+						<span class="firstname letter">I</span>
+						<span class="firstname letter">C</span>
+						<span class="firstname letter">H</span>
+						<br />
+						<span class="lastname letter">H</span>
+						<span class="lastname letter">U</span>
+						<span class="lastname letter">Y</span>
+						<span class="lastname letter">N</span>
+						<span class="lastname letter">H</span>
+					</h1>
+					<div class="noise"></div>
+				</header>
+				<canvas id="canvas_3d"></canvas>
+			</div>
+
+			<div class="wow slideInUp" style="padding:5em 20px; color:#fff; text-align:center;">
+				<h1 style="font-family: 'Montserrat', sans-serif; font-size:3em; font-weight:900;">
+					Multi-Disciplinary Digital Designer
+				</h1>
+			</div>
+
 			<main class="clearfix">
 
 				<div class="gallery-container">
 
-					<button class="gallery-button" onclick="richOverlay.open(9);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(9);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>Back to School</h1>
@@ -56,7 +88,7 @@
 						<img src="img/gallery/bts-2021.jpg" alt="MSI Back To School Guide Graphic" />
 					</button>
 
-					<button class="gallery-button" onclick="richOverlay.open(8);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(8);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>MSI Social Media</h1>
@@ -66,7 +98,7 @@
 						<img src="img/gallery/msi_socials.jpg" alt="Colorful Laptop Graphic" />
 					</button>
 
-					<button class="gallery-button" onclick="richOverlay.open(7);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(7);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>Blizzcon 2019</h1>
@@ -78,7 +110,7 @@
 
 
 
-				<button class="gallery-button" onclick="richOverlay.open(6);">
+				<button class="gallery-button wow slideInUp" onclick="richOverlay.open(6);">
 					<div class="label-overlay">
 						<div class="label">
 							<h1>Lucky Stickers</h1>
@@ -88,7 +120,7 @@
 					<img src="img/gallery/lucky-sticker.jpg" alt="MSI Lucky Powering Up" />
 				</button>
 
-					<button class="gallery-button" onclick="richOverlay.open(5);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(5);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>Fan Day</h1>
@@ -98,7 +130,7 @@
 						<img src="img/gallery/msi-fanday.jpg" alt="MSI Fan Day Boat Graphic" />
 					</button>
 
-					<button class="gallery-button" onclick="richOverlay.open(4);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(4);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>Smash the Competition</h1>
@@ -109,7 +141,7 @@
 					</button>
 
 
-					<button class="gallery-button" onclick="richOverlay.open(3);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(3);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>REACH</h1>
@@ -120,7 +152,7 @@
 					</button>
 
 
-					<button class="gallery-button" onclick="richOverlay.open(2);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(2);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>Eon</h1>
@@ -129,7 +161,7 @@
 						</div>
 						<img src="img/gallery/dino-poster.jpg" alt="T-Rex Head" />
 					</button>
-					<button class="gallery-button" onclick="richOverlay.open(1);">
+					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(1);">
 						<div class="label-overlay">
 							<div class="label">
 								<h1>REACH</h1>
@@ -155,12 +187,12 @@
 			</main>
 
 			<footer>
-				<nav class="nav-social cf">
+				<nav class="nav-social cf wow slideInUp">
 					<a target="_blank" href="https://www.linkedin.com/in/richhuynh">
-						<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+						<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
 					</a>
 					<a target="_blank" href="https://github.com/richhuynhyo">
-						<i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+						<i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
 					</a>
 				</nav>
 			</footer>
@@ -185,5 +217,11 @@
 
 		<!--Site JS-->
 		<script type="text/javascript" src="js/site.js"></script>
+
+		<!-- wow -->
+		<script src="js/vendor/wow.js"></script>
+		<script>
+			new WOW().init();
+		</script>
 	</body>
 </html>
