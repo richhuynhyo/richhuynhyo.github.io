@@ -20,11 +20,11 @@
 			padding-bottom:56.25%;
 		}
 	}
-	@media(min-width:1920px)
+	@media(min-width:1921px)
 	{
 		#kv_wrap
 		{
-			padding-bottom:1060px;
+			padding-bottom:1080px;
 		}
 	}
 #canvas_3d
