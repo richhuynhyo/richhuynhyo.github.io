@@ -179,3 +179,16 @@ sup
 {
 	font-family: 'Yantramanav', sans-serif;
 }
+.divider
+	{
+		height:2px;
+		background:#eee;
+		width:100%;
+	}
+
+
+	video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+}
