@@ -3,7 +3,7 @@ import { GLTFLoader } from './three/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from './three/jsm/controls/OrbitControls.js';
 
 
-var scene, camera, renderer;
+var scene, camera, renderer, controls;
 
 var WRAP_WIDTH;
 var WRAP_HEIGHT;
@@ -17,11 +17,12 @@ var renderer = new THREE.WebGLRenderer({
  });
 
 
+var canvasContainer = "canvas_wrap";
 
 function initRender()
 {
-	var kv_wrap_width = document.getElementById('kv_wrap').clientWidth;
-	var kv_wrap_aspect = (kv_wrap_width > 800) ? .5625 : 1.25;
+	var kv_wrap_width = document.getElementById(canvasContainer).clientWidth;
+	var kv_wrap_aspect = WindowResizeAspectRatio(kv_wrap_width);
 
 
 	scene = new THREE.Scene();
@@ -32,10 +33,17 @@ function initRender()
 
 	camera = new THREE.PerspectiveCamera( 45, kv_wrap_width / (kv_wrap_width * kv_wrap_aspect), 1, 1000 );
 
-	//const controls = new OrbitControls( camera, renderer.domElement );
+	controls = new OrbitControls( camera, renderer.domElement );
+	controls.autoRotate = true;
+	controls.enableZoom = false;
+	controls.enablePan = false;
+	controls.minPolarAngle = Math.PI/2.5;
+	controls.maxPolarAngle = Math.PI/1.75;
+	controls.rotateSpeed = .25;
 
-	camera.position.set( 0, 0, 1.75 );
-	camera.lookAt( 0, 0, 0 );
+	camera.position.set( 1, -1, 2.5 );
+	//camera.up.set(0,0,0);
+	//camera.lookAt( 0, 0, 0 );
 
 	/*
 	renderer = new THREE.WebGLRenderer();
@@ -48,12 +56,18 @@ function initRender()
 	scene.add( dirLight );
 	*/
 
-	var light = new THREE.PointLight(0xffffff, 3.5);
+	var light = new THREE.PointLight(0xffffff, 2.5);
 	light.position.set( 8, 20, 15 );
 	light.castShadow = true;
 	light.shadow.radius = 20;
 	scene.add( light );
 
+
+	var light2 = new THREE.PointLight(0xffffff, 1.5);
+	light2.position.set( 8, 15, -15 );
+	light2.castShadow = true;
+	light2.shadow.radius = 20;
+	scene.add( light2 );
 	//scene.fog = new THREE.Fog( 0x6a8b8f, 0.5, 1000 );
 
 
@@ -79,14 +93,16 @@ function animate() {
 
 	requestAnimationFrame( animate );
 
-	//controls.update();
+	controls.update();
 
+	/*
 	camera.lookAt( (mouseX * .001), (mouseY * -.001), 0 );
 	camera.position.x = 0 + (mouseX * -.002);
 	camera.position.y = -.5 + (mouseY * .002);
 
-
+	*/
 	renderer.render( scene, camera );
+
 
 };
 
@@ -103,7 +119,7 @@ $(document).ready(function () {
 	window.addEventListener('mousemove', onMouseMove, false);
 	window.addEventListener('resize', onWindowResize, false);
 
-	document.getElementById('kv_wrap').style.visibility = "visible";
+	document.getElementById(canvasContainer).style.visibility = "visible";
 	document.getElementById('canvas_3d').style.display = "block";
 
 
@@ -134,8 +150,8 @@ function MouseMoveModel(event)
 
 function WindowResizeModel() {
 
-	var kv_wrap_width = document.getElementById('kv_wrap').clientWidth;
-	var kv_wrap_aspect = (kv_wrap_width > 800) ? .5625 : 1.25;
+	var kv_wrap_width = document.getElementById(canvasContainer).clientWidth;
+	var kv_wrap_aspect = WindowResizeAspectRatio(kv_wrap_width);
 
 
 	camera.aspect = kv_wrap_width / (kv_wrap_width * kv_wrap_aspect);
@@ -144,6 +160,11 @@ function WindowResizeModel() {
 	renderer.setSize( kv_wrap_width, (kv_wrap_width * kv_wrap_aspect) );
 
 
+}
+
+function WindowResizeAspectRatio(kv_wrap_width)
+{
+	return (kv_wrap_width > 800) ? .5 : .85;
 }
 
 

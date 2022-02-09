@@ -1,0 +1,50 @@
+
+.swiper_wrap
+{
+	box-sizing: border-box;
+
+	width: 100%;
+	padding:8px;
+
+	background:#f3f3f3;
+
+}
+
+.swiper
+{
+	width: 100%;
+	text-align: center;
+}
+
+
+.swiper-inner
+{
+	display:inline-block;
+	padding:40px 60px 60px;
+}
+
+
+.swiper-copy
+{
+	max-width:880px;
+}
+
+
+
+
+
+
+
+
+
+
+	html:root
+	{
+	    --swiper-navigation-size: 30px;
+		--swiper-theme-color: #808080;
+	}
+	.swiper-button-prev:hover,
+	.swiper-button-next:hover
+	{
+		opacity:.35;
+	}

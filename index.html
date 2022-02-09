@@ -8,236 +8,168 @@
 		<link rel="shortcut icon" type="image/jpg" href="img/rh-favicon.png"/>
 
 
-		<!--LightGallery-->
-		<link href="css/vendor/font-awesome.css" rel="stylesheet" />
-		<link href="css/vendor/lightgallery.css" rel="stylesheet" />
-		<link href="css/vendor/lg-fb-comment-box.css" rel="stylesheet" />
-		<link href="css/vendor/lg-transitions.css" rel="stylesheet" />
+		<link type="text/css" rel="stylesheet" href="css/font-awesome/font-awesome.css" />
 
-		<!--ColorBox-
-		<link href="css/vendor/font-awesome.css" rel="stylesheet" />
-		<link href="css/vendor/colorbox.css" rel="stylesheet" />
-		-->
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600;1,900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
 		<link type="text/css" rel="stylesheet" href="css/work.css" />
 
 		<!--Three-->
 		<script src="js/renderModel.js" type="module"></script>
-		<link rel="stylesheet" href="css/title.css">
-
-		<!-- Animate -->
-		<link rel="stylesheet" href="css/vendor/animate.min.css" />
-
-
-
 	</head>
 	<body>
 
-			<div id="rich-overlay">
-				<div class="rich-overlay-outer">
 
-					<button class="rich-overlay-exit" onclick="richOverlay.exit();">&#10006;</button>
-					<div class="rich-overlay-inner">
-						<div class="rich-overlay-content_wrap"></div>
-					</div>
-					<div class="rich-overlay-footer">
-						<button class="back-to-top" onclick="$('#rich-overlay').animate({ scrollTop: 0 }, 'fast');">BACK TO TOP</button>
+			<header>
+				<div class="outer clearfix">
+					<nav>
+						<a class="name" href="#">Rich Huynh</a>
+						<ul>
+							<li>
+								<button class="topnav-link" onclick="pageScrollTo('#home-work');">Work</button>
+							</li>
+							<li>
+								<a class="topnav-link" href="https://www.linkedin.com/in/richhuynh">LinkedIn</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+
+
+
+			<main>
+				<div class="outer">
+					<div id="home-intro">
+						<h1>
+							<span class="intro-h1">Draw</span>
+							<span class="intro-h1">Design</span>
+							<span class="intro-h1">Develop</span>
+						</h1>
+						<div class="intro-divider">
+							<button onclick="openDrum();">Sometimes Drum </button>
+
+							<div class="h-line">
+								<div id="drum-clip">
+									<img src="img/drum.gif" alt="Rich Huynh spinning drumstick on stage." />
+								</div>
+
+							</div>
+
+						</div>
+						<p>
+							<strong>I am Rich Huynh</strong>, a multidiscipinary designer with a background in
+							web development, digital marketing, and e-commerce. As a creative with a taste for adventure,
+							I enjoy exploring new technologies and mediums for artistic expression. I am currently
+							a Senior Designer at MSI, designing  marketing creative for computer gaming and hardware.
+
+
+
+
+						</p>
 					</div>
 				</div>
-			</div>
 
-
-			<div id="kv_wrap">
-				<header id="title">
-					<h1>
-						<span class="firstname letter">R</span>
-						<span class="firstname letter">I</span>
-						<span class="firstname letter">C</span>
-						<span class="firstname letter">H</span>
-						<br />
-						<span class="lastname letter">H</span>
-						<span class="lastname letter">U</span>
-						<span class="lastname letter">Y</span>
-						<span class="lastname letter">N</span>
-						<span class="lastname letter">H</span>
-					</h1>
-					<div class="noise"></div>
-				</header>
-				<canvas id="canvas_3d"></canvas>
-				<div id="bg_wrap">
-					<div class="kv_bg bg-des" aria-hidden="true"></div>
-					<div class="kv_bg bg-dev" aria-hidden="true"></div>
-					<div class="kv_bg bg-gfx" aria-hidden="true"></div>
-					<div class="kv_bg bg-tech" aria-hidden="true"></div>
-					<div class="kv_bg bg-des" aria-hidden="true"></div>
-					<div class="kv_bg bg-dev" aria-hidden="true"></div>
-					<div class="kv_bg bg-gfx" aria-hidden="true"></div>
-					<div class="kv_bg bg-tech" aria-hidden="true"></div>
-					<div class="kv_bg bg-des" aria-hidden="true"></div>
-					<div class="kv_bg bg-dev" aria-hidden="true"></div>
-					<div class="kv_bg bg-gfx" aria-hidden="true"></div>
-					<div class="kv_bg bg-tech" aria-hidden="true"></div>
-					<div class="kv_bg bg-des" aria-hidden="true"></div>
-					<div class="kv_bg bg-dev" aria-hidden="true"></div>
-				</div>
-			</div>
-
-			<div class="wow slideInUp" style="padding:5em 20px; color:#fff; text-align:center;">
-				<h1 style="font-family: 'Montserrat', sans-serif; font-size:3em; font-weight:900;">
-					Multi-Disciplinary Digital Designer
-				</h1>
-			</div>
-
-			<main class="clearfix">
-
-				<div class="gallery-container">
-
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(11);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>MSI Brand Store</h1>
-								<h2>Web Design / Storytelling</h2>
-							</div>
-						</div>
-						<img src="img/gallery/msi_amazon.jpg" alt="MSI Study & Play in Style" />
-					</button>
-
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(10);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>Study & Play</h1>
-								<h2>Web Design</h2>
-							</div>
-						</div>
-						<img src="img/gallery/study_play.jpg" alt="MSI Study & Play in Style" />
-					</button>
-
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(9);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>Back to School</h1>
-								<h2>Web Design / Prototype</h2>
-							</div>
-						</div>
-						<img src="img/gallery/bts-2021.jpg" alt="MSI Back To School Guide Graphic" />
-					</button>
-
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(8);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>MSI Social Media</h1>
-								<h2>Product Graphics</h2>
-							</div>
-						</div>
-						<img src="img/gallery/msi_socials.jpg" alt="Colorful Laptop Graphic" />
-					</button>
-
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(7);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>Blizzcon 2019</h1>
-								<h2>Web + Event Display</h2>
-							</div>
-						</div>
-						<img src="img/gallery/bc-2019.jpg" alt="MSI BlizzCon Product Graphic" />
-					</button>
-
-
-
-				<button class="gallery-button wow slideInUp" onclick="richOverlay.open(6);">
-					<div class="label-overlay">
-						<div class="label">
-							<h1>Lucky Stickers</h1>
-							<h2>Animated GIFs</h2>
+				<div id="home-visual">
+					<div class="outer">
+						<div class="text-overlay">
+							ART +<br />
+							TECHNOLOGY
 						</div>
 					</div>
-					<img src="img/gallery/lucky-sticker.jpg" alt="MSI Lucky Powering Up" />
-				</button>
-
-
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(3);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>REACH</h1>
-								<h2>Brand Materials</h2>
-							</div>
-						</div>
-						<img src="img/gallery/reach-brochure.jpg" alt="Reach - We Help Foster Youth" />
-					</button>
-
-
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(2);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>Eon</h1>
-								<h2>Digital Illustration</h2>
-							</div>
-						</div>
-						<img src="img/gallery/dino-poster.jpg" alt="T-Rex Head" />
-					</button>
-					<button class="gallery-button wow slideInUp" onclick="richOverlay.open(1);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>REACH</h1>
-								<h2>Event Flyers</h2>
-							</div>
-						</div>
-						<img src="img/gallery/reach-flyers.jpg" alt="Reach Presents - Can You Hear Me?" />
-					</button>
-
-					<!--
-					<button class="gallery-button" onclick="richOverlay.open(0);">
-						<div class="label-overlay">
-							<div class="label">
-								<h1>Water</h1>
-								<h2>T-Shirt Design</h2>
-							</div>
-						</div>
-						<img src="img/gallery/water-shirt.jpg" alt="Skull Factory Monster Design"/>
-					</button>
-				-->
+					<div id="canvas_wrap">
+						<canvas id="canvas_3d" ></canvas>
+					</div>
 				</div>
 
+				<div class="outer">
+					<div id="home-work">
+						<h2>
+							Work
+						</h2>
+						<div class="portfolio-wrap">
+							<ul class="work-list clearfix">
+								<li class="work-box">
+									<a href="work/msi_brand_store">
+										<div class="work-image" style="background-image:url('img/gallery/msi_brand_store.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">MSI Brand Store - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>MSI Brand Store</h3>
+										<p>E-Commerce</p>
+										<ul class="role-list">
+											<li>Storytelling</li>
+											<li>Copywriting</li>
+											<li>Web Design</li>
+											<li>Graphic Design</li>
+										</ul>
+									</div>
+								</li>
+								<li class="work-box">
+									<a href="work/study_play">
+										<div class="work-image" style="background-image:url('img/gallery/study_and_play.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">Study & Play - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>Study & Play</h3>
+										<p>Promotional Campaign</p>
+										<ul class="role-list">
+											<li>Web Design</li>
+											<li>Graphic Design</li>
+											<li>Illustration</li>
+										</ul>
+									</div>
+								</li>
+								<li class="work-box">
+									<a href="work/reach_brand">
+										<div class="work-image" style="background-image:url('img/gallery/reach.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">REACH Foster Youth - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>REACH Foster Youth</h3>
+										<p>Brand & Marketing</p>
+										<ul class="role-list">
+											<li>Branding</li>
+											<li>Typography</li>
+											<li>Print Design</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</main>
 
+
 			<footer>
-				<nav class="nav-social cf wow slideInUp">
-					<a target="_blank" href="https://www.linkedin.com/in/richhuynh">
-						<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
-					</a>
-					<a target="_blank" href="https://github.com/richhuynhyo">
-						<i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
-					</a>
-				</nav>
+				<div class="outer">
+					<nav>
+						<ul>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/in/richhuynh">
+									<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://github.com/richhuynhyo">
+									<i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</footer>
 
 
 
-
-
 		<!--JS-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="js/vendor/hammer-time.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
+		<script src="js/hammer-time/hammer-time.min.js"></script>
 
-		<!--LightGallery-->
-		<script src="js/vendor/jquery.mousewheel.min.js"></script>
-		<script src="js/vendor/picturefill.min.js"></script>
-		<script src="js/vendor/lightgallery-all.js"></script>
-
-
-		<!--ColorBox
-		<script src="js/vendor/jquery.colorbox.js"></script>-->
 
 		<!--Site JS-->
 		<script type="text/javascript" src="js/site.js"></script>
-
-		<!-- wow -->
-		<script src="js/vendor/wow.js"></script>
-		<script>
-			new WOW().init();
-		</script>
 	</body>
 </html>
