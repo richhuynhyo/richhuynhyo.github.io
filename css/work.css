@@ -1,13 +1,12 @@
-@import "fonts.css";
+
 
 video {
-  /* override other styles to make responsive */
-  width: 100%    !important;
+  /* override other styles to make responsive
+  width: 100%    !important;*/
   height: auto   !important;
 }
 #project header nav
 {
-	text-align: center;
 }
 #project header nav .name
 {
@@ -38,7 +37,7 @@ video {
 {
 	max-width:880px;
 	margin:0 auto;
-	padding:120px 20px 100px;
+	padding:120px 0 100px;
 }
 	#project .intro .intro-info
 	{
@@ -91,9 +90,28 @@ video {
 	display: block;
 
 	max-width: 100%;
-	margin:0 auto;
+	margin:0 auto 1rem;
 
 }
+
+video.center-vid 
+{
+    width: 100% !important;
+}
+.video-wrapper
+{
+    background:#f3f3f3;
+    padding:5.5%;
+    margin:0 auto 1rem;
+}
+    .video-wrapper video
+    {
+        display:block;
+        max-width:100%;
+        margin:0 auto;
+
+        box-shadow:0 5px 10px rgba(0,0,0,0.15);
+    }
 
 
 .project-copy

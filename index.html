@@ -15,12 +15,20 @@
 
 		<!--Three-->
 		<script src="js/renderModel.js" type="module"></script>
+
+		<!--Animate Css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<style>
+		:root {
+		  --animate-delay: 0.025s;
+		}
+		</style>
 	</head>
 	<body>
 
 
 			<header>
-				<div class="outer clearfix">
+				<div class="outer clearfix intro-h1 animate__animated animate__fadeInDown animate__delay-2s">
 					<nav>
 						<a class="name" href="#">Rich Huynh</a>
 						<ul>
@@ -42,14 +50,14 @@
 				<div class="outer">
 					<div id="home-intro">
 						<h1>
-							<span class="intro-h1">Draw</span>
-							<span class="intro-h1">Design</span>
-							<span class="intro-h1">Develop</span>
+							<span class="intro-h1 animate__animated animate__fadeInLeft animate__delay-2s">Draw</span>
+							<span class="intro-h1 animate__animated animate__fadeInLeft animate__delay-3s">Design</span>
+							<span class="intro-h1 animate__animated animate__fadeInLeft animate__delay-4s">Develop</span>
 						</h1>
-						<div class="intro-divider">
+						<div class="intro-divider animate__animated animate__fadeInLeft animate__delay-5s">
 							<button onclick="openDrum();">Sometimes Drum </button>
 
-							<div class="h-line">
+							<div class="h-line ">
 								<div id="drum-clip">
 									<img src="img/drum.gif" alt="Rich Huynh spinning drumstick on stage." />
 								</div>
@@ -57,7 +65,7 @@
 							</div>
 
 						</div>
-						<p>
+						<p class="animate__animated animate__fadeInLeft animate__delay-4s">
 							<strong>I am Rich Huynh</strong>, a multidiscipinary designer with a background in
 							web development, digital marketing, and e-commerce. As a creative with a taste for adventure,
 							I enjoy exploring new technologies and mediums for artistic expression. I am currently
@@ -82,13 +90,28 @@
 					</div>
 				</div>
 
-				<div class="outer">
+				<div id="work" class="outer">
 					<div id="home-work">
 						<h2>
 							Work
 						</h2>
 						<div class="portfolio-wrap">
-							<ul class="work-list clearfix">
+							<ul class="work-list">
+								<li class="work-box">
+									<a href="work/msi_public_domain">
+										<div class="work-image" style="background-image:url('img/gallery/april_fools.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">MSI x Public Domain - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>MSI x Public Domain</h3>
+										<p>April Fool's Social Campaign</p>
+										<ul class="role-list">
+											<li>Creative Direction</li>
+											<li>Graphic Design</li>
+											<li>Photo Manipulation</li>
+										</ul>
+									</div>
+								</li>
 								<li class="work-box">
 									<a href="work/msi_brand_store">
 										<div class="work-image" style="background-image:url('img/gallery/msi_brand_store.jpg')" aria-hidden="true"></div>
@@ -96,12 +119,11 @@
 									</a>
 									<div class="work-info">
 										<h3>MSI Brand Store</h3>
-										<p>E-Commerce</p>
+										<p>E-Commerce - Amazon Vendor</p>
 										<ul class="role-list">
-											<li>Storytelling</li>
-											<li>Copywriting</li>
-											<li>Web Design</li>
-											<li>Graphic Design</li>
+											<li>Creative Direction</li>
+											<li>Branding</li>
+											<li>UI/UX</li>
 										</ul>
 									</div>
 								</li>
@@ -114,9 +136,71 @@
 										<h3>Study & Play</h3>
 										<p>Promotional Campaign</p>
 										<ul class="role-list">
-											<li>Web Design</li>
-											<li>Graphic Design</li>
 											<li>Illustration</li>
+											<li>Web Design</li>
+											<li>HTML/CSS</li>
+											<li>Javascript</li>
+										</ul>
+									</div>
+								</li>
+								<li class="work-box">
+									<a href="work/msi_oled">
+										<div class="work-image" style="background-image:url('img/gallery/msi_oled.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">Creator 15 OLED Video Social Posts - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>Creator 15 OLED</h3>
+										<p>Video Social Posts</p>
+										<ul class="role-list">
+											<li>Visual Effects</li>
+											<li>Motion Graphics</li>
+										</ul>
+									</div>
+								</li>
+								<!--
+								<li class="work-box">
+									<a href="work/msi_2021">
+										<div class="work-image" style="background-image:url('img/gallery/msi_2021.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">2021 MSI Graphics - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>2021 MSI Graphics</h3>
+										<p>Web & Print - Assorted</p>
+										<ul class="role-list">
+											<li>Marketing</li>
+											<li>Graphic Design</li>
+											<li>Photo Manipulation</li>
+										</ul>
+									</div>
+								</li>
+							-->
+								<li class="work-box">
+									<a href="work/msi_optix">
+										<div class="work-image" style="background-image:url('img/gallery/msi_optix.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">MSI Optix MPG321QRF-QD - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>Optix MPG321QRF-QD</h3>
+										<p>Etailer A+ Content</p>
+										<ul class="role-list">
+											<li>Marketing</li>
+											<li>Graphic Design</li>
+											<li>Photo Manipulation</li>
+										</ul>
+									</div>
+								</li>
+								<li class="work-box">
+									<a href="work/msi_yuumei">
+										<div class="work-image" style="background-image:url('img/gallery/msi_yuumei.jpg')" aria-hidden="true"></div>
+										<span class="sr-only">MSI x Yuumei Charity Collaboration - Learn More</span>
+									</a>
+									<div class="work-info">
+										<h3>MSI x Yuumei</h3>
+										<p>Charity Collaboration</p>
+										<ul class="role-list">
+											<li>Web Design</li>
+											<li>HTML/CSS</li>
+											<li>Javascript</li>
 										</ul>
 									</div>
 								</li>

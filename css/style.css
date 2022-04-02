@@ -1,5 +1,7 @@
 @import "fonts.css";
 
+
+
 html
 {
 	height:100%;
@@ -8,14 +10,14 @@ html
 	font-size:12px;
 	color:#171718;
 }
-@media(min-width:641px){ html{font-size:14px;} }
+@media(min-width:481px){ html{font-size:14px;} }
 @media(min-width:801px){ html{font-size:16px;} }
 body
 {
 	height:100%;
 	margin:0;
 
-	background:#fff;
+	background:#fefefe;
 
 	overflow-y:scroll;
 }
@@ -55,7 +57,7 @@ nav ul
 		width:100%;
 		max-width:1600px;
 		margin:0 auto;
-		padding:0 20px;
+		padding:0 2rem;
 	}
 	@media(min-width:641px){ .outer{padding:0 5%;} }
 	@media(min-width:801px){ .outer{padding:0 8%;} }
@@ -116,15 +118,18 @@ nav ul
 
 
 
-
+	#home-intro
+	{
+		overflow-x: hidden;
+	}
 		#home-intro h1
 		{
 			font-size:6rem;
-			line-height: 1.1;
+			line-height: 1.05;
 		}
 			@media(min-width:481px){#home-intro h1{font-size:7.5rem;}}
 			@media(min-width:721px){#home-intro h1{font-size:8.5rem;}}
-			@media(min-width:1081px){#home-intro h1{font-size:9rem;}}
+			@media(min-width:1281px){#home-intro h1{font-size:9rem;}}
 			#home-intro h1 .intro-h1
 			{
 				display:block;
@@ -144,7 +149,7 @@ nav ul
 
 		.intro-divider
 		{
-			margin:4rem auto 7rem;
+			margin:3rem auto 6rem;
 		}
 			.intro-divider button
 			{
@@ -200,7 +205,7 @@ nav ul
 
 		width:100%;
 		background:#efefef;
-		margin:0 auto 4rem;
+		margin:0 auto 2rem;
 	}
 		#home-visual .outer
 		{
@@ -244,15 +249,20 @@ nav ul
 
 	#home-work
 	{
-		padding:.5rem 0 0;
+		padding:2.5rem 0 0;
 	}
 		#home-work h2
 		{
 			font-size:3rem;
+			margin:0 auto 2rem;
 		}
 		.portfolio-wrap .work-list
 		{
-			display:block;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: space-between;
+			gap:20px;
 
 			padding:0;
 			margin:0;
@@ -265,18 +275,12 @@ nav ul
 				width:100%;
 				margin:0 auto 3em;
 
-				float:left;
 			}
 			@media(min-width:601px) and (max-width:1280px)
 			{
 				.portfolio-wrap .work-list .work-box
 				{
 					width:calc(50% - 10px);
-					margin:0 20px 2em 0;
-				}
-				.portfolio-wrap .work-list .work-box:nth-child(2n)
-				{
-					margin:0 0 2em;
 				}
 			}
 			@media(min-width:1281px)
@@ -284,12 +288,8 @@ nav ul
 				.portfolio-wrap .work-list .work-box
 				{
 					width:calc(33.33% - 15px);
-					margin:0 20px 2em 0;
 				}
-				.portfolio-wrap .work-list .work-box:nth-child(3n)
-				{
-					margin:0 0 2em;
-				}
+
 			}
 				.portfolio-wrap .work-list .work-box a
 				{
@@ -312,7 +312,7 @@ nav ul
 						width: 100%;
 						max-width:596px;
 						margin:0 0 10px;
-						padding:0 0 60%;
+						padding:0 0 80%;
 						background-size: cover;
 						background-repeat: no-repeat;
 						border:1px solid transparent;
