@@ -36,6 +36,9 @@ button
 {
 	font-family: 'RedHatDisplay', sans-serif;
 	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 nav ul
 {
