@@ -161,14 +161,9 @@ video.center-vid
 		background:none;
 
 		text-align:center;
-
+		color:#171718;
 	}
 	.scrollToTop:hover
 	{
 		animation: drumButton .5s ease 1 forwards;
-	}
-	@keyframes scrollToTop
-	{
-		from {color: #171718;}
-		to{color: #f3f3f3;}
 	}
