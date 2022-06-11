@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Rich Huynh Design">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rich Huynh - Design</title>
+		<link rel="shortcut icon" type="image/jpg" href="img/rh-favicon.png"/>
+
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+
+		<!--Animate Css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<style>
+			:root {
+		  --animate-delay: 0.025s;
+			}
+		</style>
+
+		
+		
+	</head>
+	<body>
+
+		<div id="outer">
+
+
+			<header class="animate__animated animate__fadeInDown animate__delay-4s animate__slow" > 
+				<nav>
+					<a class="name" href="#">Rich Huynh</a>
+					<ul>
+						<li>
+							<a class="topnav-link" href="https://www.linkedin.com/in/richhuynh">Work</a>
+						</li>
+						<li>
+							<a class="topnav-link" href="https://www.linkedin.com/in/richhuynh">About</a>
+						</li>
+						<li>
+							<a class="topnav-link" href="https://www.linkedin.com/in/richhuynh">LinkedIn</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="hero-bg" aria-hidden="true">
+				<video playsinline autoplay muted loop preload="metadeta">
+				  <source src="img/hero-bg.mp4" type="video/mp4">
+				</video>
+				<div class="gradient"></div>
+				<div class="noise"></div>
+			</div>
+
+			<section id="hero">
+				<div class="inner">
+					<h1 >
+						<span class="animate__animated animate__fadeIn animate__delay-1s animate__slow">Visual Storytelling</span>
+						 <span class="animate__animated animate__fadeIn animate__delay-2s animate__slow">through UI/UX and</span>
+						  <span class="animate__animated animate__fadeIn animate__delay-3s animate__slow">Multimedia Design.</span>
+					</h1>
+				</div>	
+			</section>
+
+
+			
+
+
+
+
+			<main>
+				<h2 class="animate__animated animate__fadeIn animate__delay-4s animate__slow">Selected Works</h2>
+				<div class="diamond animate__animated animate__fadeInUp animate__delay-4s animate__slow" aria-hidden="true">
+				</div>
+				
+				<div class="inner">
+					<div id="scroll-line" aria-hidden="false" class="animate__animated animate__fadeIn animate__delay-5s animate__slow"></div>
+					<ul id="case-list">
+						<li>
+							<div class="case-info wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
+								<div class="info-inner">
+									<h4>
+										03
+									</h4>
+									<h3>
+										Energetic Visual Storytelling
+										Utilizing Media Assets
+																			
+									</h3>
+									<p>
+										Personal Project - Earth Defense Force 5 Web Concept
+										
+									</p>
+									<a href="">View Case 
+									</a>
+								</div>
+							</div>
+							<a class="case-img wow animate__fadeIn offsetme40" data-wow-duration="2s" data-wow-delay="0">
+								<div style="background:#888; width:100%; padding-bottom:137.5%;">sdfsdf</div>
+							</a>
+						</li>
+						<li>
+							<div class="case-info wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
+								<div class="info-inner">
+									<h4>
+										02
+									</h4>
+									<h3>
+										Audience-Focused
+										Web Design for Product Marketing									
+									</h3>
+									<p>
+										MSI - Creator Products Landing Page
+									</p>
+									<a href="">View Case 
+									</a>
+								</div>
+							</div>
+							<a class="case-img wow animate__fadeIn offsetme40" data-wow-duration="2s" data-wow-delay="0">
+								<div style="background:#888; width:100%; padding-bottom:137.5%;">sdfsdf</div>
+							</a>
+						</li>
+						<li>
+							<div class="case-info wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
+								<div class="info-inner">
+									<h4>
+										01
+									</h4>
+									<h3>
+										Improving the Online Store
+										Shopping Experience
+									</h3>
+									<p>
+										MSI - Amazon Brand Store
+									</p>
+									<a href="">View Case 
+									</a>
+								</div>
+							</div>
+							<a class="case-img wow animate__fadeIn offsetme40" data-wow-duration="2s" data-wow-delay="0">
+								<div class="img-wrap">
+									<div style="background:#888; width:100%; padding-bottom:137.5%;">sdfsdf</div>
+								</div>			
+							</a>
+						</li>
+
+					</ul>
+
+
+				</div>
+
+				<div class="diamond" aria-hidden="true"></div>
+
+			</main>
+
+			<div class="back-to-top-wrap wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0" >
+				<button class="back-to-top" onclick="pageScrollTo('header')">
+					Back to Top
+				</button>
+			</div>
+
+			<footer class=" wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li class="e-container">
+								
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<a class="name" href="#">Rich Huynh</a>
+				<div class="copyright">
+					&copy;2022
+				</div>
+			</footer>
+
+		</div>
+
+
+
+		<!--JS-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="js/hammer-time/hammer-time.min.js"></script>
+
+
+		<!--Wow Js-->
+		<script src="js/wow/wow.min.js"></script>
+		<script>
+			window.onload = function() 
+			{
+				var elements = document.getElementsByClassName("offsetme40");
+				var i;
+				for (i = 0; i < elements.length; i++) {
+					var offset = elements[i].clientHeight * .4;   //.5 = 50%
+					elements[i].setAttribute("data-wow-offset", offset);
+				}
+			}
+			
+			wow = new WOW({
+				boxClass:     'wow',      // default
+				animateClass: 'animate__animated', // default
+				offset:       0,          // default
+				mobile:       false,       // default
+				live:         true        // default
+			});
+			wow.init();
+		</script>
+
+
+		<!--Site JS-->
+		<script type="text/javascript" src="js/site.js"></script>
+	</body>
+</html>
