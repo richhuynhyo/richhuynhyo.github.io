@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Rich Huynh Design">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rich Huynh - Design</title>
+		<link rel="shortcut icon" type="image/jpg" href="/img/rh-favicon.png"/>
+
+		<link type="text/css" rel="stylesheet" href="/css/style.css" />
+
+
+		<!--Animate Css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<style>
+			:root {
+		  --animate-delay: 0.025s;
+			}
+		</style>
+
+		
+		
+	</head>
+	<body>
+		<div id="loader-wrapper" aria-hidden="true">
+			<div id="loader">
+				<div class="title">Rich Huynh</div>
+				<div class="subtitle">Designer</div>				
+			</div>
+		</div>
+
+		<div id="outer">
+
+			<header> 
+				<nav>
+					<a class="name" href="/">Rich Huynh</a>
+					<ul>
+						<li>
+							<a class="topnav-link" href="/">Work</a>
+						</li>
+						<li>
+							<a class="topnav-link" href="/about">About</a>
+						</li>
+						<li>
+							<a class="topnav-link" href="https://www.linkedin.com/in/richhuynh">LinkedIn</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+
+			<section id="hero">
+				<div class="inner">
+					<h1 >
+						<span>About Page</span>
+					</h1>
+				</div>	
+			</section>
+
+
+			
+
+
+
+
+			<main>
+				
+				<div class="inner">
+				
+
+				</div>
+
+
+			</main>
+
+			<div class="back-to-top-wrap wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0" >
+				<button class="back-to-top" onclick="pageScrollTo('header')">
+					Back to Top
+				</button>
+			</div>
+
+			<footer class=" wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li class="e-container">
+								
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<a class="name" href="/">Rich Huynh</a>
+				<div class="copyright">
+					&copy;2022
+				</div>
+			</footer>
+
+		</div>
+
+
+
+		<!--JQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+		<!--Hammer-->
+		<script src="/js/hammer-time/hammer-time.min.js"></script>
+
+		<!--Wow Js-->
+		<script src="/js/wow/wow.min.js"></script>
+		<script>
+			window.onload = function() 
+			{
+				var elements = document.getElementsByClassName("offsetme40");
+				var i;
+				for (i = 0; i < elements.length; i++) {
+					var offset = elements[i].clientHeight * .4;   //.5 = 50%
+					elements[i].setAttribute("data-wow-offset", offset);
+				}
+			}
+			
+			wow = new WOW({
+				boxClass:     'wow',      // default
+				animateClass: 'animate__animated', // default
+				offset:       0,          // default
+				mobile:       false,       // default
+				live:         true        // default
+			});
+			wow.init();
+		</script>
+
+
+		<!--Site JS-->
+		<script type="text/javascript" src="/js/site.js"></script>
+	</body>
+</html>
