@@ -28,6 +28,10 @@ $('a').click(function(){
 
 function toggleLoader()
 {
+  if( !$('#loader').is(":visible"))
+  {
+    $('#loader').show();
+  }
   setTimeout(() => {
     $('#loader').fadeOut(400);
     setTimeout(() => {
