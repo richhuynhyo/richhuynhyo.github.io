@@ -1,8 +1,8 @@
 
-$(function() {
- toggleLoader();
-  
+$(window).on('pageshow', function(){
+  toggleLoader();
 });
+
   
 
   
