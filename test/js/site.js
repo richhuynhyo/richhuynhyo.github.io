@@ -1,8 +1,4 @@
-
-$(window).on('pageshow', function(){
-  toggleLoader();
-});
-
+window.addEventListener("pageshow", toggleLoader);
   
 
   
