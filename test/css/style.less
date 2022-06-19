@@ -142,6 +142,7 @@
 	}
 }
 
+
 @keyframes link-hover
 {
 	from 
@@ -551,12 +552,26 @@ footer
 #hero-bg
 {
 	width: 100%;
+	padding-bottom:75%;
 
 	background-repeat: no-repeat;
 	background-position: top center;
 	position: absolute;
 	top:0;
 	z-index: -10;
+
+	.breakpoint-xs({
+		padding-bottom:187.5%;
+	});
+	.breakpoint-sm({
+		padding-bottom:150%;	
+	});
+	.breakpoint-md({
+		padding-bottom:112.5%;	
+	});
+	.breakpoint-lg({
+		padding-bottom:93.75%;	
+	});
 
 	.video-wrap
 	{
@@ -569,7 +584,10 @@ footer
 		width:100%;
 		opacity:.75;
 		
-		z-index: 0;
+		position: absolute;
+		left:50%;
+		transform: translateX(-50%);
+		z-index: 1;
 
 		.breakpoint-xs({
 			width:250%;
@@ -599,7 +617,7 @@ footer
 		
 		position: absolute;
 		bottom:0;
-		z-index: 1;
+		z-index: 2;
 
 		/*
 		.breakpoint-xs({
@@ -744,6 +762,25 @@ footer
 			width:100%;
 
 			
+			&.odd-list
+			{
+				li:nth-child(odd)
+				{
+					flex-direction: row-reverse;
+					
+				}
+			}
+
+			&.even-list
+			{
+				li:nth-child(even)
+				{
+					flex-direction: row-reverse;
+					
+				}
+			}
+				
+			
 				
 			li
 			{
@@ -756,12 +793,6 @@ footer
 				justify-content:center;
 
 				
-
-				&:nth-child(2n)
-				{
-					flex-direction: row-reverse;
-					
-				}
 
 				.breakpoint-xs({
 					display: block;
@@ -848,9 +879,7 @@ footer
 
 						color:@white;
 						text-decoration: none;
-						line-height: 1;
-
-						
+						line-height: 1;						
 
 						&:hover
 						{
@@ -866,6 +895,24 @@ footer
 					display:block;
 					
 					flex:1;
+					overflow: hidden;
+					.img-wrap
+					{
+					
+						img
+						{
+							display:block;
+	
+							width:100%;
+
+							transition: all 1s ease-in-out;
+
+							&:hover
+							{
+								transform: scale(1.125);
+							}
+						}
+					}					
 				}
 			}
 		}
@@ -893,8 +940,11 @@ footer
 	}
 	.case-kv
 	{
-		margin:0 auto 3rem;
+		display:block;
 		
+		width:100%;
+		margin:0 auto 3rem;
+	
 	}
 	.case-text
 	{
@@ -932,6 +982,13 @@ footer
 	{
 		max-width: 1280px;
 		margin:0 auto 1rem;
+
+		
+		img
+		{
+			display:block;
+			width:100%;
+		}
 	}
 	h1
 	{
@@ -982,7 +1039,7 @@ footer
 
 	p
 	{
-		margin:0;
+		margin:0 0 1rem;
 
 		font-size:1.25rem;
 		font-weight:200;

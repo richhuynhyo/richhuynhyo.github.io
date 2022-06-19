@@ -485,11 +485,32 @@ footer .copyright {
 }
 #hero-bg {
   width: 100%;
+  padding-bottom: 75%;
   background-repeat: no-repeat;
   background-position: top center;
   position: absolute;
   top: 0;
   z-index: -10;
+}
+@media (max-width: 480px) {
+  #hero-bg {
+    padding-bottom: 187.5%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #hero-bg {
+    padding-bottom: 150%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hero-bg {
+    padding-bottom: 112.5%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #hero-bg {
+    padding-bottom: 93.75%;
+  }
 }
 #hero-bg .video-wrap {
   position: relative;
@@ -499,7 +520,10 @@ footer .copyright {
   display: block;
   width: 100%;
   opacity: 0.75;
-  z-index: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 @media (max-width: 480px) {
   #hero-bg video {
@@ -527,7 +551,7 @@ footer .copyright {
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
   position: absolute;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
   /*
 		.breakpoint-xs({
 			padding-top:20%;
@@ -651,15 +675,18 @@ footer .copyright {
   list-style-position: inside;
   width: 100%;
 }
+#home-container .inner #case-list.odd-list li:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+#home-container .inner #case-list.even-list li:nth-child(even) {
+  flex-direction: row-reverse;
+}
 #home-container .inner #case-list li {
   display: flex;
   width: 100%;
   margin: 12rem 0;
   align-items: center;
   justify-content: center;
-}
-#home-container .inner #case-list li:nth-child(2n) {
-  flex-direction: row-reverse;
 }
 @media (max-width: 480px) {
   #home-container .inner #case-list li {
@@ -753,6 +780,15 @@ footer .copyright {
 #home-container .inner #case-list li a.case-img {
   display: block;
   flex: 1;
+  overflow: hidden;
+}
+#home-container .inner #case-list li a.case-img .img-wrap img {
+  display: block;
+  width: 100%;
+  transition: all 1s ease-in-out;
+}
+#home-container .inner #case-list li a.case-img .img-wrap img:hover {
+  transform: scale(1.125);
 }
 #case-container .h-line {
   margin: 3rem auto;
@@ -761,6 +797,8 @@ footer .copyright {
   margin: 0 auto 3rem;
 }
 #case-container .case-kv {
+  display: block;
+  width: 100%;
   margin: 0 auto 3rem;
 }
 #case-container .case-text {
@@ -789,6 +827,10 @@ footer .copyright {
 #case-container .case-img {
   max-width: 1280px;
   margin: 0 auto 1rem;
+}
+#case-container .case-img img {
+  display: block;
+  width: 100%;
 }
 #case-container h1 {
   margin: 0 0 0.75rem;
@@ -830,7 +872,7 @@ footer .copyright {
   font-weight: 700;
 }
 #case-container p {
-  margin: 0;
+  margin: 0 0 1rem;
   font-size: 1.25rem;
   font-weight: 200;
   line-height: 1.5;

@@ -70,7 +70,7 @@
 				
 				<div class="inner">
 					<div id="scroll-line" aria-hidden="false" class="animate__animated animate__fadeIn animate__delay-1s animate__slow"></div>
-					<ul id="case-list">
+					<ul id="case-list" class="even-list">
 						<li>
 							<div class="case-info wow animate__fadeIn" data-wow-duration="1s">
 								<div class="info-inner">
@@ -131,8 +131,10 @@
 									</a>
 								</div>
 							</div>
-							<a class="case-img wow animate__fadeIn offsetMe" data-wow-duration="1s">
-								<div style="background:#888; width:100%; padding-bottom:137.5%;">sdfsdf</div>
+							<a class="case-img wow animate__fadeIn offsetMe" data-wow-duration="1s" href="case/2">
+								<div class="img-wrap">
+									<img src="img/case-2.jpg" alt="ALTTEXT" />
+								</div>		
 							</a>
 						</li>
 						<li>
@@ -142,10 +144,10 @@
 										01: MSI - Amazon Brand Store
 									</h3>
 									<h4>
-										Improving Brand Messaging for the Online Shopping Experience
+										Improving Sales by Visually Redesigning the Brand-Store Shopping Experience
 									</h4>
 									<h5>
-										 Visual Design, Branding
+										Visual Design, Product Marketing, Copywriting
 									</h5>
 									<a href="case/1">View Case 
 									</a>
@@ -153,7 +155,7 @@
 							</div>
 							<a class="case-img wow animate__fadeIn offsetMe" data-wow-duration="1s" href="case/1">
 								<div class="img-wrap">
-									<div style="background:#888; width:100%; padding-bottom:137.5%;">sdfsdf</div>
+									<img src="img/case-1.jpg" alt="ALTTEXT" />
 								</div>			
 							</a>
 						</li>
@@ -201,7 +203,7 @@
 				var elements = document.getElementsByClassName("offsetMe");
 				var i;
 				for (i = 0; i < elements.length; i++) {
-					var offset = elements[i].clientHeight * .25; 
+					var offset = elements[i].clientHeight * .35; 
 					elements[i].setAttribute("data-wow-offset", offset);
 				}
 			}
