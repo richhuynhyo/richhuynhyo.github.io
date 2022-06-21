@@ -2,410 +2,184 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="Rich Huynh - Designer + Developer">
+		<meta name="description" content="Rich Huynh Design">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Rich Huynh - Creative Designer</title>
+		<title>Rich Huynh - Design</title>
 		<link rel="shortcut icon" type="image/jpg" href="img/rh-favicon.png"/>
 
-
-		<link type="text/css" rel="stylesheet" href="css/font-awesome/font-awesome.css" />
-
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
-		<link type="text/css" rel="stylesheet" href="css/work.css" />
 
-		<!--Three-->
-		<script src="js/renderModel.js" type="module"></script>
 
 		<!--Animate Css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-		<style>
-		:root {
-		  --animate-delay: 0.025s;
-		}
-		</style>
+		
+		
 	</head>
 	<body>
+		<div id="loader-wrapper">
+			<div id="loader">
+				<div class="title">Rich Huynh</div>
+				<div class="subtitle">Design</div>				
+			</div>
+		</div>
 
+		<div id="outer">
 
-			<header>
-				<div class="outer clearfix intro-h1 animate__animated animate__fadeInDown animate__delay-2s">
-					<nav>
-						<a class="name" href="#">Rich Huynh</a>
-						<ul>
-							<li>
-								<button class="topnav-link" onclick="pageScrollTo('#home-work');">Work</button>
-							</li>
-							<li>
-								<a class="topnav-link" href="https://www.linkedin.com/in/richhuynh">LinkedIn</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+			<header> 
+				<nav>
+					<a class="name" href="/" >Rich Huynh</a>
+					<ul>
+						<li>
+							<a class="topnav-link current-page" href="/">Work</a>
+						</li>
+						<!--
+						<li>
+							<a class="topnav-link" href="/about">About</a>
+						</li>-->
+						<li>
+							<a class="topnav-link" href="https://www.linkedin.com/in/richhuynh">LinkedIn</a>
+						</li>
+					</ul>
+				</nav>
 			</header>
 
+			<div id="hero-bg" aria-hidden="true">
+				<video playsinline autoplay muted loop preload="metadeta">
+					<source src="img/hero-bg.mp4" type="video/mp4">
+				</video>
+				<div class="gradient"></div>
+				<div class="noise"></div>
+			</div>
+
+			<section id="hero">
+				<div class="inner">
+					<h1>
+						<span>Visual Storytelling</span>
+						<span>and Problem Solving</span>
+						<span>with UI/UX Design and</span>
+						<span>Creative Technology.</span>
+					</h1>
+				</div>	
+			</section>
 
 
-
-			<main>
-				<div class="outer">
-					<div id="home-intro">
-						<h1>
-							<span class="intro-h1 animate__animated animate__fadeInLeft animate__delay-2s">Draw</span>
-							<span class="intro-h1 animate__animated animate__fadeInLeft animate__delay-3s">Design</span>
-							<span class="intro-h1 animate__animated animate__fadeInLeft animate__delay-4s">Develop</span>
-						</h1>
-						<div class="intro-divider animate__animated animate__fadeInLeft animate__delay-5s">
-							<button onclick="openDrum();">Sometimes Drum </button>
-
-							<div class="h-line ">
-								<div id="drum-clip">
-									<img src="img/drum.gif" alt="Rich Huynh spinning drumstick on stage." />
+			<main id="home-container">
+				<h2 class="animate__animated animate__fadeIn animate__delay-1s animate__slow">Selected Works</h2>
+				<div class="diamond animate__animated animate__fadeInUp animate__delay-1s animate__slow" aria-hidden="true">
+				</div>
+				
+				<div class="inner">
+					<div id="scroll-line" aria-hidden="false" class="animate__animated animate__fadeIn animate__delay-1s animate__slow"></div>
+					<ul id="case-list" class="even-list">					
+						<li>
+							<div class="case-info wow animate__fadeIn" data-wow-duration="1s">
+								<div class="info-inner">
+									<h3>
+										02: MSI - Creator Products Landing Page
+									</h3>
+									<h4>
+										Audience-Focused
+										Web Design for Product Marketing									
+									</h4>
+									<h5>
+										Web Design, Interaction Design, Front-End Development
+								   </h5>
+									<a href="case/2">View Case 
+									</a>
 								</div>
-
 							</div>
+							<a class="case-img wow animate__fadeIn offsetMe" data-wow-duration="1s" href="case/2">
+								<div class="img-wrap">
+									<img src="img/case-2.jpg" alt="ALTTEXT" />
+								</div>		
+							</a>
+						</li>
+						<li>
+							<div class="case-info wow animate__fadeIn" data-wow-duration="1s">
+								<div class="info-inner">
+									<h3>
+										01: MSI - Amazon Brand Store
+									</h3>
+									<h4>
+										Improving Sales by Visually Redesigning the Brand-Store Shopping Experience
+									</h4>
+									<h5>
+										Visual Design, Product Marketing, Copywriting
+									</h5>
+									<a href="case/1">View Case 
+									</a>
+								</div>
+							</div>
+							<a class="case-img wow animate__fadeIn offsetMe" data-wow-duration="1s" href="case/1">
+								<div class="img-wrap">
+									<img src="img/case-1.jpg" alt="ALTTEXT" />
+								</div>			
+							</a>
+						</li>
 
-						</div>
-						<p class="animate__animated animate__fadeInLeft animate__delay-4s">
-							<strong>I am Rich Huynh</strong>, a multidisciplinary designer with a background in
-							web development, digital marketing, and e-commerce. I am an artist at heart, a big picture thinker, a humanist, and a creative scholar.
-							I enjoy exploring new technologies and mediums for artistic expression.
+					</ul>
 
 
-
-
-						</p>
-					</div>
 				</div>
 
-				<div id="home-visual">
-					<div class="outer">
-						<div class="text-overlay">
-							ART +<br />
-							TECHNOLOGY
-						</div>
-					</div>
-					<div id="canvas_wrap">
-						<canvas id="canvas_3d" ></canvas>
-					</div>
-				</div>
+				<div class="diamond" aria-hidden="true"></div>
 
-				<div id="work" class="outer">
-					<div id="home-work">
-						<h2>
-							Work
-						</h2>
-						<div class="portfolio-wrap">
-							<ul class="work-list">
-								<li class="work-box">
-									<a href="work/edf">
-										<div class="work-image" style="background-image:url('img/gallery/edf.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">Concept Marketing Web Design - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Earth Defense Force 5</h3>
-										<p>Web Marketing Concept</p>
-										<ul class="role-list">
-											<li>Visual Design</li>
-											<li>Web Design</li>
-											<li>Marketing</li>
-										</ul>
-									</div>
-								</li>
-
-
-								<li class="work-box">
-									<a href="work/msi_creator">
-										<div class="work-image" style="background-image:url('img/gallery/msi_creator.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">Imagine & Create - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Imagine & Create</h3>
-										<p>Product Marketing Web Design</p>
-										<ul class="role-list">
-											<li>Web Design</li>
-											<li>Visual Design</li>
-											<li>HTML/CSS/JS</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/shiba">
-										<div class="work-image" style="background-image:url('img/gallery/shiba.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">SHIBA - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>SHIBA</h3>
-										<p>Monster Movie Poster</p>
-										<ul class="role-list">
-											<li>Key Visual</li>
-											<li>Graphic Design</li>
-											<li>3D Composition</li>
-										</ul>
-									</div>
-								</li>
-
-
-								<li class="work-box">
-									<a href="work/msi_brighter_future">
-										<div class="work-image" style="background-image:url('img/gallery/brighter_future.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">Brighter Future for Gaming - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Brighter Future For Gaming</h3>
-										<p>Landing Page</p>
-										<ul class="role-list">
-											<li>Key Visual</li>
-											<li>Web Design</li>
-											<li>HTML/CSS/JS</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/msi_dribble">
-										<div class="work-image" style="background-image:url('img/gallery/msi_dribble.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">MSI Creator Animated Dribble Ad - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>MSI Creator</h3>
-										<p>Dribble Animated Ad</p>
-										<ul class="role-list">
-											<li>Art Direction</li>
-											<li>Video Composition</li>
-											<li>Motion Design</li>
-										</ul>
-									</div>
-								</li>
-
-
-								<li class="work-box">
-									<a href="work/msi_brand_store">
-										<div class="work-image" style="background-image:url('img/gallery/msi_brand_store.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">MSI Brand Store - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>MSI Brand Store</h3>
-										<p>E-Commerce - Amazon Vendor</p>
-										<ul class="role-list">
-											<li>Creative Direction</li>
-											<li>Art Direction</li>
-											<li>Branding</li>
-										</ul>
-									</div>
-								</li>
-								<li class="work-box">
-									<a href="work/msi_public_domain">
-										<div class="work-image" style="background-image:url('img/gallery/april_fools.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">MSI x Public Domain - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>MSI x Public Domain</h3>
-										<p>April Fool's Social Campaign</p>
-										<ul class="role-list">
-											<li>Creative Direction</li>
-											<li>Graphic Design</li>
-											<li>Photo Manipulation</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/msi_2021">
-										<div class="work-image" style="background-image:url('img/gallery/msi_2021.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">2021 MSI Graphics - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>2021 MSI Graphics</h3>
-										<p>Web & Print - Assorted</p>
-										<ul class="role-list">
-											<li>Key Visual</li>
-											<li>Graphic Design</li>
-											<li>Photo Manipulation</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/msi_optix">
-										<div class="work-image" style="background-image:url('img/gallery/msi_optix.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">MSI Optix MPG321QRF-QD - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Optix MPG321QRF-QD</h3>
-										<p>Etailer A+ Content</p>
-										<ul class="role-list">
-											<li>Key Visual</li>
-											<li>Graphic Design</li>
-											<li>Photo Manipulation</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/msi_oled">
-										<div class="work-image" style="background-image:url('img/gallery/msi_oled.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">Creator 15 OLED Video Social Posts - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Creator 15 OLED</h3>
-										<p>Video Social Posts</p>
-										<ul class="role-list">
-											<li>Visual Effects</li>
-											<li>Motion Graphics</li>
-										</ul>
-									</div>
-								</li>
-								<li class="work-box">
-									<a href="work/study_play">
-										<div class="work-image" style="background-image:url('img/gallery/study_and_play.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">Study & Play - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Study & Play</h3>
-										<p>Promotional Campaign</p>
-										<ul class="role-list">
-											<li>Illustration</li>
-											<li>Web Design</li>
-											<li>HTML/CSS/JS</li>
-										</ul>
-									</div>
-								</li>
-
-
-
-								<li class="work-box">
-									<a href="work/msi_rent">
-										<div class="work-image" style="background-image:url('img/gallery/msi_rent.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">MSI Rent To Own - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>MSI Rent To Own</h3>
-										<p>Landing Page</p>
-										<ul class="role-list">
-											<li>Web Design</li>
-											<li>HTML/CSS</li>
-											<li>Javascript</li>
-										</ul>
-									</div>
-								</li>
-
-	<!--
-								<li class="work-box">
-									<a href="work/msi_yuumei">
-										<div class="work-image" style="background-image:url('img/gallery/msi_yuumei.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">MSI x Yuumei Charity Collaboration - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>MSI x Yuumei</h3>
-										<p>Charity Collaboration</p>
-										<ul class="role-list">
-											<li>Web Design</li>
-											<li>HTML/CSS/JS</li>
-										</ul>
-									</div>
-								</li>
-
-
-	-->
-
-								<li class="work-box">
-									<a href="work/reach_brand">
-										<div class="work-image" style="background-image:url('img/gallery/reach.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">REACH Foster Youth - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>REACH Foster Youth</h3>
-										<p>Brand & Marketing</p>
-										<ul class="role-list">
-											<li>Branding</li>
-											<li>Typography</li>
-											<li>Print Design</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/eon">
-										<div class="work-image" style="background-image:url('img/gallery/eon.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">Eon Digital Illustration - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Eon</h3>
-										<p>Digital Illustration</p>
-										<ul class="role-list">
-											<li>Illustration</li>
-											<li>Photo Manipulation</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/dtoid">
-										<div class="work-image" style="background-image:url('img/gallery/dtoid.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">+1 Str Fitness - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Destructoid +1 Str Fitness</h3>
-										<p>Content Creation</p>
-										<ul class="role-list">
-											<li>Director</li>
-											<li>Camera Operator</li>
-											<li>Motion Graphics</li>
-										</ul>
-									</div>
-								</li>
-
-								<li class="work-box">
-									<a href="work/kf_skins">
-										<div class="work-image" style="background-image:url('img/gallery/kf_skins.jpg')" aria-hidden="true"></div>
-										<span class="sr-only">+1 Str Fitness - Learn More</span>
-									</a>
-									<div class="work-info">
-										<h3>Killing Floor 2 - Weapon Skins</h3>
-										<p>Steam Workshop</p>
-										<ul class="role-list">
-											<li>Illustration</li>
-											<li>3D Texture</li>
-											<li>Unreal Editor</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
 			</main>
 
+			<div class="back-to-top-wrap wow animate__fadeInUp" data-wow-duration="1s" >
+				<button class="back-to-top" onclick="pageScrollTo('header')">
+					Back to Top
+				</button>
+			</div>
 
-			<footer>
-				<div class="outer">
-					<nav>
-						<ul>
-							<li>
-								<a target="_blank" href="https://www.linkedin.com/in/richhuynh">
-									<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li>
-								<a target="_blank" href="https://github.com/richhuynhyo">
-									<i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
-								</a>
-							</li>
-						</ul>
-					</nav>
+			<footer class=" wow animate__fadeInUp" data-wow-duration="1s">
+				<div class="inner">
+					<a class="name" href="/">Rich Huynh</a>
+					<br />
+					<span class="copyright">&copy;2022</span>
 				</div>
 			</footer>
 
+		</div>
 
 
-		<!--JS-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
+
+		<!--JQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+		<!--Hammer-->
 		<script src="js/hammer-time/hammer-time.min.js"></script>
 
+		<!--Wow Js-->
+		<script src="js/wow/wow.min.js"></script>
+		<script>
+			window.onload = function() 
+			{
+				var elements = document.getElementsByClassName("offsetMe");
+				var i;
+				for (i = 0; i < elements.length; i++) {
+					var offset = elements[i].clientHeight * .35; 
+					elements[i].setAttribute("data-wow-offset", offset);
+				}
+			}
+			
+			wow = new WOW({
+				boxClass:     'wow',      // default
+				animateClass: 'animate__animated', // default
+				offset:       0,          // default
+				mobile:       false,       // default
+				live:         true        // default
+			});
+			wow.init();
+		</script>
 
+		
+		
 		<!--Site JS-->
 		<script type="text/javascript" src="js/site.js"></script>
+
+
 	</body>
 </html>
