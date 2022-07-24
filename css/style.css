@@ -449,8 +449,8 @@ footer .copyright {
   padding: 4rem 0;
 }
 #hero .inner h1 {
-  color: #ffffff;
-  font-size: 4.5rem;
+  color: #cccccc;
+  font-size: 4rem;
   font-weight: 100;
   text-align: center;
   transition: 0.5s;
@@ -470,18 +470,13 @@ footer .copyright {
     font-size: 3.5rem;
   }
 }
+#hero .inner h1 b {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
 #hero .inner h1 span {
   display: block;
-}
-@media (max-width: 480px) {
-  #hero .inner h1 span {
-    display: inline;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #hero .inner h1 span {
-    display: inline;
-  }
 }
 #hero-bg {
   width: 100%;
@@ -762,7 +757,7 @@ footer .copyright {
     margin: 0 0 1.5rem;
   }
 }
-#home-container .inner #case-list li .case-info a {
+#home-container .inner #case-list li .case-info .case-link {
   display: inline-block;
   margin: 0;
   padding: 0.75rem 1rem 0.625rem;
@@ -772,10 +767,18 @@ footer .copyright {
   text-decoration: none;
   line-height: 1;
 }
-#home-container .inner #case-list li .case-info a:hover {
+#home-container .inner #case-list li .case-info .case-link:hover {
   animation-name: link-hover;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+}
+#home-container .inner #case-list li .case-info .case-link.inactive {
+  color: #888888;
+  border: 2px solid #888888;
+  cursor: default;
+}
+#home-container .inner #case-list li .case-info .case-link.inactive:hover {
+  animation: none;
 }
 #home-container .inner #case-list li a.case-img {
   display: block;

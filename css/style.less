@@ -25,6 +25,7 @@
 @black:#010101;
 @dark-gray:#333333;
 @gray:#888888;
+@light-gray:#cccccc;
 @white:#ffffff;
 
 
@@ -337,7 +338,7 @@ header
 						animation-duration: .5s;
 						animation-fill-mode: forwards;
 					}
-					
+
 					&.current-page
 					{
 						color:@white;
@@ -396,6 +397,7 @@ ul.breadcrumbs
 				animation-duration: .5s;
 				animation-fill-mode: forwards;
 			}
+
 		}
 		&:last-child
 		{
@@ -516,8 +518,8 @@ footer
 		padding:4rem 0;
 		h1
 		{
-			color: @white;
-			font-size: 4.5rem;
+			color: @light-gray;
+			font-size: 4rem;
 			font-weight: 100;
 			text-align: center;
 
@@ -533,15 +535,22 @@ footer
 				font-size: 3.5rem;
 			});
 
+			b
+			{
+				display: block;
+				margin-bottom: .25rem;
+				color: @white;
+			}
+			
 			span
 			{
 				display: block;
-				.breakpoint-xs({
-					display: inline;
-				});
-				.breakpoint-sm({
-					display: inline;
-				});
+				// .breakpoint-xs({
+				// 	display: inline;
+				// });
+				// .breakpoint-sm({
+				// 	display: inline;
+				// });
 			}
 		}
 	}
@@ -866,7 +875,7 @@ footer
 							margin:0 0 1.5rem;
 						});	
 					}
-					a
+					.case-link
 					{
 						display:inline-block;
 	
@@ -886,7 +895,18 @@ footer
 							animation-name: link-hover;
   							animation-duration: .5s;
 							animation-fill-mode: forwards;
-						}		
+						}	
+													
+						&.inactive
+						{
+							color:@gray;
+							border:2px solid @gray;
+							cursor: default;
+						}
+						&.inactive:hover
+						{
+							animation:none;
+						}
 									
 					}
 				}
