@@ -519,7 +519,7 @@ footer
 		h1
 		{
 			color: @light-gray;
-			font-size: 4rem;
+			font-size: 4.5rem;
 			font-weight: 100;
 			text-align: center;
 
@@ -885,10 +885,11 @@ footer
 						border:2px solid @gray;
 						border-radius: 2rem;
 
-
 						color:@white;
 						text-decoration: none;
-						line-height: 1;						
+						line-height: 1;		
+						
+						cursor: pointer;
 
 						&:hover
 						{
@@ -972,6 +973,35 @@ footer
 		margin:0 auto;
 		padding:2rem 0;
 		
+		.highlight
+		{
+			padding:.25em .25em .125em;
+
+			background:@white;
+			vertical-align: bottom;
+			color:@black;
+			
+		}
+		ul
+		{
+			margin:0 0 1.25em;
+			
+			font-size:1.25rem;
+			li
+			{				
+				line-height: 1em;
+				padding:.125rem 0;
+				span
+				{
+					display: inline-block;
+					color:@white;					
+					b
+					{						
+						font-weight:600;
+					}
+				}
+			}
+		}
 		
 		ol
 		{
@@ -981,21 +1011,33 @@ footer
 				padding:0;
 				color:@gray;
 				font-size:.5rem;
-				a
+			}
+			
+			&.section-list
+			{
+				
+				li
 				{
-					display: inline-block;
-					
-					margin:.125rem 8px;
-
-					color:@white;
-					font-size:1rem;
-					text-decoration: none;
-					&:hover
+					padding:0;
+					color:@gray;
+					font-size:.5rem;
+					a
 					{
-						color:@gray;
+						display: inline-block;
+						
+						margin:.125rem 8px;
+	
+						color:@white;
+						font-size:1rem;
+						text-decoration: none;
+						&:hover
+						{
+							color:@gray;
+						}
 					}
 				}
 			}
+			
 		}
 	}
 	.case-img

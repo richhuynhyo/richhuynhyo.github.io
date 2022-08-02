@@ -450,7 +450,7 @@ footer .copyright {
 }
 #hero .inner h1 {
   color: #cccccc;
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 100;
   text-align: center;
   transition: 0.5s;
@@ -766,6 +766,7 @@ footer .copyright {
   color: #ffffff;
   text-decoration: none;
   line-height: 1;
+  cursor: pointer;
 }
 #home-container .inner #case-list li .case-info .case-link:hover {
   animation-name: link-hover;
@@ -809,6 +810,27 @@ footer .copyright {
   margin: 0 auto;
   padding: 2rem 0;
 }
+#case-container .case-text .highlight {
+  padding: 0.25em 0.25em 0.125em;
+  background: #ffffff;
+  vertical-align: bottom;
+  color: #010101;
+}
+#case-container .case-text ul {
+  margin: 0 0 1.25em;
+  font-size: 1.25rem;
+}
+#case-container .case-text ul li {
+  line-height: 1em;
+  padding: 0.125rem 0;
+}
+#case-container .case-text ul li span {
+  display: inline-block;
+  color: #ffffff;
+}
+#case-container .case-text ul li span b {
+  font-weight: 600;
+}
 #case-container .case-text ol {
   padding: 0 12px;
 }
@@ -817,14 +839,19 @@ footer .copyright {
   color: #888888;
   font-size: 0.5rem;
 }
-#case-container .case-text ol li a {
+#case-container .case-text ol.section-list li {
+  padding: 0;
+  color: #888888;
+  font-size: 0.5rem;
+}
+#case-container .case-text ol.section-list li a {
   display: inline-block;
   margin: 0.125rem 8px;
   color: #ffffff;
   font-size: 1rem;
   text-decoration: none;
 }
-#case-container .case-text ol li a:hover {
+#case-container .case-text ol.section-list li a:hover {
   color: #888888;
 }
 #case-container .case-img {
