@@ -1,3 +1,22 @@
+
+
+$('a').click(function () {
+    var href = $(this).attr('href');
+
+    if ($(this).hasClass('case-chapter')) {
+        pageScrollTo(href);
+    }
+    else {
+        $('#loader-wrapper').fadeIn(500, () => {
+            window.location = href;
+        })
+        return false;
+    }
+});
+
+
+
+
 window.addEventListener("pageshow", toggleLoader);
 
 
@@ -32,25 +51,6 @@ function addContactToDOM() {
 
 
 
-
-
-$('a').click(function () {
-    var href = $(this).attr('href');
-
-    if ($(this).hasClass('case-chapter')) {
-        pageScrollTo(href);
-    }
-    // else if($(this).data("case-locked"))
-    // {
-    //     caseUnlock($(this).data("case-id").toString());        
-    // }
-    else {
-        $('#loader-wrapper').fadeIn(500, () => {
-            window.location = href;
-        })
-        return false;
-    }
-});
 
 
 
