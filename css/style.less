@@ -21,7 +21,7 @@
 	@media (min-width: 1649px) { @rules(); }
 }
 
-//--------------------------------------Colors
+//-------------------------------------- Colors
 @black:#010101;
 @dark-gray:#333333;
 @gray:#888888;
@@ -29,7 +29,7 @@
 @white:#ffffff;
 
 
-//--------------------------------------Mixins
+//-------------------------------------- Mixins
 .reset-button
 {
 	display: block;
@@ -82,7 +82,7 @@
 }
 
 
-//--------------------------------------KeyFrames
+//-------------------------------------- KeyFrames
 
 @keyframes anim-noise {
 	0%, 100% { background-position:0, 0 }
@@ -177,6 +177,19 @@
 		color:@black;
 	}
 }
+@keyframes inverse-return
+{
+	from 
+	{
+		-webkit-filter: invert(1);
+		filter: invert(1);
+	}
+	to 
+	{
+		-webkit-filter: invert(0);
+		filter: invert(0);
+	}
+}	
 .transition-fade {
 	transition: 2s;
 	opacity: 1;
@@ -188,7 +201,8 @@
 
 
 
-//--------------------------------------Structure
+
+//-------------------------------------- Structure
 html
 {
 	.breakpoint-xs({
@@ -209,7 +223,6 @@ html
 	.breakpoint-2xl({
 		font-size: 21px;
 	});
-	overflow-y: scroll;
 }
 
 body
@@ -507,7 +520,7 @@ footer
 
 
 
-//--------------------------------------Home
+//-------------------------------------- Home
 
 #hero
 {
@@ -888,6 +901,7 @@ footer
 						color:@white;
 						text-decoration: none;
 						line-height: 1;		
+						vertical-align: middle;
 						
 						cursor: pointer;
 
@@ -896,6 +910,13 @@ footer
 							animation-name: link-hover;
   							animation-duration: .5s;
 							animation-fill-mode: forwards;
+
+							img
+							{
+								animation-name: inverse-return;
+								animation-duration: .5s;
+								animation-fill-mode: forwards;
+							}
 						}	
 													
 						&.inactive
@@ -908,7 +929,17 @@ footer
 						{
 							animation:none;
 						}
-									
+								
+						img
+						{
+							display:inline-block;
+							height:1em;
+							vertical-align: middle;
+							position: relative;
+							top:-.125em;
+							-webkit-filter: invert(1);
+   							filter: invert(1);
+						}
 					}
 				}
 				a.case-img
@@ -946,7 +977,7 @@ footer
 
 
 
-//--------------------------------------Cases
+//-------------------------------------- Cases
 
 
 #case-container
@@ -1115,3 +1146,166 @@ footer
 
 	
 }
+
+
+
+
+
+
+//-------------------------------------- Cases
+
+
+/* to the body element */
+.noscroll { overflow: hidden; }
+
+.overlay
+{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background:  rgba(0,0,0, .85);
+}
+@media(min-width:961px)
+{
+	.overlay
+	{
+		padding:20px 0;
+	}
+}
+
+.overlay[aria-hidden="true"]
+{
+	width: 100vw;
+	z-index: -900;
+	opacity: 0;
+}
+.overlay[aria-hidden="false"]
+{
+	transition: opacity .85s;
+	width: 100%;
+	z-index: 200;
+	opacity: 1;
+}
+
+.overlay-bg
+{
+     display:block; 
+     position: fixed; 
+
+     width: 100%; 
+     
+     top: 0; 
+     right: 0; 
+     bottom: 0; 
+     left: 0; 
+     z-index:250;
+}
+.overlay-wrap
+{
+	position: absolute;
+	z-index:500;
+
+	top:50%;
+	width: 100%;
+	margin:0 auto;
+}
+	button.close-overlay
+	{
+		display:block;
+		position:absolute;
+		top:12px;
+		right:12px;
+
+          padding:0;
+
+		background:none;
+		cursor: pointer;
+          border:none;
+
+		z-index:900;
+		opacity: .25;
+	}
+	button.close-overlay:hover
+	{
+		opacity: 1;
+		transition: all .25s ease-out;
+	}
+
+		button.close-overlay img
+		{
+			display:block;
+			width:30px;
+		}
+
+
+.password-input-view
+{	
+    box-sizing: border-box;	
+	position: absolute;
+
+	width:320px;
+    padding: 40px 30px 40px;
+
+	background:@white;
+	color:@dark-gray;
+	
+
+	left:50%;
+	transform: translate(-50%, -50%);
+    overflow: hidden;
+	outline: none;
+
+	h1
+	{
+		margin:0 0 .5rem;
+		text-align: center;
+		font-weight: 600;
+	}
+	.password-message
+	{
+	}
+	input[type="text"]
+	{
+		box-sizing: border-box;
+		width:100%;
+		padding:.5rem .5rem .45rem;
+		border: 2px solid @light-gray;
+
+		&:focus
+		{
+			border:2px solid @gray;
+			box-shadow: none;
+			outline:none;
+		}
+	}
+	.password-buttons
+	{
+		.clearfix;
+		margin:.5rem auto 0;
+		button
+		{
+			
+			box-sizing: border-box;
+			float:left;
+			width:100%;
+			padding:.5rem 1rem .45rem;
+			background: @black;
+			border:2px solid @white;
+			color:@white;
+			cursor: pointer;
+			&:focus
+			{
+				border:2px solid @gray;
+
+				box-shadow: none;
+				outline:none;
+			}
+
+			&:hover
+			{
+				border:2px solid @gray;	
+			}
+
+			
+		}
+	}
+}		

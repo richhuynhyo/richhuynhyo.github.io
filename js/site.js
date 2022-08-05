@@ -57,8 +57,3 @@ function addContactToDOM() {
 
 
 
-
-
-
-
-

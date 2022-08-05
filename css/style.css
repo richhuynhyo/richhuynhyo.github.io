@@ -148,15 +148,22 @@
     color: #010101;
   }
 }
+@keyframes inverse-return {
+  from {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+  to {
+    -webkit-filter: invert(0);
+    filter: invert(0);
+  }
+}
 .transition-fade {
   transition: 2s;
   opacity: 1;
 }
 html.is-animating .transition-fade {
   opacity: 0;
-}
-html {
-  overflow-y: scroll;
 }
 @media (max-width: 480px) {
   html {
@@ -766,10 +773,16 @@ footer .copyright {
   color: #ffffff;
   text-decoration: none;
   line-height: 1;
+  vertical-align: middle;
   cursor: pointer;
 }
 #home-container .inner #case-list li .case-info .case-link:hover {
   animation-name: link-hover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+#home-container .inner #case-list li .case-info .case-link:hover img {
+  animation-name: inverse-return;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -780,6 +793,15 @@ footer .copyright {
 }
 #home-container .inner #case-list li .case-info .case-link.inactive:hover {
   animation: none;
+}
+#home-container .inner #case-list li .case-info .case-link img {
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.125em;
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 #home-container .inner #case-list li a.case-img {
   display: block;
@@ -909,4 +931,124 @@ footer .copyright {
 }
 #case-container p strong {
   font-weight: 700;
+}
+/* to the body element */
+.noscroll {
+  overflow: hidden;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+@media (min-width: 961px) {
+  .overlay {
+    padding: 20px 0;
+  }
+}
+.overlay[aria-hidden="true"] {
+  width: 100vw;
+  z-index: -900;
+  opacity: 0;
+}
+.overlay[aria-hidden="false"] {
+  transition: opacity 0.85s;
+  width: 100%;
+  z-index: 200;
+  opacity: 1;
+}
+.overlay-bg {
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 250;
+}
+.overlay-wrap {
+  position: absolute;
+  z-index: 500;
+  top: 50%;
+  width: 100%;
+  margin: 0 auto;
+}
+button.close-overlay {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border: none;
+  z-index: 900;
+  opacity: 0.25;
+}
+button.close-overlay:hover {
+  opacity: 1;
+  transition: all 0.25s ease-out;
+}
+button.close-overlay img {
+  display: block;
+  width: 30px;
+}
+.password-input-view {
+  box-sizing: border-box;
+  position: absolute;
+  width: 320px;
+  padding: 40px 30px 40px;
+  background: #ffffff;
+  color: #333333;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  outline: none;
+}
+.password-input-view h1 {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+.password-input-view input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.45rem;
+  border: 2px solid #cccccc;
+}
+.password-input-view input[type="text"]:focus {
+  border: 2px solid #888888;
+  box-shadow: none;
+  outline: none;
+}
+.password-input-view .password-buttons {
+  overflow: auto;
+  margin: 0.5rem auto 0;
+}
+.password-input-view .password-buttons :after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.password-input-view .password-buttons button {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  padding: 0.5rem 1rem 0.45rem;
+  background: #010101;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+}
+.password-input-view .password-buttons button:focus {
+  border: 2px solid #888888;
+  box-shadow: none;
+  outline: none;
+}
+.password-input-view .password-buttons button:hover {
+  border: 2px solid #888888;
 }
