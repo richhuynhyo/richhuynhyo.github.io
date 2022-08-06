@@ -805,15 +805,40 @@ footer .copyright {
 }
 #home-container .inner #case-list li a.case-img {
   display: block;
+  position: relative;
   flex: 1;
   overflow: hidden;
 }
-#home-container .inner #case-list li a.case-img .img-wrap img {
+#home-container .inner #case-list li a.case-img[data-case-locked="true"] {
+  cursor: pointer;
+}
+#home-container .inner #case-list li a.case-img[data-case-locked="true"] .img-wrap .password-required {
+  position: absolute;
+  width: 100%;
+  padding: 100% 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  transform: translateY(-50%);
+  top: 50%;
+}
+#home-container .inner #case-list li a.case-img[data-case-locked="true"] .img-wrap .password-required:hover {
+  transition: all 0.5s ease-in-out;
+  background: rgba(20, 20, 20, 0.8);
+}
+#home-container .inner #case-list li a.case-img[data-case-locked="true"] .img-wrap .password-required img {
+  display: block;
+  width: 20%;
+  margin: 0 auto 0.5rem;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+#home-container .inner #case-list li a.case-img .img-wrap img.case-img {
   display: block;
   width: 100%;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-#home-container .inner #case-list li a.case-img .img-wrap img:hover {
+#home-container .inner #case-list li a.case-img .img-wrap img.case-img:hover {
   transform: scale(1.125);
 }
 #case-container .h-line {
@@ -1025,9 +1050,13 @@ button.close-overlay img {
   box-shadow: none;
   outline: none;
 }
+.password-input-view input[type="text"].pw-fail {
+  border-color: red;
+  background-color: #ffe6e6;
+}
 .password-input-view .password-buttons {
   overflow: auto;
-  margin: 0.5rem auto 0;
+  margin: 0.25rem auto 0.5rem;
 }
 .password-input-view .password-buttons :after {
   content: "";
@@ -1051,4 +1080,10 @@ button.close-overlay img {
 }
 .password-input-view .password-buttons button:hover {
   border: 2px solid #888888;
+}
+.password-input-view .password-message {
+  display: none;
+  padding: 0 5px;
+  color: #333333;
+  font-size: 0.875rem;
 }

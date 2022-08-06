@@ -1,16 +1,20 @@
 
 
-$('a').click(function () {
+$('a').click(() => {
     var href = $(this).attr('href');
 
     if ($(this).hasClass('case-chapter')) {
         pageScrollTo(href);
     }
     else {
-        $('#loader-wrapper').fadeIn(500, () => {
-            window.location = href;
-        })
-        return false;
+
+        if($(this).attr('href') != undefined)
+        {
+            $('#loader-wrapper').fadeIn(500, () => {
+                window.location = href;
+            })
+            return false;
+        }
     }
 });
 

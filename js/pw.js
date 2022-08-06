@@ -1,17 +1,21 @@
 
 
-// $(function() {
+$(function() {
 
     
 
 
 
-//     let pwEngine = new passwordEngine();
-//     let precheck = new passwordPreCheck(pwEngine);
-//     let overlay = new richOverlay();        
-//     let pwInput = new passwordInputView(4, overlay, pwEngine);
+    let pwEngine = new passwordEngine();
+    let overlay = new richOverlay();        
+    let pwInput = new passwordInputView(overlay, pwEngine);
+   
+    let preLoad = new passwordPreLoad(pwEngine, overlay, pwInput);
 
-// });
+    // overlay.openOverlay();
+    // pwInput.showView(4, overlay);
+    // pwInput.passwordFail();
+});
 
 
 class passwordEngine
@@ -21,16 +25,17 @@ class passwordEngine
         
     }
 
+
     caseUnlock(caseId, password, failAction)
     {
         let passwordPromise = this.checkPassword(password);
         passwordPromise.done(() => 
         {
             var hashUrl = "/case" + this.hashPassword(password) + "/" + caseId  + "/";
-            if (password != false)
-            {
-                hashUrl += "?pw=" + password;
-            }
+            
+            
+            // if (password != false) hashUrl += "?pw=" + password;
+            this.setCookie(password);
             $('#loader-wrapper').fadeIn(500, () => {
                 window.location = hashUrl;
             })
@@ -63,32 +68,36 @@ class passwordEngine
         return newHash.toString();
     }
 
+    
+    setCookie(password)
+    {
+        Cookies.set('password', password, { expires: 30 });
+    }
+
 }
 
 
-// this.setLockedCaseLinks();
-// setLockedCaseLinks()
-// {
-//     console.log('asd');
-//     $('[data-case-locked="true"]').click(function () {
-//         // openOverlay();
-//     });
-// }
 
 
-class passwordPreCheck
+class passwordPreLoad
 {
-    constructor(pwEngine)
+    constructor(pwEngine, overlay, pwInput)
     {
         
         this.pwEngine = pwEngine;
-        this.preCheck(pwEngine);
+        this.overlay = overlay;
+        this.pwInput = pwInput;
+
+        this.preCheck(overlay, pwInput, pwEngine);
     }
 
     //Precheck Initialize
-    preCheck(pwEngine)
+    preCheck(overlay, pwInput, pwEngine)
     {
         var pw = Cookies.get('password');
+
+        this.lockCaseLinks(overlay, pwInput);
+
         if (pw != undefined)
         {
             this.cookiePreCheck(pw, pwEngine);
@@ -96,7 +105,7 @@ class passwordPreCheck
         else
         {
             this.qStringPreCheck(pwEngine);
-        }        
+        }
     }
 
     //Precheck Cookie for Correct Password
@@ -105,8 +114,8 @@ class passwordPreCheck
         var passwordPromise = pwEngine.checkPassword(pw);
         passwordPromise.done(() => 
         {            
-            this.qStringAutoUnlock(pw);
-            this.setCookie(pw);
+            this.unlockCaseLinks(pw);
+            pwEngine.setCookie(pw);
             // this.qStringAppendToLinks(pw);
             console.log('cookie - works');
             return true;
@@ -119,10 +128,6 @@ class passwordPreCheck
         });
     }
 
-    setCookie(password)
-    {
-        Cookies.set('password', password, { expires: 30 });
-    }
 	
 
     //Precheck Querystring for Correct Password
@@ -134,8 +139,8 @@ class passwordPreCheck
             var passwordPromise = pwEngine.checkPassword(pw);
             passwordPromise.done(() => 
             {            
-                this.qStringAutoUnlock(pw);
-                this.setCookie(pw);
+                this.unlockCaseLinks(pw);
+                pwEngine.setCookie(pw);
                 console.log('qs - works');
                 return pw;
             });
@@ -147,28 +152,33 @@ class passwordPreCheck
     }
 
     //auto input querystring as password
-    qStringAutoUnlock(pw)
+    unlockCaseLinks(pw)
     {
         let pwEngine = this.pwEngine;
         const failAction = () => { console.log('Welp Something Messed Up') };
+
+        //Remove pwInputView If Unlocked
+        $('[data-case-locked="true"]').unbind();
+
+        $('.case-link[data-case-locked="true"]').html('View Case');
+        $('.password-required').hide();
 
         $('[data-case-locked="true"]').click(function () {
             pwEngine.caseUnlock($(this).data("case-id").toString(), pw, failAction);                
         });
     }
 
-    //append password as querystring to page urls
-    qStringAppendToLinks(pw)
+    lockCaseLinks(overlay, pwInput)
     {
-        $("a").each(() => {        
-            let linkExclude = $(this).data("pw-exclude");
-            let containerExclude = $('[data-pw-exclude="true"]').has(this).length ? true : false;            
-            if(!(containerExclude || linkExclude))
-            {
-                $(this).attr("href", $(this).attr("href") + `?pw=${pw}`);
-            }           
+        $('[data-case-locked="true"]').click(function () {         
+
+            let caseId = $(this).data('case-id');
+            overlay.openOverlay();
+            pwInput.showView(caseId, overlay);
+           
         });
-    } 
+
+    }
 }
 
 
@@ -178,7 +188,6 @@ class richOverlay
     constructor()
     {  
         this.initOverlay();
-        
     }
     initOverlay()
     {
@@ -228,7 +237,7 @@ class richOverlay
     }
     overlayTemplate()
     {
-        return `<div class="overlay" aria-hidden="false">
+        return `<div class="overlay" aria-hidden="true">
             <div class="overlay-bg" aria-hidden="true"></div>
             <div class="overlay-wrap"></div>
         </div>`;
@@ -240,13 +249,10 @@ class richOverlay
 
 class passwordInputView
 {
-    constructor(caseId, overlay, pwEngine)
+    constructor(overlay, pwEngine)
     {
-        this.caseId = caseId;
         this.overlay = overlay;
         this.pwEngine = pwEngine;
-
-        this.showView(caseId, overlay);
     }
 
     showView(caseId, overlay)
@@ -259,6 +265,8 @@ class passwordInputView
     {
         let view = this;
 
+        
+
         $('#password-submit').on("click", (e) =>
         {
             view.passwordSubmit(caseId);
@@ -266,6 +274,7 @@ class passwordInputView
 
         $('.close-overlay').on("click", (e) =>
         {
+            console.log(overlay);
             overlay.closeOverlay();
         });
     }
@@ -284,7 +293,11 @@ class passwordInputView
 
     passwordFail()
     {
-        $('.password-message').html('Password Wrong');
+
+       
+        $('#password-input').attr('class', 'pw-fail');
+        $('#password-input').effect('shake', {distance: 5, times: 2});
+        $('.password-message').show();
     }
 
 
@@ -297,11 +310,12 @@ class passwordInputView
                     <h1>
                         Case ${caseId}
                     </h1>
-                    <input id="password-input" type="text" placeholder="Password"/>
-                    <div class="password-message">
-                    </div>
+                    <input id="password-input" type="text" placeholder="Password"/>                    
                     <div class="password-buttons">
                         <button id="password-submit">Submit</button>
+                    </div>
+                    <div class="password-message">
+                        Incorrect Password.
                     </div>
                 </div>`;
     }

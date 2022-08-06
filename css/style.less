@@ -905,6 +905,8 @@ footer
 						
 						cursor: pointer;
 
+
+
 						&:hover
 						{
 							animation-name: link-hover;
@@ -942,27 +944,69 @@ footer
 						}
 					}
 				}
-				a.case-img
+			a.case-img
 				{
 					display:block;
+					position: relative;
 					
 					flex:1;
 					overflow: hidden;
+					
+					&[data-case-locked="true"]
+					{
+						cursor:pointer;
+						.img-wrap
+						{
+							.password-required
+							{
+								position: absolute;
+								
+								width:100%;
+								padding:100% 0;
+
+								text-align: center;
+								background:rgba(0,0,0,0.8);
+
+								z-index:100;
+								transform:translateY(-50%);
+								top:50%;
+
+								&:hover
+								{
+									transition: all .5s ease-in-out;
+									background:rgba(20,20,20,0.8);
+								}
+								
+								img
+								{
+									display: block;
+									width:20%;
+									margin:0 auto .5rem;
+									
+
+									-webkit-filter: invert(1);
+									filter: invert(1);
+								}
+							}
+						}
+					}
+
 					.img-wrap
 					{
 					
-						img
+						img.case-img
 						{
 							display:block;
 	
 							width:100%;
 
-							transition: all 1s ease-in-out;
+							transition: all .5s ease-in-out;
 
 							&:hover
 							{
 								transform: scale(1.125);
 							}
+
 						}
 					}					
 				}
@@ -1260,9 +1304,9 @@ footer
 		text-align: center;
 		font-weight: 600;
 	}
-	.password-message
-	{
-	}
+	// .password-message
+	// {
+	// }
 	input[type="text"]
 	{
 		box-sizing: border-box;
@@ -1274,13 +1318,19 @@ footer
 		{
 			border:2px solid @gray;
 			box-shadow: none;
-			outline:none;
+			outline:none;	
+		}
+
+		&.pw-fail
+		{
+			border-color:red;			
+			background-color: #ffe6e6;
 		}
 	}
 	.password-buttons
 	{
 		.clearfix;
-		margin:.5rem auto 0;
+		margin:.25rem auto .5rem;
 		button
 		{
 			
@@ -1307,5 +1357,12 @@ footer
 
 			
 		}
+	}
+	.password-message
+	{
+		display: none;
+		padding:0 5px;
+		color:@dark-gray;
+		font-size:.875rem;
 	}
 }		
