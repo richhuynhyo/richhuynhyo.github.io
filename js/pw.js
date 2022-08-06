@@ -6,15 +6,12 @@ $(function() {
 
 
 
-    let pwEngine = new passwordEngine();
-    let overlay = new richOverlay();        
-    let pwInput = new passwordInputView(overlay, pwEngine);
+    // let pwEngine = new passwordEngine();
+    // let overlay = new richOverlay();        
+    // let pwInput = new passwordInputView(overlay, pwEngine);
    
-    let preLoad = new passwordPreLoad(pwEngine, overlay, pwInput);
+    // let preLoad = new passwordPreLoad(pwEngine, overlay, pwInput);
 
-    // overlay.openOverlay();
-    // pwInput.showView(4, overlay);
-    // pwInput.passwordFail();
 });
 
 
