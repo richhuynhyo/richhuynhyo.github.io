@@ -124,7 +124,7 @@
                             For the MSI Deals Page to be feasible, these issues had to be addressed among additional design changes to accommodate an updatable "always-on" webpage.
 						</p>
 						<p>
-							The web page was limited to being hosted on a CMS with no access to a database or back-end development. Solutions had to be developed entirely with front-end technology.							
+							The web page was limited to being hosted on a CMS with no access to a database or back-end development. Solutions had to be developed almost entirely with front-end technology.							
 						</p>
 					</section>
 
@@ -134,9 +134,8 @@
 						<h4>Objectives:</h4>
 						<p>
 							After evaluating the project goals and challenges, I established two primary objectives:
-
 						</p>
-						<ul>
+						<ul class="special">
 							<li>
 								<span class="highlight"><b>Design and develop the customizable, customer-facing MSI Deals Page.</b></span>
 							</li>
@@ -159,34 +158,62 @@
 
 					generic deals -> summer deals -> Back to school -->
 					<section id="chapter-userflow" class="case-text">	
-						<h4>1st iteration:</h4>
+						<h4>(Week 1) - 1st iteration:</h4>
+						<h5>
+							Consumer-Facing Site - Initial Redesign
+						</h5>
+						<p>											
+							With a sales campaign launch approaching, my priority was to design and develop the consumer-facing MSI Deals Page. Using previous campaigns as a model, I neutralized the color and themes to give the page flexibility to work with varying art directions for different campaigns. I also implemented a "tagging" system for improved product discoverability.
+						</p>
+						<h5>
+							Workflow Improvement - Early Stages
+						</h5>
+						<p>
+							Because page design was the priority, initial methods of improving workflow were rudimentary and only marginally improved production efficiency. The initial effort laid the groundwork for more substantial improvements in later iterations.
+						</p>						
+						<ul>							
+							<li>
+								<b>Created an semi-automated Excel template deliverable.</b>
+								<p>I concatenated cell data into HTML blocks that can be easily copy and pasted into the page code.</p>
+								 
+							</li>
+							<li>
+								<b>Created a library of reusable partner retailer logos.</b>
+								<p>I trimmed the logos to a uniform size. I also concatenated the image URLS into the Excel deliverable. </p>
+
+							</li>
+							<li>
+								<b>Initiated the creation of product image library.</b>
+								<p>
+									The method would improve production in the future, but still required designers to manually create product images for the time being. 
+								</p>
+							</li>
+						</ul>
 						<p>
 							
-							
-							
-							intial redesign of website
-								clean up ui to make it more flexible to various campaigns
-								Add places for banners (awards for marketing)
-								write and add dealtag engine
-
-							Template engine 1:
-								used same design
-								Wrote in excel to automate code lines for copy and paste
-								create library of partner retailer images
-								still relied on creating product images
-								still carried maladaptions to remove pricing from certain products		
-
-							timeline 1 weeks
-
 						</p>
 					</section>
 
-					<section id="chapter-userflow" class="case-text">	
-						<h4>2nd iteration:</h4>
-						<p>							
-							Authorized to used 3rd party hatch service
-							initial used hatch embed function and custom link
+					<div class="h-line" aria-hidden="true"></div>			
 
+					<section id="chapter-userflow" class="case-text">	
+						<h4>(Week 2) - 2nd iteration:</h4>
+						<h5>
+							Hatch - Where To Buy Solution
+						</h5>
+						<p>							
+							After successfully launching the first iteration of the Deals Page, MSI HQ Marketing Team authorized me to implement Hatch, a third-party Where To Buy solution. Hatch provided an embeddable plugin that would automatically update a product's pricing. Hatch provided a lot of great opportunities but carried some issues.
+
+							issue
+								hatch had issues with ad block
+								custom link retailer was too unpredictable						
+						</p>
+						
+
+						<h5>
+							Workflow Automation Tool - Templating from Data
+						</h5>
+						<p>
 							workflow update:
 							adopted full templating through data ajax to improve content production
 								Data design
@@ -201,25 +228,71 @@
 									2 - simple 3 step tool
 									3 - preview for self QA
 									4- simple deliverable for update CMS	
-								in-person training								
-
-							lead to fixing some design maladaptions
-								make changes to deal page to hold more deals
-								allow for better deals messaging
-								remove requirement for retailer images
-								remove carousel
-
-							issue
-								hatch had issues with ad block
-								custom link retailer was too unpredictable
-
-								
-							timeline 1 week							
+								in-person training		
 						</p>
+						<ul>							
+							<li>
+								<b>Created an semi-automated Excel template deliverable.</b>
+								<p>that concatenated cells into HTML that can be copy/pasted. </p>
+								 
+							</li>
+							<li>
+								<b>Created a library of reusable partner retailer logos.</b>
+								<p>asdasdasdasd</p>
+
+							</li>
+							<li>
+								<b>Initiated the creation of product image library.</b>
+								<p>
+									The method still required designers to manually create product images for the time being. 
+								</p>
+							</li>
+							
+						</ul>
+						<h5>
+							Design Audit
+						</h5>
+						<p>
+							Templating from Data and Hatch provided many opportunities for the Deal Page design, but there were some issues with the new implementation. 
+						</p>
+						<br />
+						<h6>
+							Pros:
+						</h6>
+						<ul>
+							<li>
+								<b>More Deals</b>
+								<p>The improved workflow allowed for displaying more deals. The page design no longer needed to accommodate the difficulty of deal updates.</p>
+								 
+							</li>
+							<li>
+								<b>Specific Deal Messaging</b>
+								<p>With prices moved to the Hatch popup menu, the initial deal module could now display admin-controlled messaging.</p>
+							</li>
+						</ul>
+						<h6>
+							Cons:
+						</h6>
+						<ul>
+							<li>
+								<b>Hatch Service Issues</b>
+								<p>Limited Internet connectivity or ad-block could cause the Hatch buttons to not load.</p>
+								 
+							</li>
+							<li>
+								<b>Custom-Link Unpredictability</b>
+								<p>Some of the [Shop Now] buttons linked directly to retailers while others displayed the Hatch popup menu, creating a disorienting and unpredictable experience.</p>
+							</li>
+						</ul>
 					</section>
 
+					<div class="h-line" aria-hidden="true"></div>	
+
 					<section id="chapter-userflow" class="case-text">	
-						<h4>3rd iteration:</h4>
+						<h4>(Week 3 & 4) - 3rd iteration:</h4>
+						<h5>
+							Hatch - API Solution
+						</h5>
 						<p>							
 							access to hatch api					
 
@@ -230,7 +303,11 @@
 										fall back option for failed api										
 									price still at times inaccurate due to delay in hatch update so inital messaging dependant on discount
 									custom link now shows retailer image
-							
+						</p>
+						<h5>
+							Automation Tool Update: Plugin Conversion & Additional Features
+						</h5>
+						<p>
 							workflow								
 								data fields for white listing, and custom retailer links
 
@@ -239,18 +316,49 @@
 								create versioning for engine code for backwards compatiblity of regions are out of sync
 								add regional paramenters to engine and tool
 								write documentation to assist training
+						</p>
+						<h5>
+							Cross-Region Implementaton: Training Canada Team
+						</h5>
+						<p>
+							workflow								
+								data fields for white listing, and custom retailer links
 
-							timeline 2 weeks	
+							request by canada for use							
+								isolating engine code
+								create versioning for engine code for backwards compatiblity of regions are out of sync
+								add regional paramenters to engine and tool
+								write documentation to assist training
 						</p>
 					</section>
 
+					<div class="h-line" aria-hidden="true"></div>	
+
 					<section id="chapter-userflow" class="case-text">	
-						<h4>4th iteration:</h4>
-						<p>							
-							add load screen due to load nature of api
-								reloading feature for inital failed connect		
+						<h4>(Week 5) - 4th iteration:</h4>
+						<h5>
+							New Campaign Launch - UI Update
+						</h5>
+						<p>														
 							make tabs more visible
 							relaunch to back to school campaign		
+						</p>
+						<h5>
+							 API Fallback & Feedback
+						</h5>
+						<p>							
+							add load screen due to load nature of api
+								reloading feature for inital failed connect			
+						</p>
+					</section>
+
+					<div class="h-line" aria-hidden="true"></div>	
+
+
+					<section id="chapter-userflow" class="case-text">	
+						<h4>Additional Implementations:</h4>
+						<p>							
+								
 						</p>
 					</section>
 

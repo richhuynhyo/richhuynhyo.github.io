@@ -203,8 +203,8 @@ body {
 .h-line {
   display: block;
   width: 100%;
-  height: 1px;
-  background: #333333;
+  height: 0;
+  border-bottom: 1px dashed #333333;
 }
 #loader-wrapper {
   background: #010101;
@@ -842,7 +842,7 @@ footer .copyright {
   transform: scale(1.125);
 }
 #case-container .h-line {
-  margin: 3rem auto;
+  margin: 4rem auto;
 }
 #case-container .inner {
   margin: 0 auto 3rem;
@@ -864,19 +864,27 @@ footer .copyright {
   color: #010101;
 }
 #case-container .case-text ul {
+  margin: 0 0 1rem;
+}
+#case-container .case-text ul.special {
   margin: 0 0 1.25em;
   font-size: 1.25rem;
+  line-height: 1;
+}
+#case-container .case-text ul.special span {
+  vertical-align: middle;
 }
 #case-container .case-text ul li {
-  line-height: 1em;
   padding: 0.125rem 0;
+  line-height: 1.5;
+}
+#case-container .case-text ul li p {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
 }
 #case-container .case-text ul li span {
   display: inline-block;
   color: #ffffff;
-}
-#case-container .case-text ul li span b {
-  font-weight: 600;
 }
 #case-container .case-text ol {
   padding: 0 12px;
@@ -947,6 +955,18 @@ footer .copyright {
   color: #888888;
   font-size: 0.75rem;
   font-weight: 700;
+}
+#case-container h5 {
+  padding: 0 0 0.5rem;
+  margin: 2.5rem 0 0.75rem;
+  line-height: 1;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #333333;
+}
+#case-container h6 {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
 }
 #case-container p {
   margin: 0 0 1rem;
