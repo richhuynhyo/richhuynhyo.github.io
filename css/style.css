@@ -965,8 +965,11 @@ footer .copyright {
   border-bottom: 1px solid #333333;
 }
 #case-container h6 {
-  margin: 0 0 0.5rem;
-  font-size: 0.75rem;
+  display: inline-block;
+  padding: 0 0 0.25rem;
+  margin: 0 0 0.75rem;
+  border-bottom: 1px solid #ffffff;
+  font-size: 1rem;
 }
 #case-container p {
   margin: 0 0 1rem;

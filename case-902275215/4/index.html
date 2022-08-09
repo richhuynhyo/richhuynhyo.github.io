@@ -163,7 +163,8 @@
 							Consumer-Facing Site - Initial Redesign
 						</h5>
 						<p>											
-							With a sales campaign launch approaching, my priority was to design and develop the consumer-facing MSI Deals Page. Using previous campaigns as a model, I neutralized the color and themes to give the page flexibility to work with varying art directions for different campaigns. I also implemented a "tagging" system for improved product discoverability.
+							With a sales campaign launch approaching, my priority was to design and develop the consumer-facing MSI Deals Page. 
+							Using previous campaigns as a model, I neutralized the color and themes to give the page flexibility to work with varying art directions for different campaigns. I also implemented a "tagging" system for improved product discoverability.
 						</p>
 						<h5>
 							Workflow Improvement - Early Stages
@@ -174,7 +175,9 @@
 						<ul>							
 							<li>
 								<b>Created an semi-automated Excel template deliverable.</b>
-								<p>I concatenated cell data into HTML blocks that can be easily copy and pasted into the page code.</p>
+								<p>
+									In past campaigns, the marketing team sent Google Sheets containing deal information to the design team. To save time on the design team's manual page updates, I concatenated cell data into HTML blocks that could be easily copied and pasted into the page code.								
+								</p>
 								 
 							</li>
 							<li>
@@ -202,49 +205,58 @@
 							Hatch - Where To Buy Solution
 						</h5>
 						<p>							
-							After successfully launching the first iteration of the Deals Page, MSI HQ Marketing Team authorized me to implement Hatch, a third-party Where To Buy solution. Hatch provided an embeddable plugin that would automatically update a product's pricing. Hatch provided a lot of great opportunities but carried some issues.
-
-							issue
-								hatch had issues with ad block
-								custom link retailer was too unpredictable						
+							After successfully launching the first iteration of the Deals Page, MSI HQ Marketing Team authorized me to implement Hatch, a third-party Where To Buy solution.
+							Hatch provided an embeddable plugin that would automatically update a product's pricing. 
+							I was also given access to MSI HQ's Hatch API which would offer greater customizeability. 
+							Due to the limited time before the next deal update, I opted to use the Hatch embed function and prioritize improving the deal update workflow.																	
 						</p>
 						
 
 						<h5>
-							Workflow Automation Tool - Templating from Data
+							Workflow Automation - Templating from Data
 						</h5>
+						<p>							
+							For this iteration, I prioritized automating the repetitive, time-demanding task of manually writing HTML code. Consequently, I gave marketers more precise control over deal content and the ability to self-QA before sending deliverables to designers to upload into the CMS.
+						</p>
+						<br />
+						<h6>
+							Generating HTML Content from AJAX
+						</h6>
 						<p>
-							workflow update:
-							adopted full templating through data ajax to improve content production
-								Data design
-									use website product pages for images allow marketers more precise control for image									
-								templating
-								templating engine
-
-							rapidly design/develop tool prototype so individual marketers can provide on deals
-								decentralized data input
-								design workflow
-									1 - use google sheets for familiarity
-									2 - simple 3 step tool
-									3 - preview for self QA
-									4- simple deliverable for update CMS	
-								in-person training		
+							By repurposing some of functions for concatenating Excel data from before, I wrote a
+							template script that generated HTML using JSON data to fill preset variables. 
+							I opted for a JSON/AJAX solution because I did not have access to the CMS database.
+						</p>
+						<br />
+						<h6>
+							Generating Data Files from User Input
+						</h6>
+						<p>
+							After developing the templating script, I devised a method for converting user input into JSON files.							 
 						</p>
 						<ul>							
 							<li>
-								<b>Created an semi-automated Excel template deliverable.</b>
-								<p>that concatenated cells into HTML that can be copy/pasted. </p>
-								 
-							</li>
-							<li>
-								<b>Created a library of reusable partner retailer logos.</b>
-								<p>asdasdasdasd</p>
-
-							</li>
-							<li>
-								<b>Initiated the creation of product image library.</b>
+								<b>Use Google Sheets for Familiarity</b>
 								<p>
-									The method still required designers to manually create product images for the time being. 
+									Having considered creating an entirely new tool to write JSON data directly from user input, I instead chose to maintain the use of Google Sheets for receiving user input. 
+									I created a standardized Google Sheet with predefined columns that corresponded with JSON variables in the template script. 
+									This reduced development time as well as the amount of training I need to provide to marketers on the updated workflow.
+								</p>								
+							</li>							
+							<li>
+								<b>Use Pre-existing Assets</b>
+								<p>
+									The Hatch where-to-buy module already contained a retailer logo library, which removed the need to maintain the previously created library. 
+									Looking for a similar solution for product images, I decided to give marketers control of the product images by selecting the image from the product's page gallery. 
+									Marketers simply needed to input the image URL from the page gallery into the a predefined column in the Google Sheet template.
+								</p>
+							</li>						
+							<li>
+								<b>Custom Tool to Convert CSV into JSON</b>
+								<p>
+									After establishing user input would be handled by Google Sheets, I need to convert that data into JSON text files.
+                                    I designed and developed a custom solution that would allow marketers to convert uploaded Google Sheet CSV files into downloadable JSON files with a single click.
+                                    The tool generated an interactive preview for marketers to QA their content before sending the JSON file to the design team.
 								</p>
 							</li>
 							
@@ -262,12 +274,14 @@
 						<ul>
 							<li>
 								<b>More Deals</b>
-								<p>The improved workflow allowed for displaying more deals. The page design no longer needed to accommodate the difficulty of deal updates.</p>
+								<p>The improved workflow allowed for displaying and updating more deals. The page design no longer needed to accommodate the difficulty of deal updates.
+									I added an extra column of deals and removed the bottom carousel to simplify the page design.
+								</p>
 								 
 							</li>
 							<li>
 								<b>Specific Deal Messaging</b>
-								<p>With prices moved to the Hatch popup menu, the initial deal module could now display admin-controlled messaging.</p>
+								<p>With prices moved to the Hatch popup menu, the initial deal module could now display marketer-controlled messaging.</p>
 							</li>
 						</ul>
 						<h6>
