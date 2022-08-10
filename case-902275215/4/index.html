@@ -160,7 +160,7 @@
 					<section id="chapter-iteration-1" class="case-text">	
 						<h4>1st Iteration (Week 1):</h4>
 						<h5>
-							Consumer-Facing Site - Initial Redesign
+							Deal Page - Initial Redesign
 						</h5>
 						<p>											
 							With a sales campaign launch approaching, my priority was to design and develop the consumer-facing MSI Deals Page. 
@@ -202,7 +202,7 @@
 					<section id="chapter-iteration-2" class="case-text">	
 						<h4>2nd Iteration (Week 2):</h4>
 						<h5>
-							Hatch - Where To Buy Solution
+							Deal Page - Hatch Implementation
 						</h5>
 						<p>							
 							After successfully launching the first iteration of the Deals Page, MSI HQ Marketing Team authorized me to implement Hatch, a third-party Where To Buy solution.
@@ -213,26 +213,26 @@
 						
 
 						<h5>
-							Workflow Automation - Templating from Data
+							Workflow Automation - DealData.js & DealData Generator Tool
 						</h5>
 						<p>							
 							For this iteration, I prioritized automating the repetitive, time-demanding task of manually writing HTML code. Consequently, I gave marketers more precise control over deal content and the ability to self-QA before sending deliverables to designers to upload into the CMS.
 						</p>
 						<br />
 						<h6>
-							Generating HTML Content from AJAX
+							DealData.js - Generating HTML Content from AJAX
 						</h6>
 						<p>
 							By repurposing some of functions for concatenating Excel data from before, I wrote a
-							template script that generated HTML using JSON data to fill preset variables. 
+							template script (DealData.js) that generated HTML using JSON data to fill preset variables. 
 							I opted for a JSON/AJAX solution because I did not have access to the CMS database.
 						</p>
 						<br />
 						<h6>
-							Generating Data Files from User Input
+							DealDataGenerator Tool -  Converting User Input into Data Files
 						</h6>
 						<p>
-							After developing the templating script, I devised a method for converting user input into JSON files.							 
+							After developing DealData.js, I devised a method for converting user input into usable JSON files.							 
 						</p>
 						<ul>							
 							<li>
@@ -250,16 +250,15 @@
 									Looking for a similar solution for product images, I decided to give marketers control of the product images by selecting the image from the product's page gallery. 
 									Marketers simply needed to input the image URL from the page gallery into the a predefined column in the Google Sheet template.
 								</p>
-							</li>						
+							</li>
 							<li>
-								<b>Custom Tool to Convert CSV into JSON</b>
+								<b>DealDataGenerator Tool</b>
 								<p>
-									After establishing user input would be handled by Google Sheets, I need to convert that data into JSON text files.
-                                    I designed and developed a custom solution that would allow marketers to convert uploaded Google Sheet CSV files into downloadable JSON files with a single click.
+									After establishing user input would be handled by Google Sheets, I need to convert that data into JSON text files for DealData.js.
+                                    I designed and developed the DealDataGenerator Tool that would allow marketers to convert uploaded Google Sheet CSV files into downloadable JSON files with a single click.
                                     The tool generated an interactive preview for marketers to QA their content before sending the JSON file to the design team.
 								</p>
-							</li>
-							
+							</li>	
 						</ul>
 						<h5>
 							Design Audit
@@ -309,7 +308,7 @@
 						<h4>3rd Iteration (Week 3 & 4):</h4>
 
 						<h5>
-							Deal Page Redesign - API Support
+							Deal Page - API Support
 						</h5>
 						<p>
 							After successfully launching the 2nd iteration, I began converting the Deal Page to use MSI HQ's Hatch API data rather than Hatch's embedded plugin.
@@ -329,31 +328,32 @@
 						</p>
 
 						<h5>
-							Tool & Workflow Update - Plugin Conversion & Regional Support
+							DealData.js & DealDataGenerator - Plugin Conversion & Regional Support
 						</h5>
 						<p>
 							Word of the project spread to the MSI Canada Marketing team. They contacted me asking to help implement the tool onto their CMS. So along with converting the templating script to produce content from API Data, I made adjustments to the code to be a pluggable component for other regions.
-						</p>
+						</p>						
 						<h6>
-							DealDataGenerator Updates
+							DealData.js Updates
 						</h6>
 						<ul>
 							<li>
 								<b>Unifying Templating Scripts into a Templating Engine Plugin</b>
-								<p>both the tool and deal page will run off the same engine. simplifying the code and reduce redundancy. helped with versioning.</p>
+								<p>
+									both the tool and deal page will run off the same engine. simplifying the code and reduce redundancy. helped with versioning.
+								</p>
 							</li>
 							<li>
 								<b>Add Regional Paramenters</b>
 								<p>After creating the Templating Engine, I added additional parameters to support other regions. Another region's web admin can instance the engine class with their designated region code.</p>
-							</li>
-							
+							</li>							
 							<li>
 								<b>Create Version Library</b>
 								<p>backwards support for out of sync regions.</p>
 							</li>
 						</ul>
 						<h6>
-							Workflow Updates
+							DealDataGenerator Tool Updates
 						</h6>
 						<ul>
 							<li>
@@ -372,9 +372,10 @@
 					<section id="chapter-iteration-4" class="case-text">	
 						<h4>4th iteration (Week 5):</h4>
 						<h5>
-							New Campaign Launch - UI Update
+							Deal Page - New Campaign & UI Update
 						</h5>
-						<p>														
+						<p>			
+							The 3rd Iteration of the DealPage Launched 
 							make tabs more visible
 							relaunch to back to school campaign		
 						</p>
