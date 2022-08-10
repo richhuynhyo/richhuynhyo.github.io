@@ -1,10 +1,11 @@
+console.log('asd');
 
-
-$('a').click(() => {
+$('a').click(function() {
     var href = $(this).attr('href');
 
     if ($(this).hasClass('case-chapter')) {
         pageScrollTo(href);
+        console.log('asd');
     }
     else {
 

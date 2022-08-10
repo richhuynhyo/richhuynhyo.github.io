@@ -115,7 +115,7 @@
 
 			
 
-					<section id="chapter-info" class="case-text">	
+					<section id="chapter-challenges" class="case-text">	
 						<h4>Challenges:</h4>
 						<p>
 							The MSI Deals Page would iterate on similar seasonal campaign pages in the past. However, these past implementations had challenges in updating and maintaining these pages.
@@ -124,13 +124,13 @@
                             For the MSI Deals Page to be feasible, these issues had to be addressed among additional design changes to accommodate an updatable "always-on" webpage.
 						</p>
 						<p>
-							The web page was limited to being hosted on a CMS with no access to a database or back-end development. Solutions had to be developed almost entirely with front-end technology.							
+							The web page was limited to being hosted on a CMS (Content Management System) with no access to a database or back-end development. Solutions had to be developed almost entirely with front-end technology.							
 						</p>
 					</section>
 
 					<div class="h-line" aria-hidden="true"></div>
 
-					<section id="chapter-info" class="case-text">	
+					<section id="chapter-objectives" class="case-text">	
 						<h4>Objectives:</h4>
 						<p>
 							After evaluating the project goals and challenges, I established two primary objectives:
@@ -157,7 +157,7 @@
 					rapidly product working version due to short timeline
 
 					generic deals -> summer deals -> Back to school -->
-					<section id="chapter-userflow" class="case-text">	
+					<section id="chapter-iteration-1" class="case-text">	
 						<h4>1st Iteration (Week 1):</h4>
 						<h5>
 							Consumer-Facing Site - Initial Redesign
@@ -199,7 +199,7 @@
 
 					<div class="h-line" aria-hidden="true"></div>			
 
-					<section id="chapter-userflow" class="case-text">	
+					<section id="chapter-iteration-2" class="case-text">	
 						<h4>2nd Iteration (Week 2):</h4>
 						<h5>
 							Hatch - Where To Buy Solution
@@ -305,53 +305,71 @@
 
 					<div class="h-line" aria-hidden="true"></div>	
 
-					<section id="chapter-userflow" class="case-text">	
+					<section id="chapter-iteration-3" class="case-text">	
 						<h4>3rd Iteration (Week 3 & 4):</h4>
-						<h5>
-							Hatch - API Solution
-						</h5>
-						<p>							
-							access to hatch api					
 
-							improved deals Template with additioanl functions
-								additional changes to ui
-									remove awards banner and made it less obtrusive, reserving space for other content
-									design overlay display to house multiple retailers
-										fall back option for failed api										
-									price still at times inaccurate due to delay in hatch update so inital messaging dependant on discount
-									custom link now shows retailer image
-						</p>
 						<h5>
-							Automation Tool Update: Plugin Conversion & Additional Features
+							Deal Page Redesign - API Support
 						</h5>
 						<p>
-							workflow								
-								data fields for white listing, and custom retailer links
+							After successfully launching the 2nd iteration, I began converting the Deal Page to use MSI HQ's Hatch API data rather than Hatch's embedded plugin.
+                            I looked at the API Data to determine which information was available to update the Deal Page.
+                            I created a new "Where-To-Buy" overlay to replace the original Hatch plugin and cleaned up the overall page design. 
+							I updated the templating scripts to generate the newly redesigned content.
+							
 
-							request by canada for use							
-								isolating engine code
-								create versioning for engine code for backwards compatiblity of regions are out of sync
-								add regional paramenters to engine and tool
-								write documentation to assist training
+
+							<!-- improved deals Template with additioanl functions
+							additional changes to ui
+							remove awards banner and made it less obtrusive, reserving space for other content
+							design overlay display to house multiple retailers
+							fall back option for failed api	
+							price still at times inaccurate due to delay in hatch update so inital messaging dependant on discount
+							custom link now shows retailer image -->
 						</p>
+
 						<h5>
-							Cross-Region Implementaton: Training Canada Team
+							Tool & Workflow Update - Plugin Conversion & Regional Support
 						</h5>
 						<p>
-							workflow								
-								data fields for white listing, and custom retailer links
-
-							request by canada for use							
-								isolating engine code
-								create versioning for engine code for backwards compatiblity of regions are out of sync
-								add regional paramenters to engine and tool
-								write documentation to assist training
+							Word of the project spread to the MSI Canada Marketing team. They contacted me asking to help implement the tool onto their CMS. So along with converting the templating script to produce content from API Data, I made adjustments to the code to be a pluggable component for other regions.
 						</p>
+						<h6>
+							DealDataGenerator Updates
+						</h6>
+						<ul>
+							<li>
+								<b>Unifying Templating Scripts into a Templating Engine Plugin</b>
+								<p>both the tool and deal page will run off the same engine. simplifying the code and reduce redundancy. helped with versioning.</p>
+							</li>
+							<li>
+								<b>Add Regional Paramenters</b>
+								<p>After creating the Templating Engine, I added additional parameters to support other regions. Another region's web admin can instance the engine class with their designated region code.</p>
+							</li>
+							
+							<li>
+								<b>Create Version Library</b>
+								<p>backwards support for out of sync regions.</p>
+							</li>
+						</ul>
+						<h6>
+							Workflow Updates
+						</h6>
+						<ul>
+							<li>
+								<b>Add Additional Features</b>
+								<p>data fields for white listing, and custom retailer links.</p>
+							</li>
+							<li>
+								<b>Write Documentation</b>
+								<p>With prices moved to the Hatch popup menu, the initial deal module could now display marketer-controlled messaging.</p>
+							</li>
+						</ul>					
 					</section>
 
 					<div class="h-line" aria-hidden="true"></div>	
 
-					<section id="chapter-userflow" class="case-text">	
+					<section id="chapter-iteration-4" class="case-text">	
 						<h4>4th iteration (Week 5):</h4>
 						<h5>
 							New Campaign Launch - UI Update
