@@ -165,6 +165,10 @@
 							With a sales campaign launch approaching, my priority was to design and develop the consumer-facing MSI Deals Page. 
 							Using previous campaigns as a model, I neutralized the color and themes to give the page flexibility to work with varying art directions for different campaigns. I also implemented a "tagging" system for improved product discoverability.
 						</p>
+						<div class="case-img">
+							<img src="img/initial.jpg" alt="Inforamtion Architecture Diagram." />
+						</div>
+	
 						<h5>
 							Workflow Improvement - Early Stages
 						</h5>
@@ -199,7 +203,10 @@
 					<div class="h-line" aria-hidden="true"></div>			
 
 					<section id="chapter-iteration-2" class="case-text">	
+						
 						<h4>2nd Iteration (Week 2):</h4>
+						
+						
 						<h5>
 							Deal Page - Hatch Implementation
 						</h5>
@@ -209,8 +216,13 @@
 							I was also given access to MSI HQ's Hatch API which would offer greater customizeability. 
 							Due to the limited time before the next deal update, I opted to use the Hatch embed function and prioritize improving the deal update workflow.																	
 						</p>
-						
-
+						<div class="case-img">
+							<img src="img/hatch.jpg" alt="Inforamtion Architecture Diagram." />
+						</div>
+						<div class="case-img">
+							<img src="img/iteration-2.jpg" alt="Inforamtion Architecture Diagram." />
+						</div>
+						<br />
 						<h5>
 							Workflow Automation - DealData.js & DealData Generator Tool
 						</h5>
@@ -230,6 +242,11 @@
 						<h6>
 							DealDataGenerator Tool -  Converting User Input into Data Files
 						</h6>
+						
+						
+						<div class="case-img">
+							<img src="img/workflow.jpg" alt="Inforamtion Architecture Diagram." />
+						</div>
 						<p>
 							After developing DealData.js, I devised a method for converting user input into usable JSON files.							 
 						</p>
@@ -241,14 +258,6 @@
 									I created a standardized Google Sheet with predefined columns that corresponded with JSON variables in the template script. 
 									This reduced development time as well as the amount of training I need to provide to marketers on the updated workflow.
 								</p>								
-							</li>							
-							<li>
-								<b>Use Pre-existing Assets</b>
-								<p>
-									The Hatch where-to-buy module already contained a retailer logo library, which removed the need to maintain the previously created library. 
-									Looking for a similar solution for product images, I decided to give marketers control of the product images by selecting the image from the product's page gallery. 
-									Marketers simply needed to input the image URL from the page gallery into the a predefined column in the Google Sheet template.
-								</p>
 							</li>
 							<li>
 								<b>DealDataGenerator Tool</b>
@@ -257,7 +266,15 @@
                                     I designed and developed the DealDataGenerator Tool that would allow marketers to convert uploaded Google Sheet CSV files into downloadable JSON files with a single click.
                                     The tool generated an interactive preview for marketers to QA their content before sending the JSON file to the design team.
 								</p>
-							</li>	
+							</li>							
+							<!-- <li>
+								<b>Use Pre-existing Assets</b>
+								<p>
+									The Hatch where-to-buy module already contained a retailer logo library, which removed the need to maintain the previously created library. 
+									Looking for a similar solution for product images, I decided to give marketers control of the product images by selecting the image from the product's page gallery. 
+									Marketers simply needed to input the image URL from the page gallery into the a predefined column in the Google Sheet template.
+								</p>
+							</li> -->
 						</ul>
 						<h5>
 							Design Audit
@@ -312,8 +329,8 @@
 						<p>
 							After successfully launching the 2nd iteration, I began converting the Deal Page to use MSI HQ's Hatch API data rather than Hatch's embedded plugin.
                             I looked at the API Data to determine which information was available to update the Deal Page.
-                            I created a new "Where-To-Buy" overlay to replace the original Hatch plugin and cleaned up the overall page design. 
-							I updated the templating scripts to generate the newly redesigned content.
+                            I created a new "Where-To-Buy" overlay to replace the original Hatch plugin. 
+							I updated the templating scripts to generate the new redesigned API-driven content.
 							
 
 
@@ -325,6 +342,12 @@
 							price still at times inaccurate due to delay in hatch update so inital messaging dependant on discount
 							custom link now shows retailer image -->
 						</p>
+						<div class="case-img">
+							<img src="img/hatch-api.jpg" alt="Inforamtion Architecture Diagram." />
+						</div>
+						<div class="case-img">
+							<img src="img/iteration-3.jpg" alt="Inforamtion Architecture Diagram." />
+						</div>
 
 						<h5>
 							DealData.js & DealDataGenerator - Plugin Conversion & Regional Support
