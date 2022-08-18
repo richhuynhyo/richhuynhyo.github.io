@@ -326,22 +326,6 @@
 							<img src="img/iteration-3.jpg" alt="Iteration 3 Redesign." />
 						</div>
 
-						<h5>
-							API Fallback & Feedback
-					   </h5>
-					   <p>							
-						Switching to API data required a solution for handling transfer delays and errors. Data would occasionally not send on the initial request, so I wrote an error handler that would resend multiple requests (Max 3) before displaying a "Deal is not Available" message. The additional requests would stall the UI, so I added a loading animation to give the user feedback that the retailer list is processing.
-					   </p>
-					   <div class="video-wrapper" style="padding:5.5%;background:#242424;">
-						   <video width="400" height="100" playsinline autoplay muted loop preload="metadeta">
-							 <source src="img/loader.mp4" type="video/mp4">
-						   </video>
-					   </div>
-					   <div class="video-wrapper">
-						   <video width="1440" height="680" playsiplaysinline autoplay muted loop preload="metadeta">
-							 <source src="img/split.mp4#t=0.1" type="video/mp4">
-						   </video>
-					   </div>
 					   <br />
 
 						<h5>
@@ -398,31 +382,49 @@
 					<section id="chapter-iteration-4" class="case-text">	
 						<h4>4th iteration (Week 5):</h4>
 						<h5>
-							Deal Page - New Campaign & UI Update
+							Deal Page - UI Update
 						</h5>
-						<p>	
-							With the API system running stable, I focused on improving the consumer-facing UI. The primary goal was to improve navigation visibility.			
+						<p>
+							After running the API system for a week, another design audit revealed some deals failed to load data from the API. With the UI failing to update, the user would be stuck without feedback. In addition to the API issues, it would be opportune to improve navigation visibility.
 						</p>
 						<br />
+						
 						<h6>
-							Navigation & Awards
+							API Fallback & Feedback
+					   </h6>
+					   <p>							
+						Switching to API data required a solution for handling transfer delays and errors. Data would occasionally not send on the initial request, so I wrote an error handler that would resend multiple requests (Max 3) before displaying a "Deal is not Available" message. The additional requests would stall the UI, so I added a loading animation to give the user feedback that the retailer list is processing.
+					   </p>
+					   <div class="video-wrapper" style="padding:5.5%;background:#242424;">
+						   <video width="400" height="100" playsinline autoplay muted loop preload="metadeta">
+							 <source src="img/loader.mp4" type="video/mp4">
+						   </video>
+					   </div>
+					   <div class="video-wrapper">
+						   <video width="1440" height="680" playsiplaysinline autoplay muted loop preload="metadeta">
+							 <source src="img/split.mp4#t=0.1" type="video/mp4">
+						   </video>
+					   </div>
+					   <br /><br />
+						<h6>
+							Navigation & Awards - Improved Visibility
 						</h6>
 						<p>	
- 							I chose to display the awards with a minimalistic text-based layout instead of the original graphical banner. I darkened the current tab marker and added drop-shadow to increase the overall navigation contrast. 
+							I chose to display the awards with a minimalistic text-based layout instead of the original graphical banner. I darkened the current tab marker and added drop-shadow to increase the overall navigation contrast. 
 						</p>
 						<div class="case-img">
 							<img src="img/ui-1.jpg" alt="Changes to Navigation." />
 						</div>	
 						<br /><br />
 						<h6>
-							Tag Navigation
+							Tag Navigation - Improved Visibility
 						</h6>
 						<p>	
 							I increased the font size and contrast for all the tag options. I added drop-shadow on the current tag to add another layer of contrast.
 						</p>
 						<div class="case-img">
 							<img src="img/ui-2.jpg" alt="Changes to Navigation." />
-						</div>	
+						</div>
 					</section>
 
 					<!-- <div class="h-line" aria-hidden="true"></div>	
